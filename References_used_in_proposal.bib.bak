@@ -1,0 +1,1395 @@
+% Encoding: windows-1256
+
+
+@InProceedings{Abdullah,
+  Title                    = {Test Bed for Cascading Failure Scenarios Evaluation},
+  Author                   = {Abdullah, Ahmad and Esmaeilian, Ahad and Gurrala, Gurunath and Dutta, Papiya and Popovic, Tomo and Kezunovic, Mladen},
+  Booktitle                = {International Conference on Power Systems Transients},
+  Year                     = {2012},
+  Pages                    = {18--20},
+
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Al-Mohammed2014,
+  Title                    = {A fully adaptive PMU-based fault location algorithm for series-compensated lines},
+  Author                   = {Al-Mohammed, Ali H and Abido, MA},
+  Journal                  = {Power Systems, IEEE Transactions on},
+  Year                     = {2014},
+  Number                   = {5},
+  Pages                    = {2129--2137},
+  Volume                   = {29},
+
+  ISSN                     = {0885-8950},
+  Type                     = {Journal Article}
+}
+
+@Article{Al-Mohammed2014a,
+  Title                    = {A Fully Adaptive PMU-Based Fault Location Algorithm for Series-Compensated Lines},
+  Author                   = {Al-Mohammed, A. H. and Abido, M. A.},
+  Journal                  = {IEEE Transactions on Power Systems},
+  Year                     = {2014},
+  Number                   = {5},
+  Pages                    = {2129--2137},
+  Volume                   = {29},
+
+  Doi                      = {10.1109/TPWRS.2014.2303207},
+  ISSN                     = {0885-8950},
+  Type                     = {Journal Article}
+}
+
+@Book{Anderson1998,
+  Title                    = {Power system protection},
+  Author                   = {Anderson, Paul M},
+  Publisher                = {Wiley},
+  Year                     = {1998},
+
+  ISBN                     = {0780334272},
+  Type                     = {Book}
+}
+
+@InProceedings{Baldick,
+  Title                    = {Initial review of methods for cascading failure analysis in electric power transmission systems {IEEE} PES CAMS task force on understanding, prediction, mitigation and restoration of cascading failures},
+  Author                   = {Baldick, Ross and Chowdhury, Badrul and Dobson, Ian and Dong, Zhaoyang and Gou, Bei and Hawkins, David and Huang, Henry and Joung, Manho and Kirschen, Daniel and Li, Fangxing},
+  Booktitle                = {Power and Energy Society General Meeting-Conversion and Delivery of Electrical Energy in the 21st Century, 2008 IEEE},
+  Year                     = {2008},
+  Pages                    = {1--8},
+  Publisher                = {IEEE},
+
+  ISBN                     = {1424419050},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Bao2009,
+  Title                    = {Analysis of cascading failure in electric grid based on power flow entropy},
+  Author                   = {Bao, ZJ and Cao, YJ and Wang, GZ and Ding, LJ},
+  Journal                  = {Physics Letters A},
+  Year                     = {2009},
+  Number                   = {34},
+  Pages                    = {3032--3040},
+  Volume                   = {373},
+
+  ISSN                     = {0375-9601},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Carrerasa,
+  Title                    = {Dynamics, criticality and self-organization in a model for blackouts in power transmission systems},
+  Author                   = {Carreras, Benjamin A and Lynch, Vickie E and Dobson, Ian and Newman, David E},
+  Booktitle                = {System Sciences, 2002. HICSS. Proceedings of the 35th Annual Hawaii International Conference on},
+  Year                     = {2002},
+  Pages                    = {9},
+  Publisher                = {IEEE},
+
+  ISBN                     = {0769514359},
+  Type                     = {Conference Proceedings}
+}
+
+@InProceedings{Carreras,
+  Title                    = {Blackout mitigation assessment in power transmission systems},
+  Author                   = {Carreras, Benjamin A and Lynch, Vickie E and Newman, David E and Dobson, Ian},
+  Booktitle                = {System Sciences, 2003. Proceedings of the 36th Annual Hawaii International Conference on},
+  Year                     = {2013},
+  Pages                    = {10},
+  Publisher                = {IEEE},
+
+  ISBN                     = {0769518745},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Carreras2004,
+  Title                    = {Evidence for self-organized criticality in a time series of electric power system blackouts},
+  Author                   = {Carreras, Benjamin A and Newman, David E and Dobson, Ian and Poole, A Bruce},
+  Journal                  = {Circuits and Systems I: Regular Papers, IEEE Transactions on},
+  Year                     = {2004},
+  Number                   = {9},
+  Pages                    = {1733--1740},
+  Volume                   = {51},
+
+  ISSN                     = {1549-8328},
+  Type                     = {Journal Article}
+}
+
+@Article{Chen2002,
+  Title                    = {A new adaptive PMU based protection scheme for transposed/untransposed parallel transmission lines},
+  Author                   = {Chen, Ching-Shan and Liu, Chih-Wen and Jiang, Joe-Air},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2002},
+  Number                   = {2},
+  Pages                    = {395--404},
+  Volume                   = {17},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Chen2005,
+  author  = {Chen, Jie and Thorp, James S and Dobson, Ian},
+  title   = {Cascading dynamics and mitigation assessment in power system disturbances via a hidden failure model},
+  journal = {International Journal of Electrical Power and Energy Systems},
+  year    = {2005},
+  volume  = {27},
+  number  = {4},
+  pages   = {318--326},
+  issn    = {0142-0615},
+  type    = {Journal Article},
+}
+
+@Article{Dalstein1995,
+  author  = {Dalstein, T. and Kulicke, B.},
+  title   = {Neural-Network Approach to Fault Classification for High-Speed Protective Relaying},
+  journal = {IEEE Transactions on Power Delivery},
+  year    = {1995},
+  volume  = {10},
+  number  = {2},
+  pages   = {1002--1011},
+  doi     = {Doi 10.1109/61.400828},
+  issn    = {0885-8977},
+  type    = {Journal Article},
+  url     = {<Go to ISI>://WOS:A1995QV84600050},
+}
+
+@Article{Dasgupta2012,
+  Title                    = {Transmission line fault classification and location using wavelet entropy and neural network},
+  Author                   = {Dasgupta, Aritra and Nath, Sudipta and Das, Arabinda},
+  Journal                  = {Electric Power Components and Systems},
+  Year                     = {2012},
+  Number                   = {15},
+  Pages                    = {1676--1689},
+  Volume                   = {40},
+
+  ISSN                     = {1532-5008},
+  Type                     = {Journal Article}
+}
+
+@Article{Daubechies1990,
+  author  = {Daubechies, I.},
+  title   = {The wavelet transform, time-frequency localization and signal analysis},
+  journal = {Information Theory, IEEE Transactions on},
+  year    = {1990},
+  volume  = {36},
+  number  = {5},
+  pages   = {961--1005},
+  doi     = {10.1109/18.57199},
+  issn    = {0018-9448},
+  type    = {Journal Article},
+}
+
+@InProceedings{Diao,
+  Title                    = {Decision tree assisted controlled islanding for preventing cascading events},
+  Author                   = {Diao, Ruisheng and Vittal, Vijay and Sun, Kai and Kolluri, Sharma and Mandal, S and Galvan, F},
+  Booktitle                = {Power Systems Conference and Exposition, 2009. PSCE'09. IEEE/PES},
+  Year                     = {2009},
+  Pages                    = {1--8},
+  Publisher                = {IEEE},
+
+  ISBN                     = {1424438101},
+  Type                     = {Conference Proceedings}
+}
+
+@InProceedings{Dobson,
+  Title                    = {Examining criticality of blackouts in power system models with cascading events},
+  Author                   = {Dobson, Ian and Chen, Jie and Thorp, JS and Carreras, Benjamin A and Newman, David E},
+  Booktitle                = {System Sciences, 2002. HICSS. Proceedings of the 35th Annual Hawaii International Conference on},
+  Year                     = {2002},
+  Pages                    = {10},
+  Publisher                = {IEEE},
+
+  ISBN                     = {0769514359},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Dommel1987,
+  Title                    = {High speed relaying using traveling wave transient analysis},
+  Author                   = {Dommel, H. W. and Michels, J. M.},
+  Journal                  = {IEEE PES Winter Power Meeting, -78 CH1295-5 PWR, 1-7},
+  Year                     = {1987},
+
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Duan,
+  Title                    = {Transient-based Ultra-high-speed Directional Protection Using Wavelet Transforms for EHV Transmission Lines},
+  Author                   = {Duan, Jian-dong and Zhang, Bao-hui and Luo, Si-bei and Zhou, Yi},
+  Booktitle                = {Transmission and Distribution Conference and Exhibition: Asia and Pacific, 2005 IEEE/PES},
+  Year                     = {2005},
+  Pages                    = {1--6},
+
+  Doi                      = {10.1109/TDC.2005.1547120},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Eissa2010,
+  Title                    = {A novel back up wide area protection technique for power transmission grids using phasor measurement unit},
+  Author                   = {Eissa, MM and Masoud, M Elshahat and Elanwar, MMMA},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2010},
+  Number                   = {1},
+  Pages                    = {270--278},
+  Volume                   = {25},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@TechReport{2015Turkish,
+  Title                    = {Final Report on Blackout in Turkey on 31st March 2015},
+  Author                   = {Entoso-E},
+  Institution              = {Entoso-E},
+  Year                     = {2015},
+
+  Url                      = {http://www.nerc.com/comm/PC/System%20Protection%20and%20Control%20Subcommittee%20SPCS%20DL/Load%20Encroachment%20Final%2012-7-05.pdf}
+}
+
+@Article{Feng2004,
+  Title                    = {Transmission line distance protection using wavelet transform algorithm},
+  Author                   = {Feng, Liang and Jeyasurya, B.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2004},
+  Number                   = {2},
+  Pages                    = {545--553},
+  Volume                   = {19},
+
+  Doi                      = {10.1109/TPWRD.2003.823188},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Feng,
+  author    = {Feng, Yan and Zhiye, Chen and Zhirui, Liang and Yinghui, Kong and Peng, Li},
+  title     = {Fault location using wavelet packets},
+  booktitle = {Power System Technology, 2002. Proceedings. PowerCon 2002. International Conference on},
+  year      = {2002},
+  volume    = {4},
+  pages     = {2575-2579 vol.4},
+  doi       = {10.1109/ICPST.2002.1047251},
+  type      = {Conference Proceedings},
+}
+
+@Article{Gaouda2002,
+  Title                    = {Wavelet-based signal processing for disturbance classification and measurement},
+  Author                   = {Gaouda, A. M. and Kanoun, S. H. and Salama, M. M. A. and Chikhani, A. Y.},
+  Journal                  = {Generation, Transmission and Distribution, IEE Proceedings-},
+  Year                     = {2002},
+  Number                   = {3},
+  Pages                    = {310--318},
+  Volume                   = {149},
+
+  Doi                      = {10.1049/ip-gtd:20020119},
+  ISSN                     = {1350-2360},
+  Type                     = {Journal Article}
+}
+
+@Article{Gaouda2000,
+  Title                    = {Application of multiresolution signal decomposition for monitoring short-duration variations in distribution systems},
+  Author                   = {Gaouda, A. M. and Salama, M. M. A. and Sultan, M. R. and Chikhani, A. Y.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2000},
+  Number                   = {2},
+  Pages                    = {478--485},
+  Volume                   = {15},
+
+  Doi                      = {10.1109/61.852972},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Garlapati2013,
+  author  = {Garlapati, Shravan and Lin, Hua and Heier, Andrew and Shukla, Sandeep K and Thorp, James},
+  title   = {A hierarchically distributed non-intrusive agent aided distance relaying protection scheme to supervise Zone 3},
+  journal = {International Journal of Electrical Power and Energy Systems},
+  year    = {2013},
+  volume  = {50},
+  pages   = {42--49},
+  issn    = {0142-0615},
+  type    = {Journal Article},
+}
+
+@Article{He2014,
+  author  = {He, Zhengyou and Lin, Sheng and Deng, Yujia and Li, Xiaopeng and Qian, Qingquan},
+  title   = {A rough membership neural network approach for fault classification in transmission lines},
+  journal = {International Journal of Electrical Power and Energy Systems},
+  year    = {2014},
+  volume  = {61},
+  pages   = {429--439},
+  issn    = {0142-0615},
+  type    = {Journal Article},
+}
+
+@Article{He2011,
+  Title                    = {Wide-Area Backup Protection Algorithm Based on Fault Component Voltage Distribution},
+  Author                   = {He, Z. and Zhang, Z. and Chen, W. and Malik, O. P. and Yin, X.},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2011},
+  Number                   = {4},
+  Pages                    = {2752--2760},
+  Volume                   = {26},
+
+  Doi                      = {10.1109/TPWRD.2011.2165971},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Hines2009,
+  Title                    = {Large blackouts in {North America}: Historical trends and policy implications},
+  Author                   = {Hines, Paul and Apt, Jay and Talukdar, Sarosh},
+  Journal                  = {Energy Policy},
+  Year                     = {2009},
+  Number                   = {12},
+  Pages                    = {5249--5259},
+  Volume                   = {37},
+
+  ISSN                     = {0301-4215},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Hines,
+  Title                    = {Trends in the history of large blackouts in the {United States}},
+  Author                   = {Hines, Paul and Apt, Jay and Talukdar, Sarosh},
+  Booktitle                = {Power and Energy Society General Meeting-Conversion and Delivery of Electrical Energy in the 21st Century, 2008 IEEE},
+  Year                     = {2008},
+  Pages                    = {1--8},
+  Publisher                = {IEEE},
+
+  ISBN                     = {1424419050},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Horowitz2006,
+  Title                    = {Third zone revisited},
+  Author                   = {Horowitz, SH and Phadke, AG},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2006},
+  Number                   = {1},
+  Pages                    = {23--29},
+  Volume                   = {21},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Ibrahim2002,
+  Title                    = {Artificial intelligence and advanced mathematical tools for power quality applications: a survey},
+  Author                   = {Ibrahim, W. R. A. and Morcos, M. M.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2002},
+  Number                   = {2},
+  Pages                    = {668--673},
+  Volume                   = {17},
+
+  Doi                      = {10.1109/61.997958},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Jafarian2013,
+  Title                    = {High-Frequency Transients-Based Protection of Multiterminal Transmission Lines Using the {SVM} Technique},
+  Author                   = {Jafarian, P. and Sanaye-Pasand, M.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2013},
+  Number                   = {1},
+  Pages                    = {188--196},
+  Volume                   = {28},
+
+  Doi                      = {10.1109/TPWRD.2012.2215925},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Jafarian2010,
+  Title                    = {A Traveling-Wave-Based Protection Technique Using Wavelet/{PCA} Analysis},
+  Author                   = {Jafarian, P. and Sanaye-Pasand, M.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2010},
+  Number                   = {2},
+  Pages                    = {588--599},
+  Volume                   = {25},
+
+  Doi                      = {10.1109/TPWRD.2009.2037819},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Joe-Air2000,
+  Title                    = {An adaptive PMU based fault detection/location technique for transmission lines. I. Theory and algorithms},
+  Author                   = {Joe-Air, Jiang and Jun-Zhe, Yang and Ying-Hong, Lin and Chih-Wen, Liu and Jih-Chen, Ma},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2000},
+  Number                   = {2},
+  Pages                    = {486--493},
+  Volume                   = {15},
+
+  Doi                      = {10.1109/61.852973},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Jonsson2003,
+  Title                    = {An adaptive scheme to prevent undesirable distance protection operation during voltage instability},
+  Author                   = {Jonsson, Mattias and Daalder, Jaap E},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2003},
+  Number                   = {4},
+  Pages                    = {1174--1180},
+  Volume                   = {18},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Kezunovic1995a,
+  Title                    = {High-Speed Fault-Detection and Classification with Neural Nets},
+  Author                   = {Kezunovic, M. and Rikalo, I. and Sobajic, D. J.},
+  Journal                  = {Electric Power Systems Research},
+  Year                     = {1995},
+  Number                   = {2},
+  Pages                    = {109--116},
+  Volume                   = {34},
+
+  Doi                      = {Doi 10.1016/0378-7796(95)00962-X},
+  ISSN                     = {0378-7796},
+  Type                     = {Journal Article},
+  Url                      = {<Go to ISI>://WOS:A1995TH18700005}
+}
+
+@Article{Kosterev1999,
+  Title                    = {Model validation for the {August} 10, 1996~{W}SCC system outage},
+  Author                   = {Kosterev, Dmitry N and Taylor, Carson W and Mittelstadt, William A},
+  Journal                  = {Power Systems, IEEE Transactions on},
+  Year                     = {1999},
+  Number                   = {3},
+  Pages                    = {967--979},
+  Volume                   = {14},
+
+  ISSN                     = {0885-8950},
+  Type                     = {Journal Article}
+}
+
+@Article{Kundu2014,
+  Title                    = {Synchrophasor-assisted zone 3 operation},
+  Author                   = {Kundu, Pratim and Pradhan, Ashok Kumar},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2014},
+  Number                   = {2},
+  Pages                    = {660--667},
+  Volume                   = {29},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Li2013,
+  Title                    = {Wide-Area Protection Fault Identification Algorithm Based on Multi-Information Fusion},
+  Author                   = {Li, Z. and Yin, X. and Zhang, Z. and He, Z.},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2013},
+  Number                   = {3},
+  Pages                    = {1348--1355},
+  Volume                   = {28},
+
+  Doi                      = {10.1109/TPWRD.2013.2247638},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Lim2008,
+  Title                    = {Blocking of zone 3 relays to prevent cascaded events},
+  Author                   = {Lim, Seong-II and Liu, Chen-Ching and Lee, Seung-Jae and Choi, Myeon-Song and Rim, Seong-Jeong},
+  Journal                  = {Power Systems, IEEE Transactions on},
+  Year                     = {2008},
+  Number                   = {2},
+  Pages                    = {747--754},
+  Volume                   = {23},
+
+  ISSN                     = {0885-8950},
+  Type                     = {Journal Article}
+}
+
+@Article{Liscouski2004,
+  Title                    = {Final report on the august 14, 2003~{b}lackout in the united states and canada: Causes and recommendations},
+  Author                   = {Liscouski, B and Elliot, W},
+  Journal                  = {A report to US Department of Energy},
+  Year                     = {2004},
+  Number                   = {4},
+  Volume                   = {40},
+
+  Type                     = {Journal Article}
+}
+
+@Article{Liu2015,
+  Title                    = {Multiagent System-Based Wide-Area Protection and Control Scheme Against Cascading Events},
+  Author                   = {Liu, Zhou and Chen, Zhe and Sun, Haishun and Hu, Yanting},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2015},
+  Number                   = {4},
+  Pages                    = {1651--1662},
+  Volume                   = {30},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Liu2014,
+  Title                    = {Multiwavelet packet entropy and its application in transmission line fault recognition and classification},
+  Author                   = {Liu, Zhigang and Han, Zhiwei and Zhang, Yang and Zhang, Qiaoge},
+  Journal                  = {Neural Networks and Learning Systems, IEEE Transactions on},
+  Year                     = {2014},
+  Number                   = {11},
+  Pages                    = {2043--2052},
+  Volume                   = {25},
+
+  ISSN                     = {2162-237X},
+  Type                     = {Journal Article}
+}
+
+@Article{Livani2014,
+  Title                    = {A machine learning and wavelet-based fault location method for hybrid transmission lines},
+  Author                   = {Livani, Hanif and Evrenosoglu, Cansin Yaman},
+  Journal                  = {Smart Grid, IEEE Transactions on},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {51--59},
+  Volume                   = {5},
+
+  ISSN                     = {1949-3053},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Lopes,
+  Title                    = {Transients detection in EHV transmission lines using park's transformation},
+  Author                   = {Lopes, FV and Fernandes Jr, D and Neves, WLA},
+  Booktitle                = {Transmission and Distribution Conference and Exposition (T\&D), 2012 IEEE PES},
+  Year                     = {2012},
+  Pages                    = {1--6},
+  Publisher                = {IEEE},
+
+  ISBN                     = {1467319341},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Lopes2013,
+  Title                    = {A traveling-wave detection method based on Park's transformation for fault locators},
+  Author                   = {Lopes, FV and Fernandes, Denis and Neves, WLA},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2013},
+  Number                   = {3},
+  Pages                    = {1626--1634},
+  Volume                   = {28},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{RN85,
+  Title                    = {{IEEE} PSRC Report on Global Industry Experiences With System Integrity Protection Schemes (SIPS)},
+  Author                   = {Madani, V. and Novosel, D. and Horowitz, S. and Adamiak, M. and Amantegui, J. and Karlsson, D. and Imai, S. and Apostolov, A.},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2010},
+  Number                   = {4},
+  Pages                    = {2143--2155},
+  Volume                   = {25},
+
+  Doi                      = {10.1109/TPWRD.2010.2046917},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Magnago1998,
+  Title                    = {Fault location using wavelets},
+  Author                   = {Magnago, F. H. and Abur, A.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {1998},
+  Number                   = {4},
+  Pages                    = {1475--1480},
+  Volume                   = {13},
+
+  Doi                      = {10.1109/61.714808},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Mao2001,
+  Title                    = {A novel approach to the classification of the transient phenomena in power transformers using combined wavelet transform and neural network},
+  Author                   = {Mao, P. L. L. and Aggarwal, R. K.},
+  Journal                  = {Ieee Transactions on Power Delivery},
+  Year                     = {2001},
+  Number                   = {4},
+  Pages                    = {654--660},
+  Volume                   = {16},
+
+  Doi                      = {Doi 10.1109/61.956753},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article},
+  Url                      = {<Go to ISI>://WOS:000171542300034}
+}
+
+@Article{Martin2003,
+  author  = {Martin, F. and Aguado, J. A.},
+  title   = {Wavelet-based ANN approach for transmission line protection},
+  journal = {IEEE Transactions on Power Delivery},
+  year    = {2003},
+  volume  = {18},
+  number  = {4},
+  pages   = {1572--1574},
+  doi     = {10.1109/Tpwrd.2003.817523},
+  issn    = {0885-8977},
+  type    = {Journal Article},
+  url     = {<Go to ISI>://WOS:000185659500067},
+}
+
+@InProceedings{Moreno,
+  Title                    = {Protection functions for distribution networks with distributed generation applying wavelet transform},
+  Author                   = {Moreno, J. G. and Perez, F. E. and Orduna, E. A.},
+  Booktitle                = {Transmission and Distribution: Latin America Conference and Exposition (T\&D-LA), 2012 Sixth IEEE/PES},
+  Year                     = {2012},
+  Pages                    = {1--5},
+
+  Doi                      = {10.1109/TDC-LA.2012.6319073},
+  Type                     = {Conference Proceedings}
+}
+
+@InProceedings{MuneshwarNewAdaptive,
+  Title                    = {A new adaptive PMU based protection scheme for interconnected transmission network system},
+  Author                   = {Muneshwar, S. N. and Hasabet, R. P. and Kose, P. and Bhole, A. A.},
+  Booktitle                = {Circuit, Power and Computing Technologies (ICCPCT), 2014 International Conference on},
+  Year                     = {2014},
+  Pages                    = {179--183},
+
+  Doi                      = {10.1109/ICCPCT.2014.7054922},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Nayak2015,
+  Title                    = {Secured zone 3 protection during stressed condition},
+  Author                   = {Nayak, Paresh Kumar and Pradhan, Ashok Kumar and Bajpai, Prabodh},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2015},
+  Number                   = {1},
+  Pages                    = {89--96},
+  Volume                   = {30},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Nayak2014,
+  Title                    = {Wide-Area Measurement-Based Backup Protection for Power Network With Series Compensation},
+  Author                   = {Nayak, P. K. and Pradhan, A. K. and Bajpai, P.},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2014},
+  Number                   = {4},
+  Pages                    = {1970--1977},
+  Volume                   = {29},
+
+  Doi                      = {10.1109/TPWRD.2013.2294183},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Nedic2006,
+  author  = {Nedic, Dusko P and Dobson, Ian and Kirschen, Daniel S and Carreras, Benjamin A and Lynch, Vickie E},
+  title   = {Criticality in a cascading failure blackout model},
+  journal = {International Journal of Electrical Power and Energy Systems},
+  year    = {2006},
+  volume  = {28},
+  number  = {9},
+  pages   = {627--633},
+  issn    = {0142-0615},
+  type    = {Journal Article},
+}
+
+@Article{Neyestanaki2015,
+  Title                    = {An Adaptive PMU-Based Wide Area Backup Protection Scheme for Power Transmission Lines},
+  Author                   = {Neyestanaki, M. K. and Ranjbar, A. M.},
+  Journal                  = {IEEE Transactions on Smart Grid},
+  Year                     = {2015},
+  Number                   = {3},
+  Pages                    = {1550--1559},
+  Volume                   = {6},
+
+  Doi                      = {10.1109/TSG.2014.2387392},
+  ISSN                     = {1949-3053},
+  Type                     = {Journal Article}
+}
+
+@Article{Nikolaidis2016,
+  Title                    = {Emergency Zone 3 Modification as a Local Response-Driven Protection Measure against System Collapse},
+  Author                   = {Nikolaidis, V.},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2016},
+  Number                   = {99},
+  Pages                    = {1--1},
+  Volume                   = {PP},
+
+  Doi                      = {10.1109/TPWRD.2016.2552644},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Nikolaidis,
+  Title                    = {Adjusting third zone distance protection to avoid voltage collapse},
+  Author                   = {Nikolaidis, VC and Savvopoulos, N and Safigianni, AS and Vournas, CD},
+  Booktitle                = {Power Systems Computation Conference (PSCC), 2014},
+  Year                     = {2014},
+  Pages                    = {1--7},
+  Publisher                = {IEEE},
+
+  Type                     = {Conference Proceedings}
+}
+
+@Article{RN14,
+  Title                    = {{IEEE} PSRC report on performance of relaying during wide-area stressed conditions},
+  Author                   = {Novosel, Damir and Bartok, George and Henneberg, Gene and Mysore, Pratap and Tziouvaras, Demetrios and Ward, Solveig},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2010},
+  Number                   = {1},
+  Pages                    = {3--16},
+  Volume                   = {25},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Novosel2004,
+  Title                    = {Shedding light on blackouts},
+  Author                   = {Novosel, Damir and Begovic, Miroslav M and Madani, Vahid},
+  Journal                  = {Power and Energy Magazine, IEEE},
+  Year                     = {2004},
+  Number                   = {1},
+  Pages                    = {32--43},
+  Volume                   = {2},
+
+  ISSN                     = {1540-7977},
+  Type                     = {Journal Article}
+}
+
+@Article{Oleskovicz2001,
+  Title                    = {A complete scheme for fault detection, classification and location in transmission lines using neural networks},
+  Author                   = {Oleskovicz, M. and Coury, D. V. and Aggarwal, R. K.},
+  Journal                  = {Seventh International Conference on Developments in Power System Protection},
+  Year                     = {2001},
+  Number                   = {479},
+  Pages                    = {335--338},
+
+  ISSN                     = {0537-9989},
+  Type                     = {Journal Article},
+  Url                      = {<Go to ISI>://WOS:000171221700084}
+}
+
+@InProceedings{Pahwa,
+  Title                    = {Topological analysis of the power grid and mitigation strategies against cascading failures},
+  Author                   = {Pahwa, Sakshi and Hodges, Amelia and Scoglio, Caterina and Wood, Sean},
+  Booktitle                = {Systems Conference, 2010 4th Annual IEEE},
+  Year                     = {2014},
+  Pages                    = {272--276},
+  Publisher                = {IEEE},
+
+  ISBN                     = {142445882X},
+  Type                     = {Conference Proceedings}
+}
+
+@InProceedings{Papic,
+  Title                    = {Present industry practices with cascading outages},
+  Author                   = {Papic, Milorad},
+  Booktitle                = {IEEE Power and Energy Society General Meeting, PESGM 2015, July 26, 2015 - July 30, 2015},
+  Year                     = {2015},
+  Publisher                = {IEEE Computer Society},
+  Series                   = {IEEE Power and Energy Society General Meeting},
+  Volume                   = {2015-September},
+
+  Doi                      = {10.1109/PESGM.2015.7286023},
+  ISBN                     = {19449925},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Perera2011,
+  Title                    = {Recognition of Fault Transients Using a Probabilistic Neural-Network Classifier},
+  Author                   = {Perera, N. and Rajapakse, A.},
+  Journal                  = {2011 Ieee Power and Energy Society General Meeting},
+  Year                     = {2011},
+
+  ISSN                     = {1944-9925},
+  Type                     = {Journal Article},
+  Url                      = {<Go to ISI>://WOS:000297469600037}
+}
+
+@Article{Perez2011,
+  Title                    = {Adaptive wavelets applied to fault classification on transmission lines},
+  Author                   = {Perez, F. E. and Orduna, E. and Guidi, G.},
+  Journal                  = {Generation, Transmission \& Distribution, IET},
+  Year                     = {2011},
+  Number                   = {7},
+  Pages                    = {694--702},
+  Volume                   = {5},
+
+  Doi                      = {10.1049/iet-gtd.2010.0615},
+  ISSN                     = {1751-8687},
+  Type                     = {Journal Article}
+}
+
+@Article{Poisson2000,
+  Title                    = {Detection and measurement of power quality disturbances using wavelet transform},
+  Author                   = {Poisson, O. and Rioual, P. and Meunier, M.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2000},
+  Number                   = {3},
+  Pages                    = {1039--1044},
+  Volume                   = {15},
+
+  Doi                      = {10.1109/61.871372},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Pourbeik2006,
+  Title                    = {The anatomy of a power grid blackout},
+  Author                   = {Pourbeik, Pouyan and Kundur, Prabha S and Taylor, Carson W},
+  Journal                  = {IEEE Power and Energy Magazine},
+  Year                     = {2006},
+  Number                   = {5},
+  Pages                    = {22--29},
+  Volume                   = {4},
+
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Probert,
+  author    = {Probert, S. A. and Song, Y. H.},
+  title     = {Detection and classification of high frequency transients using wavelet analysis},
+  booktitle = {Power Engineering Society Summer Meeting, 2002 IEEE},
+  year      = {2002},
+  volume    = {2},
+  pages     = {801-806 vol.2},
+  doi       = {10.1109/PESS.2002.1043437},
+  type      = {Conference Proceedings},
+}
+
+@Misc{NERC2003,
+  author       = {System Protection and Control Task Force of the NERC Planning Committee},
+  title        = {Increase Line Loadability by Enabling Load Encroachment Functions of Digital Relays},
+  howpublished = {online},
+  month        = {December},
+  year         = {2005},
+  owner        = {NERC},
+  timestamp    = {2016.06.19},
+  url          = {Available online at \url{http://www.nerc.com/comm/PC/System%20Protection%20and%20Control%20Subcommittee%20SPCS%20DL/Load%20Encroachment%20Final%2012-7-05.pdf}},
+}
+
+@Article{Rigatos2009,
+  Title                    = {Neural network-based approach for early detection of cascading events in electric power systems},
+  Author                   = {Rigatos, Gerasimos and Siano, Pierluigi and Piccolo, Antonio},
+  Journal                  = {Generation, Transmission \& Distribution, IET},
+  Year                     = {2009},
+  Number                   = {7},
+  Pages                    = {650--665},
+  Volume                   = {3},
+
+  ISSN                     = {1751-8687},
+  Type                     = {Journal Article}
+}
+
+@Article{Robertson1996,
+  Title                    = {Wavelets and electromagnetic power system transients},
+  Author                   = {Robertson, D. C. and Camps, O. I. and Mayer, J. S. and Gish, William B.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {1996},
+  Number                   = {2},
+  Pages                    = {1050--1058},
+  Volume                   = {11},
+
+  Doi                      = {10.1109/61.489367},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Salehi-Dobakhshari2014,
+  Title                    = {Application of synchronised phasor measurements to wide-area fault diagnosis and location},
+  Author                   = {Salehi-Dobakhshari, A. and Ranjbar, A. M.},
+  Journal                  = {IET Generation, Transmission \& Distribution},
+  Year                     = {2014},
+  Number                   = {4},
+  Pages                    = {716--729},
+  Volume                   = {8},
+
+  Doi                      = {10.1049/iet-gtd.2013.0033},
+  ISSN                     = {1751-8687},
+  Type                     = {Journal Article}
+}
+
+@Article{Santoso1996,
+  Title                    = {Power quality assessment via wavelet transform analysis},
+  Author                   = {Santoso, S. and Powers, E. J. and Grady, W. M. and Hofmann, P.},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {1996},
+  Number                   = {2},
+  Pages                    = {924--930},
+  Volume                   = {11},
+
+  Doi                      = {10.1109/61.489353},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Saravanababu,
+  Title                    = {Transmission line faults detection, classification, and location using Discrete Wavelet Transform},
+  Author                   = {Saravanababu, K and Balakrishnan, Pranav and Sathiyasekar, K},
+  Booktitle                = {Power, Energy and Control (ICPEC), 2013 International Conference on},
+  Year                     = {2013},
+  Pages                    = {233--238},
+  Publisher                = {IEEE},
+
+  ISBN                     = {1467360279},
+  Type                     = {Conference Proceedings}
+}
+
+@InProceedings{Shang,
+  Title                    = {A new approach to high-speed protection for transmission line based on transient signal analysis using wavelets},
+  Author                   = {Shang, L. and Herold, G. and Jaeger, J.},
+  Booktitle                = {Developments in Power System Protection, 2001, Seventh International Conference on (IEE)},
+  Year                     = {2001},
+  Pages                    = {173--176},
+
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Sharifzadeh2014,
+  Title                    = {A new algorithm to stabilize distance relay operation during voltage-degraded conditions},
+  Author                   = {Sharifzadeh, Mostafa and Lesani, H and Sanaye-Pasand, Majid},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2014},
+  Number                   = {4},
+  Pages                    = {1639--1647},
+  Volume                   = {29},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Silva2006,
+  Title                    = {Fault detection and classification in transmission lines based on wavelet transform and ANN},
+  Author                   = {Silva, KM and Souza, BA and Brito, NSD},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2006},
+  Number                   = {4},
+  Pages                    = {2058--2063},
+  Volume                   = {21},
+
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Song2007,
+  Title                    = {A new analysis method for early detection and prevention of cascading events},
+  Author                   = {Song, Hongbiao and Kezunovic, Mladen},
+  Journal                  = {Electric Power Systems Research},
+  Year                     = {2007},
+  Number                   = {8},
+  Pages                    = {1132--1142},
+  Volume                   = {77},
+
+  ISSN                     = {0378-7796},
+  Type                     = {Journal Article}
+}
+
+@Article{SouzaGomes2013,
+  author  = {de Souza Gomes, Andrea and Costa, Marcelo Azevedo and de Faria, Thomaz Giovani Akar and Caminhas, Walmir Matos},
+  title   = {Detection and classification of faults in power transmission lines using functional analysis and computational intelligence},
+  journal = {Power Delivery, IEEE Transactions on},
+  year    = {2013},
+  volume  = {28},
+  number  = {3},
+  pages   = {1402--1413},
+  issn    = {0885-8977},
+  type    = {Journal Article},
+}
+
+@Misc{vandenberghe2004final,
+  Title                    = {FINAL REPORT of the Investigation Committee on the 28 September 2003 Blackout in Italy},
+
+  Author                   = {Vandenberghe, F and Grebe, E and Klaar, D and Kleinekorte, K and Rodriguez, JM and Erven, H and Laffaye, H and Sabelli, C and Kropec, F and Tillwicks, T and others},
+  Year                     = {2004},
+
+  Publisher                = {UCTE}
+}
+
+@Article{Yadav2015,
+  Title                    = {A single ended directional fault section identifier and fault locator for double circuit transmission lines using combined wavelet and ANN approach},
+  Author                   = {Yadav, Anamika and Swetapadma, Aleena},
+  Journal                  = {International Journal of Electrical Power \& Energy Systems},
+  Year                     = {2015},
+  Pages                    = {27--33},
+  Volume                   = {69},
+
+  ISSN                     = {0142-0615},
+  Type                     = {Journal Article}
+}
+
+@InProceedings{Yamashita,
+  Title                    = {Analysis and control of major blackout events},
+  Author                   = {Yamashita, Koji and Li, Juan and Zhang, Pei and Liu, Chen-Ching},
+  Booktitle                = {Power Systems Conference and Exposition, 2009. PSCE'09. IEEE/PES},
+  Year                     = {2009},
+  Pages                    = {1--4},
+  Publisher                = {IEEE},
+
+  ISBN                     = {1424438101},
+  Type                     = {Conference Proceedings}
+}
+
+@Article{Ying-Hong2004,
+  Title                    = {A new PMU-based fault detection/location technique for transmission lines with consideration of arcing fault discrimination-part I: theory and algorithms},
+  Author                   = {Ying-Hong, Lin and Chih-Wen, Liu and Ching-Shan, Chen},
+  Journal                  = {IEEE Transactions on Power Delivery},
+  Year                     = {2004},
+  Number                   = {4},
+  Pages                    = {1587--1593},
+  Volume                   = {19},
+
+  Doi                      = {10.1109/TPWRD.2004.832407},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Article{Zare2015,
+  author  = {Zare, J. and Aminifar, F. and Sanaye-Pasand, M.},
+  title   = {Synchrophasor-Based Wide-Area Backup Protection Scheme with Data Requirement Analysis},
+  journal = {IEEE Transactions on Power Delivery},
+  year    = {2015},
+  volume  = {30},
+  number  = {3},
+  pages   = {1410--1419},
+  doi     = {10.1109/tpwrd.2014.2377202},
+  issn    = {0885-8977},
+  type    = {Journal Article},
+  url     = {<Go to ISI>://WOS:000355255700044},
+}
+
+@Article{Zwe-Lee2004,
+  Title                    = {Wavelet-based neural network for power disturbance recognition and classification},
+  Author                   = {Zwe-Lee, Gaing},
+  Journal                  = {Power Delivery, IEEE Transactions on},
+  Year                     = {2004},
+  Number                   = {4},
+  Pages                    = {1560--1568},
+  Volume                   = {19},
+
+  Doi                      = {10.1109/TPWRD.2004.835281},
+  ISSN                     = {0885-8977},
+  Type                     = {Journal Article}
+}
+
+@Misc{NERCMisoperation,
+  author = {NERC},
+  title  = {Standard PRC-004-3 - Protection System Misoperation Identification and Correction (PRC-004-3)},
+  month  = {feb},
+  year   = {2014},
+  note   = {Available online at \url{http://www.nerc.com/pa/Stand/Project%20201005%20Protection%20System%20Misoperations%20DL/PRC_004_3_Misoperations_Draft_6_2014_07_18_Clean.pdf}},
+}
+
+@Misc{langner2011cracking,
+  author = {Langner, R},
+  title  = {Cracking Stuxnet, a 21st century cyber weapon, TED Talks},
+  year   = {2011},
+  url    = {http://www.ted.com/talks/ralph_langner_cracking_stuxnet_a_21st_century_cyberweapon},
+}
+
+@InProceedings{hou1996capacitive,
+  author       = {Hou, Daqing and Roberts, Jeff},
+  title        = {Capacitive voltage transformer: transient overreach concerns and solutions for distance relaying},
+  booktitle    = {Electrical and Computer Engineering, 1996. Canadian Conference on},
+  year         = {1996},
+  volume       = {1},
+  pages        = {119--125},
+  organization = {IEEE},
+}
+
+@InProceedings{zocholl1992current,
+  author    = {Zocholl, Stanley E and Smaha, DW},
+  title     = {Current transformer concepts},
+  booktitle = {Proceedings of the 46th Annual Georgia Tech Protective Relay Conference, Atlanta, GA},
+  year      = {1992},
+  pages     = {7--9},
+}
+
+@Article{hooshyar2014distance,
+  author    = {Hooshyar, Ali and Azzouz, Maher Abdelkhalek and El-Saadany, Ehab F},
+  title     = {Distance protection of lines connected to induction generator-based wind farms during balanced faults},
+  journal   = {IEEE Transactions on Sustainable Energy},
+  year      = {2014},
+  volume    = {5},
+  number    = {4},
+  pages     = {1193--1203},
+  publisher = {IEEE},
+}
+
+@Article{pradhan2007adaptive,
+  author    = {Pradhan, AK and Joos, Gza},
+  title     = {Adaptive distance relay setting for lines connecting wind farms},
+  journal   = {IEEE Transactions on Energy Conversion},
+  year      = {2007},
+  volume    = {22},
+  number    = {1},
+  pages     = {206--213},
+  publisher = {IEEE},
+}
+
+@InProceedings{stokes2000distance,
+  author    = {Stokes-Waller, Edmund},
+  title     = {Distance Protection: Pushing the Envelope},
+  booktitle = {Southern African Power System Protection Conference, Johannesburg},
+  year      = {2000},
+}
+
+@Article{thorp1979limits,
+  author    = {Thorp, JS and Phadke, AG and Horowitz, SH and Beehler, JE},
+  title     = {Limits to impedance relaying},
+  journal   = {IEEE Transactions on Power Apparatus and Systems},
+  year      = {1979},
+  number    = {1},
+  pages     = {246--260},
+  publisher = {IEEE},
+}
+
+@Book{grainger1994power,
+  title     = {Power system analysis},
+  publisher = {McGraw-Hill},
+  year      = {1994},
+  author    = {Grainger, John J and Stevenson, William D},
+}
+
+@Book{zurada1992introduction,
+  title     = {Introduction to artificial neural systems},
+  publisher = {West St. Paul},
+  year      = {1992},
+  author    = {Zurada, Jacek M},
+  volume    = {8},
+}
+
+@Article{hedman1965propagation,
+  author    = {Hedman, DE},
+  title     = {Propagation on overhead transmission lines I-theory of modal analysis},
+  journal   = {IEEE Transactions on Power Apparatus and Systems},
+  year      = {1965},
+  volume    = {84},
+  number    = {3},
+  pages     = {200--205},
+  publisher = {IEEE},
+}
+
+@Article{hedman1965propagation2,
+  author    = {Hedman, DE},
+  title     = {Propagation on Overhead Transmission Lines II-Earth-Conduction Effects and Practical Results},
+  journal   = {IEEE Transactions on Power Apparatus and Systems},
+  year      = {1965},
+  volume    = {84},
+  number    = {3},
+  pages     = {205--211},
+  publisher = {IEEE},
+}
+
+@InProceedings{lee1994development,
+  author    = {Lee, Harry},
+  title     = {Development of an accurate transmission line fault locator using the global positioning system satellites},
+  booktitle = {The 25th Annual Precise Time and Time Interval (PTTI) Applications and Planning Meeting; p 197-204},
+  year      = {1994},
+  type      = {Conference Proceedings},
+}
+
+@Article{douglass1981current,
+  author    = {Douglass, DA},
+  title     = {Current transformer accuracy with asymmetric and high frequency fault currents},
+  journal   = {IEEE Transactions on Power Apparatus and Systems},
+  year      = {1981},
+  number    = {3},
+  pages     = {1006--1012},
+  publisher = {IEEE},
+}
+
+@Article{redfern2003laboratory,
+  author    = {Redfern, MA and Terry, SC and Robinson, FVP and Bo, ZQ},
+  title     = {Laboratory investigation into the use of MV current transformers for transient based protection},
+  journal   = {ISPT2003},
+  year      = {2003},
+  pages     = {1--5},
+  publisher = {University of Bath},
+}
+
+@Article{perera2013series,
+  author    = {Perera, Nuwan and Rajapakse, Athula D},
+  title     = {Series-compensated double-circuit transmission-line protection using directions of current transients},
+  journal   = {IEEE Transactions on Power Delivery},
+  year      = {2013},
+  volume    = {28},
+  number    = {3},
+  pages     = {1566--1575},
+  publisher = {IEEE},
+}
+
+@Article{perera2008isolation,
+  author    = {Perera, Nuwan and Rajapakse, AD and Buchholzer, TE},
+  title     = {Isolation of faults in distribution networks with distributed generators},
+  journal   = {IEEE transactions on power delivery},
+  year      = {2008},
+  volume    = {23},
+  number    = {4},
+  pages     = {2347--2355},
+  publisher = {IEEE},
+}
+
+@Book{ametani2013power,
+  title     = {Power system transients: Theory and Applications},
+  publisher = {CRC Press},
+  year      = {2013},
+  author    = {Ametani, Akihiro and Nagaoka, Naoto and Baba, Yoshihiro and Ohno, Teruo},
+}
+
+@PhdThesis{cho2002parameter,
+  author = {Cho, Sung Don},
+  title  = {Parameter estimation for transformer modeling},
+  school = {Michigan Technological University},
+  year   = {2002},
+}
+
+@TechReport{prikler2002atpdraw,
+  author      = {Prikler, L{\'a}szl{\'o} and H{\o}idalen, Hans Kristian},
+  title       = {ATPDRAW version 3.5 for Windows 9x},
+  institution = {NT/2000/XP Users' Manual},
+  year        = {2002},
+}
+
+@InProceedings{gashimov2009transmission,
+  author       = {Gashimov, Arif M and Kabayeva, AR and Nayir, Ahmet},
+  title        = {Transmission line transposition},
+  booktitle    = {Electrical and Electronics Engineering, 2009. ELECO 2009. International Conference on},
+  year         = {2009},
+  pages        = {364--367},
+  organization = {IEEE},
+}
+
+@Book{alstom2002network,
+  title     = {Network Protection \& Automation Guide},
+  publisher = {ALSTOM},
+  year      = {2002},
+  author    = {ALSTOM (Firm)},
+}
+
+@Book{greenwood1991electrical,
+  title     = {Electrical transients in power systems},
+  publisher = {New York, NY (USA); John Wiley and Sons Inc.},
+  year      = {1991},
+  author    = {Greenwood, Allan},
+}
+
+@InProceedings{abdullah2015atpmat,
+  author       = {Abdullah, Ahmad},
+  title        = {ATPMAT: An open source toolbox for systematic creation of EMTP cases in ATP using Matlab},
+  booktitle    = {North American Power Symposium (NAPS), 2015},
+  year         = {2015},
+  pages        = {1--6},
+  organization = {IEEE},
+}
+
+@Article{terzija2004modeling,
+  author    = {Terzija, Vladimir V and Koglin, H-J},
+  title     = {On the modeling of long arc in still air and arc resistance calculation},
+  journal   = {IEEE Transactions on Power Delivery},
+  year      = {2004},
+  volume    = {19},
+  number    = {3},
+  pages     = {1012--1017},
+  publisher = {IEEE},
+}
+
+@Misc{Woodworth2011,
+  author = {Jonathan Woodworth},
+  title  = {Arrester Selection Guide.},
+  year   = {2011},
+  note   = {Available online at \url{http://www.arresterworks.com/arresterfacts/pdf_files/Arrester_Characteristics_for_ATPDraw_Users.xls}},
+}
+
+@Misc{IEEE118case,
+  author = {Washington State University},
+  title  = {Power Systems Test Case Archive},
+  note   = {Available online at \url{http://www.ee.washington.edu/research/pstca/pf118/pg_tca118bus.htm}},
+}
+
+@Article{de2015discussion,
+  author    = {de Siqueira, Jos{\'e} Carlos G and Bonatto, Benedito D and Mart{\'\i}, Jos{\'e} R and Hollman, Jorge A and Dommel, Hermann W},
+  title     = {A discussion about optimum time step size and maximum simulation time in EMTP-based programs},
+  journal   = {International Journal of Electrical Power \& Energy Systems},
+  year      = {2015},
+  volume    = {72},
+  pages     = {24--32},
+  publisher = {Elsevier},
+}
+
+@InProceedings{thompson2015transmission,
+  author       = {Thompson, Michael J and Heidfeld, Daniel L},
+  title        = {Transmission line setting calculations-beyond the cookbook},
+  booktitle    = {Protective Relay Engineers, 2015 68th Annual Conference for},
+  year         = {2015},
+  pages        = {850--865},
+  organization = {IEEE},
+}
+
+@Misc{NERCLoadability,
+  author       = {System Protection and Control Task Force of the NERC Planning Committee},
+  title        = {NERC Standard PRC-023-2},
+  howpublished = {online},
+  month        = {December},
+  year         = {2005},
+  note         = {Available online at \url{http://www.nerc.com}},
+  owner        = {NERC},
+}
+
+@Misc{IEEE300case,
+  author       = {Illinois Center for a Smarter Electric Grid (ICSEG)},
+  title        = {IEEE 300-Bus System},
+  howpublished = {online},
+  note         = {Available online at \url{http://icseg.iti.illinois.edu/ieee-300-bus-system}},
+  owner        = {ICSEG},
+}
+
+@Book{eaton1997gnu,
+  title     = {Gnu octave},
+  publisher = {Network thoery London},
+  year      = {1997},
+  author    = {Eaton, John Wesley and Bateman, David and Hauberg, S{\o}ren},
+}
+
+@Article{zimmerman2011matpower,
+  author    = {Zimmerman, Ray Daniel and Murillo-S{\'a}nchez, Carlos Edmundo and Thomas, Robert John},
+  title     = {MATPOWER: Steady-state operations, planning, and analysis tools for power systems research and education},
+  journal   = {IEEE Transactions on power systems},
+  year      = {2011},
+  volume    = {26},
+  number    = {1},
+  pages     = {12--19},
+  publisher = {IEEE},
+}
+
+@Misc{Ill150,
+  author       = {Illinois Center for a Smarter Electric Grid (ICSEG)},
+  title        = {UIUC 150-Bus System},
+  howpublished = {online},
+  note         = {Available online at \url{http://icseg.iti.illinois.edu/synthetic-power-cases/uiuc-150-bus-system}},
+  owner        = {ICSEG},
+}
+
+@Misc{IEEE300,
+  author       = {Illinois Center for a Smarter Electric Grid (ICSEG)},
+  title        = {IEEE 300-Bus System},
+  howpublished = {online},
+  note         = {Available online at \url{http://icseg.iti.illinois.edu/ieee-300-bus-system/}},
+  owner        = {ICSEG},
+}
+
+@Misc{IEEE2000,
+  author       = {Illinois Center for a Smarter Electric Grid (ICSEG)},
+  title        = {Texas 2000-June 2016},
+  howpublished = {online},
+  note         = {Available online at \url{http://icseg.iti.illinois.edu/synthetic-power-cases/texas2000-june2016/}},
+  owner        = {ICSEG},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

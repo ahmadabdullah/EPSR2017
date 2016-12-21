@@ -1,0 +1,1536 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass elsarticle
+\begin_preamble
+ \usepackage{url}
+% specify here the journal
+\journal{ Electric Power Systems Research}
+
+% use this if you need line numbers
+%\usepackage{lineno}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-std
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout BeginFrontmatter
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keep this empty!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Zone 3 Distance Protection Misoperation: The Problem and a Literature Survey
+\end_layout
+
+\begin_layout Author
+A.M.
+\begin_inset space ~
+\end_inset
+
+Abdullah
+\begin_inset Flex CorAuthormark
+status open
+
+\begin_layout Plain Layout
+cor1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+rvt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Email
+ahmad.abdullah@ieee.org
+\end_layout
+
+\begin_layout Author
+K.
+\begin_inset space ~
+\end_inset
+
+Butler-Perry
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+focal
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size normal
+With 
+\series bold
+\size default
+
+\backslash
+fnref
+\series default
+\size normal
+ and you refer to the author footnotes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Email
+klbutler@tamu.edu
+\end_layout
+
+\begin_layout Corresponding author
+Corresponding author
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+cor1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Address
+Department of Electrical and Computer Engineering, Texas A&M University,
+ College Station, TX, 78738
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+rvt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Address
+Department of Electrical and Computer Engineering, Texas A&M University,
+ College Station, TX, 78738
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+focal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Abstract, should normally be not longer than 200 words.
+\end_layout
+
+\begin_layout Keywords
+Distance protection 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ blackouts 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ cascading events 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ misoperation
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keywords must be separated by 
+\series bold
+
+\backslash
+sep
+\series default
+.
+ 
+\series bold
+
+\backslash
+PACS
+\series default
+ and 
+\series bold
+
+\backslash
+MSC
+\series default
+ are optional classifications.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrontmatter
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keep this empty!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Use here the command 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+linenumbers 
+\end_layout
+
+\end_inset
+
+ and enable the package 
+\series bold
+lineno
+\series default
+ in the preamble if you need line numbers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+A & = & \prod_{i=1}^{\infty}B\nonumber \\
+ & = & C
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Theorem 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Theorem 2
+\end_layout
+
+\begin_layout Subsection
+Subsection
+\end_layout
+
+\begin_layout Enumerate
+test
+\end_layout
+
+\begin_layout Enumerate
+test
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To get another numbering scheme, you cannot use an option argument (a.k.a.
+ short title) as described in the elsarticle manual.
+ But you can use the following \SpecialChar TeX
+-code command to achieve the same:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+labelenumi}{(
+\backslash
+roman{enumi})} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+test
+\end_layout
+
+\begin_layout Enumerate
+test
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+labelenumi}{Step
+\backslash
+,
+\backslash
+alph{enumi})} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+test
+\end_layout
+
+\begin_layout Enumerate
+test
+\end_layout
+
+\begin_layout Subsubsection
+Subsubsection
+\end_layout
+
+\begin_layout Standard
+Bla, bla
+\end_layout
+
+\begin_layout Section
+Literature Survey 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Lit-Survey"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As shown above in the general formulation of the problem, a distance protection
+ system may not be able to differentiate between a heavy line load and a
+ fault if system is stressed enough to cause such confusion.
+ Several approaches have been devised to solve the problem.
+ The solutions proposed can be divided into two major paths: 
+\end_layout
+
+\begin_layout Itemize
+Detection and mitigation of cascading events in the planning stage 
+\end_layout
+
+\begin_layout Itemize
+Detection and mitigation of cascading events in real time operations
+\end_layout
+
+\begin_layout Standard
+In the planning stage, the power system operator has access to all relay
+ settings and system anticipated conditions ahead of time.
+ Using the loading conditions and system settings, distance protection misoperat
+ion can be anticipated and thus blocked before occurrence.
+ 
+\end_layout
+
+\begin_layout Standard
+In real time operations research path, the following research categories
+ have been offered:
+\end_layout
+
+\begin_layout Itemize
+Modification of existing distance protection system algorithms 
+\end_layout
+
+\begin_layout Itemize
+Proposition of new “unit protection” principles 
+\end_layout
+
+\begin_layout Itemize
+Proposition of wide area protection schemes
+\end_layout
+
+\begin_layout Standard
+The following subsections details each of these research paths and categories.
+ 
+\end_layout
+
+\begin_layout Subsection
+Detection and mitigation of cascading events in the planning stage
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Most Independent System Operators (ISOs) today use N-1 criterion to judge
+ whether the system is safe after the removal of one line in planning stage.
+ However, given that distance protection system misoperation is not triggered
+ until two or three line goes out of service 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liscouski2004,Kosterev1999,vandenberghe2004final"
+
+\end_inset
+
+, the distribution of power flow is hard to be taken into account in the
+ planning stage as it would mean performing N-2 and N-3 contingency analysis
+ which is expensive computationally.
+ Thus it is increasingly hard to assess protection system capability under
+ the most stressful system conditions.
+ In a stressful system condition, distance protection system may not be
+ able distinguish between a fault and a heavy load on the line 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Horowitz2006"
+
+\end_inset
+
+ causing it to trip a healthy line in its third zone of protection.
+ When such confusion arises, relays are designed to trip the line within
+ ninety cycles 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Horowitz2006"
+
+\end_inset
+
+.
+ If this trip is false (relay misoperation) a series of cascading events
+ commences and a blackout follows within seconds.
+ The original philosophy of tripping a line (secure tripping) was developed
+ decades ago when engineers felt that removal of a line should not cause
+ system trouble since, back in the old days, system was not operated near
+ the failure threshold.
+ With that being said, after the 2003 blackout NERC provisions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NERC2003"
+
+\end_inset
+
+ mandate that distance relays should not operate under the most severe system
+ condition.
+ Since it is hard to assess distance protection system operation in the
+ third zone, utilities responded by disabling third zone protection  altogether.
+ This effectively shortened the reach of the relays which would mean that
+ with certain line outages, some lines may not be provided by a backup protectio
+n.
+ It could be perceived as well that since the third zone is used for providing
+ backup protection for adjacent lines, disabling this zone is advisable
+ only if another backup protection scheme is further explained in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Horowitz2006"
+
+\end_inset
+
+.
+ However, providing another a separate hardware set for backup protection
+ comes with its associated economic costs.
+ 
+\end_layout
+
+\begin_layout Standard
+Even though blackouts have hit North American and Europe and most of the
+ world in the last century, the blackout of 2003 was detrimental in making
+ the scientific community produce much literature about the subject, partly
+ because the consequences its events had and how its events unfold.
+ In the same year of 2003, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Carreras"
+
+\end_inset
+
+ was published to pinpoint which lines can cause the system to drift to
+ a blackout.
+ The idea in the paper is that a probability function is defined that can
+ be used in the planning stage to measure the failure probability of the
+ system after certain number of lines are taken out of service sequentially.
+ The system operator can issue a warning message in real time operations
+ in case of the scenarios attained in the planning stage occur during operations.
+ The author also showed that the probability is heavily dependent on the
+ system dynamics and the operating point.
+ The authors noted that the system behavior resemble the one with self-organized
+ criticality, a concept that the authors explored in more detail in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Carreras2004,Nedic2006"
+
+\end_inset
+
+.
+ The model along with its own parameters has been developed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Carrerasa,Dobson"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Since line heavy loading has been the reason for major blackouts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pourbeik2006"
+
+\end_inset
+
+, many authors have devoted considerable effort to studying these types
+ of blackouts.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bao2009"
+
+\end_inset
+
+, the authors define an entropy quantity that can be shown by simulations
+ that the system is about the brink of collapse.
+ A drawback of this approach is that it depends on the DC power flow whence
+ the AC power flow should be used when the system is very stressed.
+ Running an AC power flow in the planning stage requires more computational
+ power.
+ Mitigation of cascading events in the planning stage is further explored
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Song2007"
+
+\end_inset
+
+, where the emphasis is on early detection of cascading events.
+ The authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Song2007"
+
+\end_inset
+
+ are proposing certain indices that can quite accurately gauge the severity
+ of system conditions and the likelihood of cascades.
+ An index that is used to monitor distance relays is also proposed.
+ However, in practice only N-1 contingencies are studied and thus the severity
+ index is chosen based on that case.
+ However, if the system enters N-2 or N-3 contingencies, tuning of the “severity
+” threshold will be a difficult task computationally.
+ 
+\end_layout
+
+\begin_layout Standard
+The authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pahwa"
+
+\end_inset
+
+ proposes three solutions in the situation when the operator finds in the
+ planning stage that it will be necessary to relieve a load from an overloaded
+ line.
+ The authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diao"
+
+\end_inset
+
+ proposed that controlled islanding be made to prevent overall system collapse.
+ The authors train a decision tree with certain operating conditions to
+ obtain the best islanding possible.
+ This process needs to be done under N-1 contingency analysis.
+ A drawback of this method is the fact that the tree highly depends on the
+ operating system conditions and the load pattern.
+ A similar approach has been provided in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rigatos2009"
+
+\end_inset
+
+ where a neural network is used instead of a decision tree.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+In summary, the authors in this section proposed new methods to mitigate
+ and prevent cascading events due to distance protection system misoperation
+ in case they are discovered in the planning stage.
+ However, N-1 contingency criterion is used for planning stage and cascading
+ events due to distance protection misoperation had historically occurred
+ after N-2 and N-3 contingencies which makes discovering them in the planning
+ stage a computationally challenging task due to the large search to identify
+ line outages needed to pinpoint distance protection system misoperation
+ and line overloads.
+\end_layout
+
+\begin_layout Subsection
+Detection and mitigation of cascading events in real time operations
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Detection-and-mitigation-of-cascading-events-in-real-time-operations"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, research had followed three paths: 
+\end_layout
+
+\begin_layout Enumerate
+Modification of existing distance protection system algorithms 
+\end_layout
+
+\begin_layout Enumerate
+Proposition of new transmission line protection principles
+\end_layout
+
+\begin_layout Enumerate
+Proposition of wide area protection schemes
+\end_layout
+
+\begin_layout Standard
+The sections below provide an overview for each path.
+\end_layout
+
+\begin_layout Subsubsection
+Modification of existing distance protection algorithms
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Modification-of-existing-distance-relay-algorithms"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With zone 3 misoperation causing the 2003 blackout, several ideas have been
+ proposed to mitigate and eliminate zone 3 misoperation.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jonsson2003"
+
+\end_inset
+
+ the rate of change of voltage is used as a trip restraint to prevent distance
+ protection misoperation in the real time.
+ However, for the trip command to be safe, large amount of offline simulations
+ need to be carried out to know the worst case rate of change of voltage.
+ Additionally, given that zone 3 are activated within 90 cycles, changes
+ to zone-3 time may be needed to fully detect the zone-3 misoperation with
+ this method which means that checking co-ordination with nearby distance
+ protection systems need to be done as well.
+ Since it is hard to distinguish between evolving pre-blackout event and
+ short circuit conditions using magnitude of voltage, the rate of change
+ of current as well has been used along with the rate of voltage as trip
+ restraint in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sharifzadeh2014"
+
+\end_inset
+
+.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kundu2014"
+
+\end_inset
+
+ synchrophasors are proposed to supervise zone-3 operation which result
+ in a very robust zone-3 distance protection system.
+ However, to fully take advantage of the method, strategically located PMU
+ have to exist in the system which add more complexity to the system.
+ Local measurements only are used in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nayak2015"
+
+\end_inset
+
+ to achieve zone-3 tripping.
+ The drawback of this method is that the fault must have significant decaying
+ DC component which makes it challenging for certain fault incipient angles.
+ Additionally, the paper assumes the angle between the current and the voltage
+ at the relay to be more than 50 degrees as a fault indicator.
+ However, it has been pointed out in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Horowitz2006"
+
+\end_inset
+
+ that under stressed system condition that angle may indeed exceed that
+ degree with no fault on the system.
+ Several other research ideas have been proposed 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nikolaidis2016,Liu2015,Nikolaidis"
+
+\end_inset
+
+.
+ All these ideas are based on selecting a fourth zone such that it gives
+ the distance protection system alarm when the operating conditions is about
+ to enter the third zone.
+ However, all of them are impeded by the fact that threshold selection highly
+ depends on the system configuration and operating conditions.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Garlapati2013"
+
+\end_inset
+
+, a non-intrusive agent to supervise zone 3 relay is proposed.
+ In this scheme, agents installed at each relay are used to aid zone 3 relays.
+ Since the agent in non-intrusive, it only aids the protection without enforcing
+ a decision.
+ A drawback of this approach is the need for agents that are disturbed in
+ the system which need to communicate with each other which require high
+ communication bandwidth.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+In summary, valuable research has been performed to modify existing zone
+ 3 distance protection logic.
+ However, most of the proposed modifications are based on experience with
+ previous zone 3 misoperation occurrences such as the 2003 blackout.
+ It is thus not entirely clear whether these methods will be able to prevent
+ future distance protection misoperation if other system wide cascading
+ conditions are encountered.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Proposition of new transmission line protection principles 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Proposition-of-new-unit-protection-relaying-principles"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When it comes to new single unit protection schemes, traveling wave based
+ fault detection and location has been proposed 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dommel1987"
+
+\end_inset
+
+.
+ A traveling waves based protection technique using wavelets and principal
+ component analysis is given in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jafarian2010"
+
+\end_inset
+
+, where a principal component analysis is used to identify dominant patterns
+ of the voltage and current signal which is preprocessed by wavelet transforms.
+ The proposed algorithm uses the polarity, magnitude and time interval to
+ propose discrimination criteria for protection.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lopes,Lopes2013"
+
+\end_inset
+
+, Parks transformation is used to transform both traveling waves of voltages
+ or currents at one end of the line.
+ After that a rotation frame establishes whether the waveforms are due to
+ a fault or not.
+ The system is in steady state with no fault if the rotation frame measured
+ is balanced and rotating with zero rotational speed to the predefined ABC
+ frame.
+ However, when a fault occurs, the measured rotation frame is different
+ than the predefined ABC frame rotation causing the fault to be detected.
+ In this method, it not quite possible to tell whether the fault is from
+ the faulted line or due another line since the rotation is used a fault
+ discriminant.
+ 
+\end_layout
+
+\begin_layout Standard
+Fault generated waveforms varies with time and frequency 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shang"
+
+\end_inset
+
+, so neither pure time nor pure frequency methods are suitable for such
+ transient signals.
+ The unique features of wavelets make them very suitable to capture specific
+ period of time without analyzing other parts of the signal which is very
+ different from Fourier analysis.
+ Wavelet transform transfer the time domain function to time scaling function
+ at different set of frequencies 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Daubechies1990"
+
+\end_inset
+
+.
+ This makes wavelets very suitable for various functions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Robertson1996,Ibrahim2002,Gaouda2002,Gaouda2000,Santoso1996,Poisson2000,Moreno"
+
+\end_inset
+
+ in power systems using deterministic and probabilistic approaches.
+ 
+\end_layout
+
+\begin_layout Standard
+The approach given in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Magnago1998"
+
+\end_inset
+
+ transforms the signals from the a-b-c frame into the modal form then applies
+ the wavelet transform to the resulting voltage and current signals to detect
+ the fault.
+ However, the paper uses the energy of the transformed signals which is
+ likely to be confused for faults on adjacent lines.
+ Since there seems no relation between the energy contained in the wavelets
+ and the associated transient phenomena, as the energy depends on the width
+ of the window frame, various neural network papers have been devised to
+ attack this problem.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jafarian2013"
+
+\end_inset
+
+, a high frequency transient based protection using support vector machines
+ is given where appropriate line traps are installed at the terminals of
+ the line and support vector machines are used to classify internal and
+ external faults based on the frequency spectrum of the current signals.
+ An adaptive wavelets based on Bayesian linear discrimination is given in
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Perez2011"
+
+\end_inset
+
+.
+ Only current measurement is used and is applied to windows shorter than
+ one fourth of a cycle.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yadav2015"
+
+\end_inset
+
+, a single ended algorithm for fault detection and classification of faults
+ on double circuit lines have been proposed.
+ The algorithm uses both voltages and currents at a single end of the line
+ to detect and classify faults.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Saravanababu"
+
+\end_inset
+
+ three phase currents are used to detect and classify faults.
+ A single stage DWT is performed with DB6 and the wavelets coefficients
+ are then extracted for a windows of 0.25 seconds.
+ The first coefficient to be extracted is then compared against a predetermined
+ threshold which if exceeded a fault is declared.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "He2014"
+
+\end_inset
+
+, time domain features as well as frequency domain features are both extracted
+ for one quarter of a cycle to train a rough membership neural network.
+ A drawback of this approach is the massive amount of preprocessing that
+ is needed to detect and classify faults.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2014"
+
+\end_inset
+
+ Tsallis Entropy is used instead of the traditional Shannon entropy approach
+ to detect and classify faults.
+ It is shown in this paper that Tsallis Entropy gives better classification
+ accuracy than traditionally entropy based methods.
+ Additionally, it is shown that using Tsallis entropy makes it easier to
+ select the threshold for fault detection.
+ The authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Probert"
+
+\end_inset
+
+ are using wavelets to detect and classify high frequency transients as
+ frequencies map to different wavelet components.
+ Wavelet packets are used in [56] to detect and locate faults.
+ Simply put, the paper uses packets to decompose and reconstruct high frequency
+ signals generated by the fault, then the energy of the packets are compared
+ to a threshold to detect faults.
+ A directional ultra-fast protection based on wavelets is given in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Duan"
+
+\end_inset
+
+.
+ The wavelet transform spectrum energy is introduced to represent the energy
+ of the high frequency components of the two components.
+ These components are derived from the forward and traveling waves of the
+ fault voltage and current.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Feng"
+
+\end_inset
+
+ gives an algorithm for distance protection using wavelets.
+ The algorithm is wavelet counterpart of the DFT (discrete Fourier transform)
+ used in modern day distance relays.
+ However, the author does not say how his algorithm will prevent distance
+ protection misoperation since after all it still uses impedance as an indicator
+ for fault detection.
+ 
+\end_layout
+
+\begin_layout Standard
+The use of artificial neural networks for fault classification and detection
+ has been given in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dalstein1995,Kezunovic1995a,Oleskovicz2001"
+
+\end_inset
+
+ where voltage and current samples are fed directly to the ANN for fault
+ detection and classification on the protected line.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kezunovic1995a"
+
+\end_inset
+
+ samples of voltages and currents are used as a feature vector to train
+ ANN.
+ With the advent of wavelets, special wavelets transforms are applied to
+ voltage and current waveforms before they are fed to the ANN for training
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Martin2003,Zwe-Lee2004"
+
+\end_inset
+
+.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Martin2003"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zwe-Lee2004"
+
+\end_inset
+
+, DWT is applied to voltage and current signals at a relay location resulting
+ in series of details coefficients that are fed to the ANN for fault detection
+ and type classification.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Silva2006"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mao2001"
+
+\end_inset
+
+, DWT is applied to voltages and currents but instead of feeding the details
+ coefficients to the ANN, entropy (energy) of the signal is captured and
+ fed instead to the ANN to make fault type classification between faults
+ on the same transmission line.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Perera2011"
+
+\end_inset
+
+ the energy of certain current levels and approximations is used to train
+ a probabilistic classifier, and using this energy feature a decision is
+ made whether a transient signal if due to a fault or non-fault condition
+ on a line.
+ An expert system based neural network is proposed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dasgupta2012"
+
+\end_inset
+
+ where entropy database is used for fault detection and classification.
+ Since the parameters of transmission lines in reality varies stochastically
+ in a specific range, the authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SouzaGomes2013"
+
+\end_inset
+
+ studied the effect of this stochastic nature of line parameters in deep
+ detail.
+ With the introduction of renewable energy, hybrid lines is starting to
+ proliferate in the transmission system, namely lines that have both underground
+ cables sections and overhead sections connected together.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Livani2014"
+
+\end_inset
+
+, an SVM based approach uses the first level of DWT voltage coefficients
+ to detect and classify faults on these hybrid lines.
+ A detailed look at literature reveals that very few attempts have been
+ done to harness the power of the wavelets details coefficients alone and
+ understand their underlying structure.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+The following shortcomings are observed when it comes to the application
+ of DWT to fault detection: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+All methods except the one in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Perera2011"
+
+\end_inset
+
+ uses voltages for classification.
+ CVT attenuates all high frequencies beyond 200 Hz effectively making the
+ voltage signal unusable
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+All methods use the energy for fault detection and the wavelets coefficients
+ are rarely used 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Transients on nearby lines are ignored which can mislead the schemes 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Transposition is a universal assumption even though it does not exist in
+ real power systems 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Typical response time is 1/4th of a cycle which is the same as phasor estimation
+ methods 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Reliability and security of the proposed schemes are rarely studied
+\end_layout
+
+\begin_layout Subsubsection
+Wide area protection schemes
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:3.2.3-Wide-area-protection-schemes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 2003 blackouts pointed out the importance of having events along with
+ the time they occurred.
+ Investigators spent much of their time trying to match up the waveforms
+ to reconstruct the sequence of events that led to the blackout.
+ It was then apparent that to facilitate the transfer and comparison of
+ waveforms, all samples need to have a time stamp for this purpose.
+ Phasor Measurement Unit (PMU) or synchrophasor technology were then developed
+ to address this shortcoming.
+ By the time of 2003 blackout, state estimation was a very mature field,
+ but PMUs opened new areas for the application of state estimation by reducing
+ the time needed to do state estimation due to the wide spread deployment
+ in the transmission network.
+ A PMU measures the positive sequence voltage and current (magnitude and
+ angles), which opens new areas for adaptive relaying and wide area control
+ and protection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Papic"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In conventional protection schemes, the relay is only applied to the transmissio
+n line protected much like distance relaying.
+ However, in a wide area protection scheme, a complete area can be protected
+ using selected PMU devices without the need to apply PMUs to each single
+ bus in the system.
+ 
+\end_layout
+
+\begin_layout Standard
+Due to the fact that zone 3 of distance relays may not be able differentiate
+ between heavy line load and an actual fault on the system, the authors
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lim2008"
+
+\end_inset
+
+ proposed that a tool is to be installed at the control center – also known
+ as Independent System Operator (ISO)- to continuously supervise the operation
+ of zone-3 relays.
+ Even though this solution might be able to prevent all zone-3 misoperations,
+ but it needs considerable cost to construct the communication infrastructure
+ that is needed to transmit the data from all distance relays in the system
+ to the system operator.
+ 
+\end_layout
+
+\begin_layout Standard
+With the introduction of PMUs, several fault detection and locations methods
+ have been proposed 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al-Mohammed2014a,Joe-Air2000,Ying-Hong2004,MuneshwarNewAdaptive,Neyestanaki2015,Salehi-Dobakhshari2014,Zare2015,Li2013"
+
+\end_inset
+
+.
+ The essential feature of all PMU detection schemes is that using the communicat
+ion links to transfer data between the two ends of the lines, several conclusion
+s can be drawn regarding whether the line is undergoing abnormal conditions.
+ A salient feature of the PMU algorithm is the ability to monitor the status
+ of the line and compute the parameters of the lines online in a very accurate
+ way.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Al-Mohammed2014a"
+
+\end_inset
+
+, PMUs at both ends of the line are used to locate fault in any series compensat
+ion lines without the need to know the model of the series compensation
+ devices.
+ The method estimates the line parameters from the PMU measurements without
+ the need to know any information regarding the line in advance.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Joe-Air2000"
+
+\end_inset
+
+, PMUs are used to detect and locate faults in symmetrical lines.
+ Clarke transformation is used to estimate the line parameters in real time
+ and fault detection is based on predefined metric.
+ That calculated metric is the fault distance.
+ If the fault distance is measured to be more than zero, then fault is declared
+ and line is opened.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ying-Hong2004"
+
+\end_inset
+
+ the effect of arc on the method proposed has been examined.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Neyestanaki2015"
+
+\end_inset
+
+ limited number of PMUs are used to determine the faulted line as well as
+ the location of the fault.
+ An optimization approach is used to locate a set of PMUs such that the
+ observability is independent of the generator models.
+ A backup protection zone is then constructed using the lines and buses
+ between each PMU such that a line in not included in two regions.
+ The sum of zero and positive sequence currents are used as discriminant
+ for fault detection and location.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Eissa2010"
+
+\end_inset
+
+, a backup wide area protection scheme is proposed.
+ In this scheme, the absolute difference of the bus angles and currents
+ are used to detect the fault.
+ The minimum voltage magnitude establishes the closest bus to the fault
+ and the maximum current angle difference between the buses establishes
+ the faulted lines.
+ However, for the method to work, the minimum voltage threshold has to be
+ established.
+ It is shown in the paper that a voltage threshold less than 0.95 means that
+ there is a fault on a system.
+ This immediately points out that in case of voltage instability conditions,
+ the method can operate erroneously.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2002"
+
+\end_inset
+
+, an adaptive method to protect parallel transmissions line is proposed.
+ The method uses both current and voltages from both ends of the line to
+ locate and detect faults.
+ A fault distance index is first defined.
+ This fault distance index uses samples of voltages and currents at both
+ ends which are substituted in this fault index.
+ If the fault index deviates from zero, then the fault is declared.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "He2011"
+
+\end_inset
+
+, a wide area protection scheme is proposed.
+ The measured voltage and current of one terminal of the line are used to
+ estimate the voltages at the other end.
+ If an internal fault on the line being monitored exists, then the estimated
+ value will be different form the measured value at that bus.
+ This discrepancy causes the fault to be detected.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nayak2014"
+
+\end_inset
+
+, a wide area fault detection method on series compensated lines are proposed.
+ The closest bus to the fault is selected based on a predetermined magnitude
+ threshold much like is done in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Eissa2010"
+
+\end_inset
+
+.
+ Then the cosine of the angle between the sequence voltages and currents
+ are then used to establish a criterion to detect and locate the faulted
+ line.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+In summary, even though PMUs did not find wide acceptance in the industry
+ for transmission line protection due to the high communication bandwidth
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zare2015"
+
+\end_inset
+
+ requirement of the communication links, PMU assisted wide area measurement
+ and protection schemes have been proved to be very useful in the industry
+ for implementing special protection schemes.
+ A survey 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RN85"
+
+\end_inset
+
+ in industry show that all ISO and utilities use one type or another of
+ WAMPs systems.
+ All the literature reviewed in this section suffer from the fact that for
+ the scheme to work properly, system has to be completely observable which
+ puts stringent demands on the communication requirements.
+ 
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Appendix name
+\end_layout
+
+\begin_layout Standard
+Appendix, only when needed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "References_used_in_proposal"
+options "bibtotoc,elsarticle-harv"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
