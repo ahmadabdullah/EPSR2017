@@ -1832,10 +1832,9 @@ key "Nayak2015"
 
  to assist zone-3 tripping.
  The DC decaying component and the load angle are used to determine whether
- a fault has occurred within the reach of local distance relay.
+ a fault has occurred on the protected transmission line.
  The drawback of this method is that the fault must have significant decaying
- DC component which makes it challenging for certain fault incipient angles
- and transmission line lengths.
+ DC component which makes it challenging for certain fault incipient angles.
  Additionally, the paper assumes the angle between the current and the voltage
  at the relay to be more than 50 degrees as a fault indicator.
  However, it has been pointed out in 
@@ -1845,8 +1844,8 @@ key "Horowitz2006"
 
 \end_inset
 
- that under stressed system conditions the angle may indeed exceed that
- thresholds with no fault on the system.
+ that under stressed system condition that angle may indeed exceed that
+ degree with no fault on the system.
  In 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1883,7 +1882,7 @@ key "Feng2004"
  gives an algorithm for distance protection using wavelets.
  The algorithm is wavelet counterpart of the DFT (discrete Fourier transform)
  used in modern day distance relays.
- However, the paper does not point out how his algorithm will prevent distance
+ However, the author does not say how his algorithm will prevent distance
  protection misoperation since after all it still uses impedance as an indicator
  for fault detection.
  
@@ -2012,7 +2011,7 @@ key "Kezunovic1995a"
 
  samples of voltages and currents are used as a feature vector to train
  ANN.
- With the advent of wavelets, special wavelet transforms are applied to
+ With the advent of wavelets, special wavelets transforms are applied to
  voltage and current waveforms before they are fed to the ANN for training
  
 \begin_inset CommandInset citation
@@ -2160,14 +2159,8 @@ key "Perera2011"
 \end_inset
 
  uses voltages for classification.
- It is known that CVT attenuates all high frequencies beyond 200 Hz 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "hou1996capacitive"
-
-\end_inset
-
-effectively making the voltage signal unusable
+ It is known that CVT attenuates all high frequencies beyond 200 Hz effectively
+ making the voltage signal unusable
 \end_layout
 
 \begin_layout Itemize

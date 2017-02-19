@@ -70,7 +70,7 @@ theorems-std
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 0
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
@@ -106,8 +106,7 @@ Keep this empty!
 \end_layout
 
 \begin_layout Title
-Distance Protection Zone 3 Misoperation During System Wide Cascading Events:
- The Problem and a Survey of Solutions
+Distance Protection Zone 3 Misoperation: The Problem and a Survey of Solutions
 \end_layout
 
 \begin_layout Author
@@ -316,7 +315,7 @@ With the deregulated market structure in the United States and Europe, grid
  operators are under more pressure to reap more profits of existing infrastructu
 re due to increased competition.
  The grid is thus increasingly operated near the threshold of stability.
- Failure of the grid, better known as blackouts, carries catastrophic economic
+ Failure of the grid - better known as blackouts- carries catastrophic economic
  and societal sequences.
  Large blackouts tend to be due to either extreme natural events such as
  hurricanes or a series of events called cascading failures 
@@ -431,15 +430,16 @@ key "NERCMisoperation"
  However, in this proposal the word misoperation will be used exclusively
  to mean only one of them, namely, an operation in which a protection system
  trips a healthy line when no fault exists.
- Notable cascading events 
+ The notable cascading events begin with a line that has been cleared due
+ to an actual fault such as the ones in 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Yamashita,Novosel2004"
 
 \end_inset
 
- begin with lines that were tripped due to actual faults.
- The tripping of those faulty line causes the current flowing in those lines
+.
+ The tripping of those faulty line causes the current flowing in that line
  to be redistributed to adjacent lines.
  Those lines may be overloaded and thus tripped incorrectly -protection
  misoperation- which will trigger a sequence of cascading events that might
@@ -474,14 +474,14 @@ n principle is not able to be selective in some regions of its operation.
 \end_layout
 
 \begin_layout Standard
-The paper is organized as follows: Section 
+The paper is organized as follows: 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand formatted
 reference "sec:Typical-Distance-Protection"
 
 \end_inset
 
- provides a sample distance relay that is set according to NERC standards.
+ provide a sample distance relay that is set according to NERC standards.
  Once this relay is set according to NERC directives, it will be explained
  in the same section that the relay may still misoperate.
  The remaining sections survey literature for possible solutions for the
@@ -529,7 +529,7 @@ key "Liscouski2004"
 
 \end_inset
 
- or due to lines out of service for maintenance causing one line to carry
+or due to lines out of service for maintenance causing one line to carry
  substantial system power transfer as in the 2015 Turkish blackout 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -537,14 +537,21 @@ key "2015Turkish"
 
 \end_inset
 
- or due to any unforeseen reasons.
+or due to any unforeseen reasons.
  
 \end_layout
 
 \begin_layout Standard
 To illustrate that this confusion is not tied up with a certain system condition
  but rather inherent insecurity in the distance protection principle, the
- single line diagram shown in 
+ single line diagram taken from 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horowitz2006"
+
+\end_inset
+
+ and shown in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:System-Configuration-for-formulating-problem"
@@ -553,7 +560,7 @@ reference "fig:System-Configuration-for-formulating-problem"
 
  is used to formulate the problem in general terms.
  It will be shown below that this insecurity always exists and the degraded
- system conditions only excite it; that is, for some regions in the impedance
+ system conditions only excites it; that is, for some regions in the impedance
  protection zone the protection system is not able to be selective between
  a fault and non-fault condition.
  Without the degraded system conditions, it is highly unlikely that a distance
@@ -564,8 +571,8 @@ reference "fig:System-Configuration-for-formulating-problem"
  It is important to keep in mind that distance protection systems are set
  locally with the help of the impedance of adjacent lines without any informatio
 n about the system load until the coordination study phase.
- In the coordination study phase, the transmission line owner checks all
- settings against applicable standards.
+ In the coordination study phase, the Transmission System Operator (TSO)
+ checks all settings against applicable standards.
  This is explained in detail in 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -586,11 +593,11 @@ reference "fig:System-Configuration-for-formulating-problem"
 
 \end_inset
 
-, the distance protection relay that will be studied is the relay at point
+, the distance protection system that will be studied is the system at point
  A of line A-C.
- Line A-C is connected to three (3) lines, namely C-M, C-N and C-P.
- The number of lines connected to line A-C will not affect zone1 or zone
- 2 settings but will affect zone 3 settings.
+ Line A-C is connected to four (4) lines, namely B-C, C-M, C-N and C-P.
+ The number of lines connected to line A-C will not affect Zone1 or Zone
+ 2 settings but will affect Zone 3 settings.
  As will be seen below, the more lines connected to line A-C, tripping in
  Zone 3 becomes more insecure.
  To simplify the analysis, all lines are assumed to have the same impedance
@@ -599,18 +606,18 @@ reference "fig:System-Configuration-for-formulating-problem"
  the generality of the problem formulation.
  The impedance and the rating of the lines are taken from 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "NERC2003"
 
 \end_inset
 
 .
- The setting of zone 1 is assumed to be 0.85 of the line impedance.
- Zone 2 is assumed to be 1.2 of the line impedance.
+ The settings of zone 1 is assumed to be 0.85 of line impedance.
+ Zone 2 is assumed to be 1.2 of the first zone.
  However, some consideration is needed to set up the third zone.
  The third zone has to be set such that it can protect the longest adjacent
  line (assumed to be line C-P in this case) and to protect 20% beyond that
- line to provide backup to the remote circuit breakers .
+ line.
  In case of a bolted three phase fault on line C-P and assuming that the
  short circuit contributions of all buses is given in 
 \begin_inset CommandInset ref
@@ -630,7 +637,7 @@ reference "fig:System-Configuration-for-formulating-problem"
  is the bus name (being M , N, A or P), the voltage at distance protection
  system at A can be written as given in equation 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:VoltageAtRelat"
 
 \end_inset
@@ -646,7 +653,6 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename SysExample.PNG
-	scale 80
 
 \end_inset
 
@@ -657,7 +663,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\series bold
 System Configuration for formulating the problem
+\series default
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:System-Configuration-for-formulating-problem"
@@ -699,9 +709,10 @@ V_{A}=I_{A}\times Z_{A}+Z_{P}\times\left(I_{M}+I_{A}+I_{N}\right)\label{eq:Volta
 \end_layout
 
 \begin_layout Standard
-The impedance that is seen by the relay A can then be written as in 
+The impedance that is seen by the relay A can then be written as in equation
+ 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:ApparentImpedanceAtRelay"
 
 \end_inset
@@ -721,8 +732,9 @@ Z_{R}=\frac{V_{A}}{I_{A}}=Z_{A}+Z_{P}\left(1+\frac{I_{M}+I_{N}}{I_{A}}\right)\la
 \end_layout
 
 \begin_layout Standard
+Equation 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand eqref
 reference "eq:ApparentImpedanceAtRelay"
 
 \end_inset
@@ -746,7 +758,7 @@ reference "eq:ApparentImpedanceAtRelay"
 .
  Using the data in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "NERC2003"
 
 \end_inset
@@ -776,7 +788,6 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename impedance form.PNG
-	scale 80
 
 \end_inset
 
@@ -784,6 +795,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\series bold
 \begin_inset Argument 1
 status open
 
@@ -794,8 +807,6 @@ Distance protection characteristic
 \end_inset
 
 Distance protection characteristic 
-\series bold
-
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Distance-Relay-characteristic"
@@ -823,7 +834,7 @@ After setting up the relay locally, engineers need to apply applicable standards
  The most notable directive is the load encroachment.
  The load encroachment zone is an area of the protection zone in which the
  load impedance “ encroaches” –intrudes- upon the fault impedance.
- Load encroachment will obviously cause misoperation and should be removed
+ Load encroachment will obviously causes misoperation and should be removed
  from the zone of protection.
  To plot the load encroachment zone according to NERC directives 
 \begin_inset CommandInset citation
@@ -919,11 +930,11 @@ reference "fig:Distance-Relay-characteristic"
 \end_inset
 
 , this fault resistance ranges from 
-\begin_inset Formula $30\varOmega$
+\begin_inset Formula $40\varOmega$
 \end_inset
 
  to 
-\begin_inset Formula $90\varOmega$
+\begin_inset Formula $110\varOmega$
 \end_inset
 
 .
@@ -948,7 +959,7 @@ n is nonexistence and the green area can be removed from zone 3 without
  However, fault resistance along the route of the transmission line is not
  known in advance.
  Also, one should note that solid state and electromagnetical relays can
- not be programmed, only microprocessor relays can.
+ NOT be programmed, only microprocessor relays can.
  This really means that older relays will have to comply with NERC standards
  by disabling zone 3 altogether.
  It is shown in 
@@ -959,7 +970,7 @@ key "Horowitz2006"
 \end_inset
 
  that disabling zone 3 in some cases will force protection engineers to
- provide back up protection solutions to remote circuit breakers.
+ provide back up protection solutions to remote systems.
  This might involve a considerable cost.
  Additionally, not all countries around the world have standards as strict
  as NERC, so the green area 
@@ -975,7 +986,7 @@ URI,
  under stressed system conditions as Phadke and Horowitz pointed out in
  their paper 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Horowitz2006"
 
 \end_inset
@@ -1003,7 +1014,7 @@ on.
 \series bold
 URI
 \series default
- will exist due to the load profile under stressed conditions.
+ will exist due to the load profile under stressed condition.
  Additionally, the fault contribution of the transmission lines will only
  affect the diameter 
 \series bold
@@ -1035,37 +1046,37 @@ reference "fig:Distance-Relay-characteristic"
 
  is given explicitly in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "RN14"
 
 \end_inset
 
 , however the one given here is more general.
- Lastly, to derive 
+ Lastly, to derive equation (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:VoltageAtRelat"
 
 \end_inset
 
- and 
+) and equation (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:ApparentImpedanceAtRelay"
 
 \end_inset
 
-, a three phase fault has been assumed.
+), a three phase fault has been assumed.
  Nevertheless, if a single line to ground fault occurs then the positive
  sequence impedance seen by the distance protection system will still be
- given by 
+ given by equation (
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:ApparentImpedanceAtRelay"
 
 \end_inset
 
-.
+).
  
 \end_layout
 
@@ -1085,8 +1096,8 @@ It should be apparent from the description above that the major issue that
  flow under system wide cascading failures changes considerably from the
  planned power flow.
  In other words, the load encroachment zone has to be set for system wide
- cascading scenarios that is not known in advance, which is close to impossible
- undertaking.
+ cascading scenarios that is not known in advance, which is impossible undertaki
+ng.
  One of the authors 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1119,7 +1130,7 @@ The next few sections survey the literature for possible solutions for this
 \end_layout
 
 \begin_layout Section
-Survey of Solutions 
+Literature Survey 
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Lit-Survey"
@@ -1134,7 +1145,7 @@ As shown above in the general formulation of the problem, a distance protection
  system may not be able to differentiate between a heavy line load and a
  fault if system is stressed enough to cause such confusion.
  Several approaches have been devised to solve the problem.
- The solutions proposed can be divided into two major categories: 
+ The solutions proposed can be divided into two major paths: 
 \end_layout
 
 \begin_layout Itemize
@@ -1148,8 +1159,8 @@ Detection and mitigation of cascading events in real time operations
 \begin_layout Standard
 In the planning stage, the power system operator has access to all relay
  settings and system anticipated conditions ahead of time.
- Using the forecasted load conditions and system settings, distance protection
- misoperation can be anticipated and thus blocked before occurrence.
+ Using the loading conditions and system settings, distance protection misoperat
+ion can be anticipated and thus blocked before occurrence.
  
 \end_layout
 
@@ -1173,7 +1184,7 @@ The following subsections details each of these research paths and categories.
 \end_layout
 
 \begin_layout Subsection
-Detection and mitigation of zone 3 misoperation in the planning stage
+Detection of Zone 3 in planning stage
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
@@ -1188,9 +1199,9 @@ Most Independent System Operators (ISOs) today use N-1 criterion to judge
  whether the system is secure after the removal of one line in planning
  stage.
  However, given that distance protection system misoperation is not triggered
- until two or three lines go out of service 
+ until two or three line goes out of service 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Liscouski2004,Kosterev1999,vandenberghe2004final"
 
 \end_inset
@@ -1203,16 +1214,6 @@ key "Liscouski2004,Kosterev1999,vandenberghe2004final"
 
 \shape slanted
  
-\shape default
-However, the authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "li2007operation,li2008sensitivity"
-
-\end_inset
-
- provided an efficient method to study the sensitivity of zone 3 under various
- operating conditions.
 \end_layout
 
 \begin_layout Standard
@@ -1222,7 +1223,7 @@ Even though blackouts have hit North American and Europe and most of the
  because the consequences its events had and how its events unfold.
  In the same year of 2003, 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Carreras"
 
 \end_inset
@@ -1231,7 +1232,7 @@ key "Carreras"
  a blackout.
  The idea in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Carreras"
 
 \end_inset
@@ -1240,13 +1241,13 @@ key "Carreras"
  stage to measure the failure probability of the system after certain number
  of lines are taken out of service sequentially.
  The system operator can issue a warning message in real time operations
- in case the scenarios identified in the planning stage occur during operations.
+ in case the scenarios identifed in the planning stage occur during operations.
  The authors also showed that the probability is heavily dependent on the
  system dynamics and the operating point.
  The authors noted that the system behavior resemble the one with self-organized
  criticality, a concept that the authors explored in more detail in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Carreras2004,Nedic2006"
 
 \end_inset
@@ -1254,7 +1255,7 @@ key "Carreras2004,Nedic2006"
 .
  The model along with its own parameters has been developed in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Carrerasa,Dobson"
 
 \end_inset
@@ -1275,7 +1276,7 @@ key "Pourbeik2006"
  of blackouts.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Bao2009"
 
 \end_inset
@@ -1287,10 +1288,10 @@ key "Bao2009"
  conditions.
  Running an AC power flow in the planning stage requires more computational
  power.
- Mitigation of cascading events that lead to distance protection zone 3
- misoperation in the planning stage is further explored in 
+ Mitigation of cascading events in the planning stage is further explored
+ in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Song2007"
 
 \end_inset
@@ -1298,7 +1299,7 @@ key "Song2007"
 , where the emphasis is on early detection of cascading events.
  The authors in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Song2007"
 
 \end_inset
@@ -1308,15 +1309,15 @@ key "Song2007"
  An index that is used to monitor distance relays is also proposed.
  However, in practice only N-1 contingencies are studied and thus the severity
  index is chosen based on that case.
- However, if the system enters N-2 or N-3 contingency conditions, tuning
- of the “severity” threshold will be a difficult task computationally.
+ However, if the system enters N-2 or N-3 contingencies, tuning of the “severity
+” threshold will be a difficult task computationally.
  
 \end_layout
 
 \begin_layout Standard
 The authors in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Pahwa"
 
 \end_inset
@@ -1326,7 +1327,7 @@ key "Pahwa"
  line.
  The authors in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Diao"
 
 \end_inset
@@ -1335,7 +1336,7 @@ key "Diao"
  collapse.
  The authors in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Diao"
 
 \end_inset
@@ -1347,46 +1348,12 @@ key "Diao"
  operating system conditions and the load pattern.
  A similar approach has been provided in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Rigatos2009"
 
 \end_inset
 
  where a neural network is used instead of a decision tree.
- 
-\end_layout
-
-\begin_layout Standard
-Lastly, distance protection co-ordination has been done explored in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ravikumar2008approach,ravikumar2009approach,gilany2008new,ojaghi2013new"
-
-\end_inset
-
-.
- Due to the fact that distance protection co-ordination requires large amount
- of offline simulations and performing many contingency conditions, the
- authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "tasdighi2016automated"
-
-\end_inset
-
- introduced the idea of 
-\begin_inset Quotes eld
-\end_inset
-
-distance of impact
-\begin_inset Quotes erd
-\end_inset
-
- to automate the distance protection co-ordination.
- However, the authors uses the super computer to perform their computations
- at the first stage.
- Once the distance of impact of each relay has been calculated, co-ordination
- of the distance relays becomes straight forward.
  
 \end_layout
 
@@ -1414,84 +1381,103 @@ name "subsec:Communication-Assisted-Schemes"
 \end_layout
 
 \begin_layout Standard
-Zone 3 misoperation can be completely eliminated by using distance protection
- with communication capabilities.
- Blocking and unblocking schemes have been known for a while and they have
- good performance 
+In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kundu2014"
+
+\end_inset
+
+ synchrophasors are proposed to supervise zone-3 operation which result
+ in a very robust zone-3 distance protection system.
+ However, to fully take advantage of the method, strategically located PMU
+ have to exist in the system which add more complexity to the system.
+ A multi agent system has been proposed in 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Anderson1998"
+key "Liu2015"
 
 \end_inset
 
 .
- From a theoretical perspective, if the local relay can communicate with
- other distance relays within its reach, then a very secure zone 3 scheme
- can be devised.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Garlapati2013"
+
+\end_inset
+
+, a non-intrusive agent to supervise zone 3 relay is proposed.
+ In this scheme, agents installed at each relay are used to aid zone 3 relays.
+ Since the agent in non-intrusive, it only aids the protection without enforcing
+ a decision.
+ A drawback of this approach is the need for agents that are disturbed in
+ the system which need to communicate with each other which require high
+ communication bandwidth.
  
 \end_layout
 
 \begin_layout Standard
-Conceptually, detection of fault generated traveling waves can provide a
- precise answer on whether a fault has occurred within the distance relay
- reach.
- Traveling waves (TWs) based fault detection and location has been proposed
- 
+traveling wave based fault detection and location has been proposed 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Dommel1987"
 
 \end_inset
 
 .
- The moment of arrival of the TWs at both ends of the line are transmitted
- to the relays at both ends of the line and a decision is made based on
- the time used by the TWs to reach both ends.
- A modern realization of this idea has been given in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "schweitzer2014locating,schweitzer2015speed"
+ 
+\end_layout
 
-\end_inset
-
-.
- Fault generated waveforms varies with time and frequency 
+\begin_layout Standard
+Fault generated waveforms varies with time and frequency 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Shang"
 
 \end_inset
 
-, so neither pure time nor pure frequency methods are suitable for analyzing
- such transient signals.
- Wavelet transform (WT) has been the tool used recently to analyze the high
- frequency components 
+, so neither pure time nor pure frequency methods are suitable for such
+ transient signals.
+ The unique features of wavelets make them very suitable to capture specific
+ period of time without analyzing other parts of the signal which is very
+ different from Fourier analysis.
+ Wavelet transform transfer the time domain function to time scaling function
+ at different set of frequencies 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
+key "Daubechies1990"
+
+\end_inset
+
+.
+ This makes wavelets very suitable for various functions 
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Robertson1996,Ibrahim2002,Gaouda2002,Gaouda2000,Santoso1996,Poisson2000,Moreno"
 
 \end_inset
 
- that occur after a fault using deterministic and probabilistic approaches.
+ in power systems using deterministic and probabilistic approaches.
  The approach given in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Magnago1998"
 
 \end_inset
 
  transforms the signals from the a-b-c frame into the modal form then applies
- the WT to the resulting voltage and current signals to locate the fault.
- The same approach can be used to detect faults.
+ the wavelet transform to the resulting voltage and current signals to detect
+ the fault.
  However, the paper uses the energy of the transformed signals which is
  likely to be confused for faults on adjacent lines.
- Since there seems to be no relation between the energy contained in the
- wavelets and the associated transient phenomena, as the energy depends
- on the width of the window frame, various pattern recognition approaches
- have been devised to attack this problem.
+ Since there seems no relation between the energy contained in the wavelets
+ and the associated transient phenomena, as the energy depends on the width
+ of the window frame, various neural network papers have been devised to
+ attack this problem.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Jafarian2013"
 
 \end_inset
@@ -1503,7 +1489,7 @@ key "Jafarian2013"
  An adaptive wavelets based on Bayesian linear discrimination is given in
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Perez2011"
 
 \end_inset
@@ -1513,7 +1499,7 @@ key "Perez2011"
  one fourth of a cycle.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Yadav2015"
 
 \end_inset
@@ -1522,35 +1508,6 @@ key "Yadav2015"
  on double circuit lines have been proposed.
  The algorithm uses both voltages and currents at a single end of the line
  to detect and classify faults.
- A critic of TW fault detection methods can be found at 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "shehab1988travelling2"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Due to the fact that zone 3 of distance relays may not be able differentiate
- between heavy line load and an actual fault on the system, the authors
- in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lim2008"
-
-\end_inset
-
- proposed that a tool is to be installed at the control center , also known
- as Independent System Operator (ISO), to continuously supervise the operation
- of zone 3 relays.
- Even though this solution might be able to prevent all zone-3 misoperations,
- but it needs considerable cost to construct the communication infrastructure
- that is needed to transmit the data from all distance relays in the system
- to the system operator.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1570,14 +1527,17 @@ The 2003 blackouts pointed out the importance of having events along with
  angles), which opens new areas for adaptive relaying and wide area control
  and protection 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Papic"
 
 \end_inset
 
 .
- In conventional protection schemes, the relay is only applied to the transmissi
-on line protected much like distance relaying.
+\end_layout
+
+\begin_layout Standard
+In conventional protection schemes, the relay is only applied to the transmissio
+n line protected much like distance relaying.
  However, in a wide area protection scheme, a complete area can be protected
  using selected PMU devices without the need to apply PMUs to each single
  bus in the system.
@@ -1585,11 +1545,31 @@ on line protected much like distance relaying.
 \end_layout
 
 \begin_layout Standard
+Due to the fact that zone 3 of distance relays may not be able differentiate
+ between heavy line load and an actual fault on the system, the authors
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lim2008"
+
+\end_inset
+
+ proposed that a tool is to be installed at the control center – also known
+ as Independent System Operator (ISO)- to continuously supervise the operation
+ of zone-3 relays.
+ Even though this solution might be able to prevent all zone-3 misoperations,
+ but it needs considerable cost to construct the communication infrastructure
+ that is needed to transmit the data from all distance relays in the system
+ to the system operator.
+ 
+\end_layout
+
+\begin_layout Standard
 With the introduction of PMUs, several fault detection and locations methods
  have been proposed 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "Al-Mohammed2014a,Joe-Air2000,Ying-Hong2004,MuneshwarNewAdaptive,Neyestanaki2015,Salehi-Dobakhshari2014,Zare2015,Li2013,rao2014logic,navalkar2011secure,lavand2016predictive"
+LatexCommand cite
+key "Al-Mohammed2014a,Joe-Air2000,Ying-Hong2004,MuneshwarNewAdaptive,Neyestanaki2015,Salehi-Dobakhshari2014,Zare2015,Li2013"
 
 \end_inset
 
@@ -1602,7 +1582,7 @@ s can be drawn regarding whether the line is undergoing abnormal conditions.
  way.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Al-Mohammed2014a"
 
 \end_inset
@@ -1612,52 +1592,9 @@ ion lines without the need to know the model of the series compensation
  devices.
  The method estimates the line parameters from the PMU measurements without
  the need to know any information regarding the line in advance.
- 
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Kundu2014"
-
-\end_inset
-
- synchrophasors are proposed to supervise zone 3 operation which result
- in a very robust zone 3 distance protection system.
- However, to fully take advantage of the method, strategically located PMU
- have to exist in the system which add more complexity to the system.
- A multi agent system has been proposed in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Liu2015"
-
-\end_inset
-
-.
  In 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Garlapati2013"
-
-\end_inset
-
-, a non-intrusive agent to supervise zone 3 relay is proposed.
- In this scheme, agents installed at each relay are used to aid zone 3 relays.
- Since the agent in non-intrusive, it only aids the protection without enforcing
- a decision.
- Zone 3 is also adjusted adaptively in real time using agents disturbed
- across nearby substations as given in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "haj2014intelligent"
-
-\end_inset
-
-.
- In 
-\begin_inset CommandInset citation
-LatexCommand citep
 key "Joe-Air2000"
 
 \end_inset
@@ -1670,7 +1607,7 @@ key "Joe-Air2000"
  and line is opened.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Ying-Hong2004"
 
 \end_inset
@@ -1678,7 +1615,7 @@ key "Ying-Hong2004"
  the effect of arc on the method proposed has been examined.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Neyestanaki2015"
 
 \end_inset
@@ -1693,7 +1630,7 @@ key "Neyestanaki2015"
  for fault detection and location.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Eissa2010"
 
 \end_inset
@@ -1712,7 +1649,7 @@ key "Eissa2010"
  the method can operate erroneously.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Chen2002"
 
 \end_inset
@@ -1726,12 +1663,12 @@ key "Chen2002"
  If the fault index deviates from zero, then the fault is declared.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "He2011"
 
 \end_inset
 
-, another wide area protection scheme is proposed.
+, a wide area protection scheme is proposed.
  The measured voltage and current of one terminal of the line are used to
  estimate the voltages at the other end.
  If an internal fault on the line being monitored exists, then the estimated
@@ -1739,16 +1676,16 @@ key "He2011"
  This discrepancy causes the fault to be detected.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Nayak2014"
 
 \end_inset
 
 , a wide area fault detection method on series compensated lines are proposed.
  The closest bus to the fault is selected based on a predetermined magnitude
- threshold in the same way in 
+ threshold much like is done in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Eissa2010"
 
 \end_inset
@@ -1757,17 +1694,6 @@ key "Eissa2010"
  Then the cosine of the angle between the sequence voltages and currents
  are then used to establish a criterion to detect and locate the faulted
  line.
- The authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "lin2016countermeasures,yan2015research"
-
-\end_inset
-
- use PMUs, that are in place as part of a wide area protection scheme, to
- detect the power flow transfer due to the removal of faulted line from
- service.
- Based on that detection zone 3 is adaptively adjusted to prevent misoperation.
  
 \end_layout
 
@@ -1778,34 +1704,26 @@ In summary, even though PMUs did not find wide acceptance in the industry
  for transmission line protection due to the high communication bandwidth
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Zare2015"
 
 \end_inset
 
- requirements of the communication links as well cybersecurity risks 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "schweitzer2016cyber"
-
-\end_inset
-
-, PMU assisted wide area measurement and protection schemes have been proved
- to be very useful in the industry for implementing special protection schemes.
+ requirement of the communication links, PMU assisted wide area measurement
+ and protection schemes have been proved to be very useful in the industry
+ for implementing special protection schemes.
  A survey 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "RN85"
 
 \end_inset
 
- in the industry show that all ISO and utilities use one type or another
- of WAMPs systems.
- Additionally, an optimization problem has to be set up to strategically
- locate PMUs.
- The optimization problem is generally formulated to include N-1 contingency
- conditions and when the system suffers from the loss of more than one element,
- the power system may not be observable anymore.
+ in industry show that all ISO and utilities use one type or another of
+ WAMPs systems.
+ All the literature reviewed in this section suffer from the fact that for
+ the scheme to work properly, system has to be completely observable which
+ puts stringent demands on the communication requirements.
  
 \end_layout
 
@@ -1821,35 +1739,43 @@ name "subsec:Modifications-to-Local"
 \end_layout
 
 \begin_layout Standard
-Augmenting zone 3 distance protection with more elaborate logic has been
- proposed in literature.
- Local measurements are used in 
+Local measurements only are used in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Nayak2015"
 
 \end_inset
 
- to assist zone-3 tripping.
- The DC decaying component and the load angle are used to determine whether
- a fault has occurred within the reach of local distance relay.
+ to achieve zone-3 tripping.
  The drawback of this method is that the fault must have significant decaying
- DC component which makes it challenging for certain fault incipient angles
- and transmission line lengths.
+ DC component which makes it challenging for certain fault incipient angles.
  Additionally, the paper assumes the angle between the current and the voltage
  at the relay to be more than 50 degrees as a fault indicator.
  However, it has been pointed out in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Horowitz2006"
 
 \end_inset
 
- that under stressed system conditions the angle may indeed exceed that
- thresholds with no fault on the system.
+ that under stressed system condition that angle may indeed exceed that
+ degree with no fault on the system.
+ Several other research ideas have been proposed 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Nikolaidis2016,Nikolaidis"
+
+\end_inset
+
+.
+ All these ideas are based on selecting a fourth zone such that it gives
+ the distance protection system alarm when the operating conditions is about
+ to enter the third zone.
+ However, all of them are impeded by the fact that threshold selection highly
+ depends on the system configuration and operating conditions.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Jonsson2003"
 
 \end_inset
@@ -1859,44 +1785,28 @@ key "Jonsson2003"
  However, for the trip command to be safe, large amount of offline simulations
  need to be carried out to know the worst case rate of change of voltage.
  Additionally, given that zone 3 are activated within 90 cycles, changes
- to zone 3 time delay may be needed to fully detect the zone 3 misoperation.
- This in turn means that checking co-ordination with nearby distance protection
- systems need to be done as well.
+ to zone-3 time may be needed to fully detect the zone-3 misoperation with
+ this method which means that checking co-ordination with nearby distance
+ protection systems need to be done as well.
  Since it is hard to distinguish between evolving pre-blackout event and
  short circuit conditions using magnitude of voltage, the rate of change
  of current as well has been used along with the rate of voltage as trip
  restraint in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Sharifzadeh2014"
 
 \end_inset
 
 .
- The authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Feng2004"
-
-\end_inset
-
- gives an algorithm for distance protection using wavelets.
- The algorithm is wavelet counterpart of the DFT (discrete Fourier transform)
- used in modern day distance relays.
- However, the paper does not point out how his algorithm will prevent distance
- protection misoperation since after all it still uses impedance as an indicator
- for fault detection.
  
 \end_layout
 
 \begin_layout Standard
-Single-ended traveling wave relaying principles were also proposed.
- Detection of fault traveling waves can provide an answer on whether the
- fault is within the reach of the distance protection or not.
- A traveling waves based protection technique using wavelets and principal
+A traveling waves based protection technique using wavelets and principal
  component analysis is given in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Jafarian2010"
 
 \end_inset
@@ -1907,7 +1817,7 @@ key "Jafarian2010"
  propose discrimination criteria for protection.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Lopes,Lopes2013"
 
 \end_inset
@@ -1924,36 +1834,13 @@ key "Lopes,Lopes2013"
  In this method, it not quite possible to tell whether the fault is from
  the faulted line or due another line since the rotation is used a fault
  discriminant.
- A directional ultra-fast protection based on wavelets is given in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Duan"
-
-\end_inset
-
-.
- The spectrum energy is introduced to represent the energy of the high frequency
- components of two defined quantities.
- These quantities are derived from the forward and traveling waves of the
- fault voltage and current.
+ 
 \end_layout
 
 \begin_layout Standard
-The use of fault generated high frequency components has been also investigated
- in literature 
+In 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "Probert"
-
-\end_inset
-
-.
- Such usage can give more a precise answer whether a fault has occurred
- within the distance protection reach thus making tripping in zone 3 more
- secure.
- In 
-\begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Saravanababu"
 
 \end_inset
@@ -1967,7 +1854,7 @@ key "Saravanababu"
 e is not fault.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "He2014"
 
 \end_inset
@@ -1978,25 +1865,68 @@ key "He2014"
  is needed to detect and classify faults.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Liu2014"
 
 \end_inset
 
-, Tsallis Entropy is used instead of the traditional Shannon entropy approach
+ Tsallis Entropy is used instead of the traditional Shannon entropy approach
  to detect and classify faults.
  It is shown in this paper that Tsallis Entropy gives better classification
  accuracy than traditionally entropy based methods.
  Additionally, it is shown that using Tsallis entropy makes it easier to
  select the threshold for fault detection.
+ The authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Probert"
+
+\end_inset
+
+ are using wavelets to detect and classify high frequency transients as
+ frequencies map to different wavelet components.
+ The authors in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Probert"
+
+\end_inset
+
+ investigated the use wavelets to detect and classify high frequency transients
+ as frequencies map to different wavelet components.
+ A directional ultra-fast protection based on wavelets is given in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Duan"
+
+\end_inset
+
+.
+ The wavelet transform spectrum energy is introduced to represent the energy
+ of the high frequency components of the two components.
+ These components are derived from the forward and traveling waves of the
+ fault voltage and current.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Feng"
+
+\end_inset
+
+ gives an algorithm for distance protection using wavelets.
+ The algorithm is wavelet counterpart of the DFT (discrete Fourier transform)
+ used in modern day distance relays.
+ However, the author does not say how his algorithm will prevent distance
+ protection misoperation since after all it still uses impedance as an indicator
+ for fault detection.
  
 \end_layout
 
 \begin_layout Standard
-Additionally, the use of artificial neural networks for fault classification
- and detection has been given in 
+The use of artificial neural networks for fault classification and detection
+ has been given in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Dalstein1995,Kezunovic1995a,Oleskovicz2001"
 
 \end_inset
@@ -2005,18 +1935,18 @@ key "Dalstein1995,Kezunovic1995a,Oleskovicz2001"
  detection and classification on the protected line.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Kezunovic1995a"
 
 \end_inset
 
  samples of voltages and currents are used as a feature vector to train
  ANN.
- With the advent of wavelets, special wavelet transforms are applied to
+ With the advent of wavelets, special wavelets transforms are applied to
  voltage and current waveforms before they are fed to the ANN for training
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Martin2003,Zwe-Lee2004"
 
 \end_inset
@@ -2024,14 +1954,14 @@ key "Martin2003,Zwe-Lee2004"
 .
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Martin2003"
 
 \end_inset
 
  and 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Zwe-Lee2004"
 
 \end_inset
@@ -2041,36 +1971,36 @@ key "Zwe-Lee2004"
  and type classification.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Silva2006"
 
 \end_inset
 
  and 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Mao2001"
 
 \end_inset
 
 , DWT is applied to voltages and currents but instead of feeding the details
- coefficients to the ANN, the entropy of the signal is captured and fed
- instead to the ANN to make fault type classification between faults on
- the same transmission line.
+ coefficients to the ANN, entropy (energy) of the signal is captured and
+ fed instead to the ANN to make fault type classification between faults
+ on the same transmission line.
  In 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Perera2011"
 
 \end_inset
 
-, the energy of certain current levels and approximations is used to train
+ the energy of certain current levels and approximations is used to train
  a probabilistic classifier, and using this energy feature a decision is
  made whether a transient signal if due to a fault or non-fault condition
  on a line.
  An expert system based neural network is proposed in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Dasgupta2012"
 
 \end_inset
@@ -2079,7 +2009,7 @@ key "Dasgupta2012"
  Since the parameters of transmission lines in reality varies stochastically
  in a specific range, the authors in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "SouzaGomes2013"
 
 \end_inset
@@ -2090,63 +2020,30 @@ key "SouzaGomes2013"
 \end_layout
 
 \begin_layout Standard
-Various adaptive zone 3 settings are provided in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gawande2016adaptive,stedall1996investigation"
 
-\end_inset
+\series bold
+In summary, valuable research has been performed to modify existing zone
+ 3 distance protection logic.
+ However, most of the proposed modifications are based on experience with
+ previous zone 3 misoperation occurrences such as the 2003 blackout.
+ It is thus not entirely clear whether these methods will be able to prevent
+ future distance protection misoperation if other system wide cascading
+ conditions are encountered.
+ 
+\end_layout
 
- where zone 3 reach is adjusted based on local information.
- In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "zadeh2008artificial,zadeh2011adaptive"
-
-\end_inset
-
-, ANN has been used to predict the correct load blinder under various system
- conditions.
- The load blinder is then combined with the zone 3 settings to block any
- undesirable tripping.
- However, the effect of the system topology wasn't studied.
- It is foreseen that the inclusion for contingency analysis in ANN training
- will require large offline simulations.
- In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Nikolaidis2016,Nikolaidis"
-
-\end_inset
-
-, the authors proposes a 4th protection zone for protection.
- The rate of change of the impedance once it enters that 4th zone and proceeds
- to zone 3 is calculated and a decision is made whether to issue a trip
- command based on that rate.
- Although, the approach is very promising, a fast evolving system instability
- could mislead the scheme.
- Lastly, the authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ma2016adaptive"
-
-\end_inset
-
- to identify power flow overload based on a complex phasor plane.
- The paper only differentiates between three phase faults and overloads.
- However, the method is not applicable in case an open phase fault occurs
- and causes asymmetrical power flow transfer.
- Additionally, the method is not applicable when three phase faults and
- system overload coexist.
+\begin_layout Standard
+A detailed look at literature reveals that very few attempts have been done
+ to harness the power of the wavelets details coefficients alone and understand
+ their underlying structure.
  
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-In Summary, the use of high frequency fault generated transients seem to
- be the most promising area.
- However, in this class of solutions the following are observed:
+The following shortcomings are observed when it comes to the application
+ of DWT to fault detection: 
 \end_layout
 
 \begin_layout Itemize
@@ -2154,20 +2051,21 @@ In Summary, the use of high frequency fault generated transients seem to
 \series bold
 All methods except the one in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Perera2011"
 
 \end_inset
 
  uses voltages for classification.
- It is known that CVT attenuates all high frequencies beyond 200 Hz 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "hou1996capacitive"
+ CVT attenuates all high frequencies beyond 200 Hz effectively making the
+ voltage signal unusable
+\end_layout
 
-\end_inset
+\begin_layout Itemize
 
-effectively making the voltage signal unusable
+\series bold
+All methods use the energy for fault detection and the wavelets coefficients
+ are rarely used 
 \end_layout
 
 \begin_layout Itemize
@@ -2203,7 +2101,7 @@ References
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "References_used_in_proposal,newlit"
+bibfiles "References_used_in_proposal"
 options "bibtotoc,elsarticle-harv"
 
 \end_inset
