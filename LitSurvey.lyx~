@@ -2162,7 +2162,7 @@ key "Perera2011"
  uses voltages for classification.
  It is known that CVT attenuates all high frequencies beyond 200 Hz 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "hou1996capacitive"
 
 \end_inset

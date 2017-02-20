@@ -2204,7 +2204,7 @@ References
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "References_used_in_proposal,newlit"
-options "bibtotoc,elsarticle-harv"
+options "bibtotoc,IEEEtran"
 
 \end_inset
 
