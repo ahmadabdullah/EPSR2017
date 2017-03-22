@@ -1,0 +1,1024 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\usepackage[caption=false,font=footnotesize]{subfig}
+\end_preamble
+\options conference
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Solutions to the Problem of Distance Protection Zone 3 Misoperation During
+ System Wide Cascading Events: A Critique
+\end_layout
+
+\begin_layout Author
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the standard way: 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Name
+status open
+
+\begin_layout Plain Layout
+Ahmad
+\begin_inset space ~
+\end_inset
+
+Abdullah
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status open
+
+\begin_layout Plain Layout
+Department of Electrical and Computer Engineering
+\begin_inset Newline newline
+\end_inset
+
+Texas A&M University, College Station, TX 77840
+\begin_inset Newline newline
+\end_inset
+
+Email: ahmad@tamu.edu
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+and 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Name
+status collapsed
+
+\begin_layout Plain Layout
+Karen
+\begin_inset space ~
+\end_inset
+
+Butler-Purry
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Author Affiliation
+status open
+
+\begin_layout Plain Layout
+Department of Electrical and Computer Engineering
+\begin_inset Newline newline
+\end_inset
+
+Texas A&M University, College Station, TX 77840
+\begin_inset Newline newline
+\end_inset
+
+Email: kbutler@tamu.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+This paper summarizes the problem and provides a survey on the research
+ efforts made to increase distance relay security to prevent distance protection
+ misoperation.
+\end_layout
+
+\begin_layout Keywords
+Distance protection zone 3, blackouts, cascading events, misoperation, security
+ 
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Most Independent System Operators (ISOs) today use N-1 criterion to judge
+ whether the system is secure after the removal of one line in planning
+ stage.
+ However, given that distance protection system misoperation is not triggered
+ until two or three lines go out of service 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Liscouski2004"
+
+\end_inset
+
+, the distribution of power flow is hard to be taken into account in the
+ planning stage as it would mean performing N-2 and N-3 contingency analysis
+ which is expensive computationally.
+ Thus, it is increasingly hard to assess protection system capability under
+ the most stressful system conditions.
+
+\shape slanted
+ 
+\shape default
+Due to that, the authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "li2007operation,li2008sensitivity"
+
+\end_inset
+
+ provided an efficient method to study the sensitivity of zone 3 under various
+ operating conditions without the need for performing large number of power
+ flow studies.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "li2007operation,li2008sensitivity"
+
+\end_inset
+
+, the authors define a linearized impedance margin of a distance relay using
+ system voltages, injected power and shunt susceptance.
+ The impedance margin is defined as the distance between the measured impedance
+ in the R-X plane to the boundary of the operating characteristic of the
+ relay.
+ By doing so, the relays that may misoperate can be anticipated ahead of
+ time in an efficient manner in the planning stage using simple formulas.
+ However, it is shown in the paper that if the changes in the voltages or
+ power injections are electrically far away from the relay under study,
+ a situation that always exists in wide area cascading scenarios, the error
+ in the analysis becomes unacceptable especially for long lines.
+ 
+\end_layout
+
+\begin_layout Standard
+The authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Song2007"
+
+\end_inset
+
+ proposed certain indices that can accurately gauge the severity of system
+ conditions and the likelihood of cascades.
+ An index that is used to monitor distance relays is also proposed.
+ However, in practice only N-1 contingencies are studied and thus the severity
+ index is chosen based on that case.
+ However, if the system enters N-2 or N-3 contingency conditions, tuning
+ of the “severity” threshold will be a difficult task computationally.
+ 
+\end_layout
+
+\begin_layout Standard
+Lastly, distance protection co-ordination has been explored in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ravikumar2008approach,ravikumar2009approach"
+
+\end_inset
+
+.
+ By ensuring that the relays are well co-coordinated under various contingency
+ conditions, unnecessary trip could be avoided.
+ Due to the fact that distance protection co-ordination requires large amount
+ of offline simulations by performing many contingency conditions, the authors
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tasdighi2016automated"
+
+\end_inset
+
+ introduced the idea of 
+\begin_inset Quotes eld
+\end_inset
+
+distance of impact
+\begin_inset Quotes erd
+\end_inset
+
+ to automate the distance protection co-ordination.
+ However, the authors uses the super computer to perform their computations
+ at the first stage.
+ Once the distance of impact of each relay has been calculated, co-ordination
+ of the distance relays becomes straight forward.
+ A shortcoming of the distance co-ordination approach is that even though
+ it can ensure that distance relays never overreach for faults beyond their
+ reach, little research has been performed to study whether the co-ordination
+ can ensure that relays will not misoperate under heavy loading conditions.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+As can be seen above, detection  of distance protection misoperation is
+ the planning stage is a hard task.
+ To be able to fully prevent distance protection misoperation, an N-x ,
+ where x is greater than 1, contingency analysis need to be done.
+ Even though this could be done for small benchmark systems, the contingency
+ analysis, under uncertain load and generation, is computationally impossible
+ for large system consisting of thousands of buses.
+\end_layout
+
+\begin_layout Standard
+Due to the fact that zone 3 of distance relays may not be able differentiate
+ between heavy line load and an actual fault on the system, the authors
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lim2008"
+
+\end_inset
+
+ proposed that a tool is to be installed at the control center, also known
+ as Independent System Operator (ISO), to continuously supervise the operation
+ of zone 3 elements.
+ Even though this solution might be able to prevent all zone-3 misoperations,
+ but it needs considerable cost to construct the communication infrastructure
+ that is needed to transmit the data from all distance relays in the system
+ to the system operator.
+ 
+\end_layout
+
+\begin_layout Standard
+The 2003 blackouts pointed out the importance of having events along with
+ the time they occurred.
+ Investigators spent much of their time trying to match up the waveforms
+ to reconstruct the sequence of events that led to the blackout.
+ It was then apparent that to facilitate the transfer and comparison of
+ waveforms, all samples need to have a time stamp for this purpose.
+ Phasor Measurement Unit (PMU) or synchrophasor technology were then developed
+ to address this shortcoming.
+ By the time of 2003 blackout, state estimation was a very mature field,
+ but PMUs opened new areas for the application of state estimation by reducing
+ the time needed to do state estimation due to the wide spread deployment
+ in the transmission network.
+ A PMU measures the positive sequence voltage and current (both the magnitude
+ and angle), which opens new areas for adaptive relaying and wide area control
+ and protection.
+ In conventional protection schemes, the relay is only applied to the transmissi
+on line protected much like distance relaying.
+ However, in a wide area protection scheme, a complete area can be protected
+ using selected PMU devices without the need to apply PMUs to each single
+ bus in the system.
+ 
+\end_layout
+
+\begin_layout Standard
+With the introduction of PMUs, several fault detection and locations methods
+ have been proposed 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Joe-Air2000"
+
+\end_inset
+
+.
+ The essential feature of all PMU detection schemes is that using the communicat
+ion links to transfer data between the two ends of the lines, several conclusion
+s can be drawn regarding whether the line is undergoing abnormal conditions.
+ A salient feature of the PMU algorithm is the ability to monitor the status
+ of the line and compute the parameters of the lines online in a very accurate
+ way.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "navalkar2011secure"
+
+\end_inset
+
+, distributed PMUs are used to reach a definitive decision about the existence
+ of the fault in the system using a synchrophasor state estimator.
+ However, the grid has be completely observably by PMUs.
+ Thus, siting PMUs has to be done carefully to not create unobservable islands
+ under stressed system conditions and certain contingency conditions.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Kundu2014"
+
+\end_inset
+
+ synchrophasors are proposed to supervise zone 3 operation.
+ Specific indices are proposed to assert the fault using the currents which
+ result in a very robust zone 3 distance protection system.
+ The algorithm basically forms a super node from the certain groups of PMUs.
+ By summing the current going into the super node, a decision can be reached
+ whether the fault exists or not.
+ However, to fully take advantage of the method, strategically located PMU
+ have to exist in the system which makes the approach highly dependent on
+ the topology and any transmission system upgrades.
+ Additionally, certain contingency conditions can cause some faults not
+ to be detected due to the location of the PMUs.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Garlapati2013"
+
+\end_inset
+
+, agents are used to aid zone 3 relay elements without enforcing a decision.
+ In this scheme, each impedance relay will have the capability to communicate
+ with other agents in the network that protect the same transmission line.
+ If the majority of the agents informs the local distance relay that the
+ impedance in its zone 3 reach is actually due to a fault, then the local
+ distance relay should be energized and a trip command has to be issued.
+ An optimization approach is set up such that the communication delay between
+ the various agents are less than 1 second, which is the time of operation
+ of zone 3.
+ A similar approach has been proposed in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "haj2014intelligent"
+
+\end_inset
+
+ where agents are installed everywhere without the optimization approach.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Neyestanaki2015"
+
+\end_inset
+
+ limited number of PMUs are used to determine the faulted line as well as
+ the location of the fault.
+ An optimization approach is used to locate a set of PMUs such that the
+ observability is independent of the generator models.
+ A backup protection zone is then constructed using the lines and buses
+ between each PMU such that a line in not included in two regions.
+ The sum of zero and positive sequence currents are used as discriminant
+ for fault detection and location.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Eissa2010"
+
+\end_inset
+
+, a backup wide area protection scheme is proposed.
+ In this scheme, the absolute difference of the bus angles and currents
+ are used to detect the fault.
+ The minimum voltage magnitude establishes the closest bus to the fault
+ and the maximum current angle difference between the buses establishes
+ the faulted lines.
+ However, for the method to work, the minimum voltage threshold has to be
+ established.
+ It is shown in the paper that a voltage threshold less than 0.95 means that
+ there is a fault on a system.
+ This immediately points out that in case of voltage instability conditions,
+ the method can operate erroneously.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "He2011"
+
+\end_inset
+
+, another wide area protection scheme is proposed.
+ The measured voltage and current of one terminal of the line are used to
+ estimate the voltages at the other end.
+ If an internal fault on the line being monitored exists, then the estimated
+ value will be different form the measured value at that bus.
+ This discrepancy causes the fault to be detected.
+ 
+\end_layout
+
+\begin_layout Standard
+The authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lin2016countermeasures,yan2015research"
+
+\end_inset
+
+ use PMUs, that are in place as part of a wide area protection scheme, to
+ detect the power flow transfer due to the removal of faulted line from
+ service.
+ Based on that detection, zone 3 is adaptively adjusted to prevent misoperation.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Even though PMU based solutions can offer an attractive solution to the
+ problem of distance protection misoperation, these solutions require significan
+t communication infrastructure cost.
+ Additionally, the power grid is a critical infrastructure and the cybersecurity
+ risk may be eminent if the grid is brought online for communications purposes.
+ 
+\end_layout
+
+\begin_layout Standard
+Apart from using PMUs for fault detection and assisting zone 3 tripping,
+ various authors proposed making changes to the way impedance relays operate.
+ In these methods, the authors augmented the distance criterion by other
+ criteria to assert that fault exists within the relay reach.
+ 
+\end_layout
+
+\begin_layout Standard
+Local measurements are used in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nayak2015"
+
+\end_inset
+
+ to assist zone-3 tripping.
+ The DC decaying component and the load angle are used to determine whether
+ a fault has occurred within the reach of local distance relay.
+ The drawback of this method is that the fault must have significant decaying
+ DC component which makes it challenging for certain fault incipient angles
+ and transmission line lengths.
+ Additionally, the paper assumes the angle between the current and the voltage
+ at the relay to be more than 50 degrees as a fault indicator.
+ However, it has been pointed out in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horowitz2006"
+
+\end_inset
+
+ that under stressed system conditions the angle may indeed exceed that
+ thresholds with no fault on the system.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jonsson2003"
+
+\end_inset
+
+ the rate of change of voltage is used as a trip restraint to prevent distance
+ protection misoperation in the real time.
+ However, for the trip command to be safe, large amount of offline simulations
+ need to be carried out to know the worst case rate of change of voltage.
+ Additionally, under voltage instability, the method is inapplicable as
+ pointed in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sharifzadeh2014"
+
+\end_inset
+
+.
+ Since it is hard to distinguish between evolving pre-blackout event and
+ short circuit conditions using magnitude of voltage, the rate of change
+ of current as well has been used along with the rate of voltage as trip
+ restraint in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sharifzadeh2014"
+
+\end_inset
+
+.
+ A drawback of 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sharifzadeh2014"
+
+\end_inset
+
+ is that it only tries to distinguish between three phase symmetrical faults
+ and heavy loading conditions without regard to other types of faults which
+ could be the case if the transmission line is not transposed.
+ Additionally, the rate of change of current may not be an accurate indication
+ in case of generator dropping.
+ 
+\end_layout
+
+\begin_layout Standard
+The use of fault generated high frequency components has been also investigated
+ in literature 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Probert"
+
+\end_inset
+
+.
+ Such usage can give more a precise answer whether a fault has occurred
+ thus making tripping in zone 3 more secure.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Perera2011"
+
+\end_inset
+
+, the energy of certain current levels and approximations is used to train
+ a probabilistic classifier, and using this energy feature a decision is
+ made whether a transient signal if due to a fault or non-fault condition
+ on a line.
+ The major drawback of this approach is that even though fault can be distinguis
+hed from non-fault transients, the location of the fault, whether it is
+ within or without the reach of the relay, cannot be determined.
+ 
+\end_layout
+
+\begin_layout Standard
+Various adaptive zone 3 settings were also investigated in literature where
+ zone 3 reach is adjusted based on local information.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zadeh2008artificial,zadeh2011adaptive"
+
+\end_inset
+
+, ANN has been used to predict the correct load blinder under various system
+ conditions.
+ The load blinder is then combined with the zone 3 settings to block any
+ undesirable tripping.
+ However, the effect of the system topology wasn't studied.
+ It also is foreseen that the inclusion for contingency analysis in ANN
+ training will require large offline simulations.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Nikolaidis2016,Nikolaidis"
+
+\end_inset
+
+, the authors proposes a fourth protection zone for protection.
+ The rate of change of the impedance once it enters that 4th zone and proceeds
+ to zone 3 is calculated and a decision is made whether to issue a trip
+ command based on that rate.
+ Although, the approach is very promising, a fast evolving system instability
+ could mislead the scheme.
+ 
+\end_layout
+
+\begin_layout Standard
+Lastly, the authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ma2016adaptive"
+
+\end_inset
+
+ to identify power flow overload based on a complex phasor plane.
+ The paper only differentiates between three phase faults and overloads.
+ However, the method is not applicable in case an open phase fault occurs
+ and causes asymmetrical power flow transfer.
+ Additionally, the method is not applicable when three phase faults and
+ system overload coexists.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+In Summary, the use of high frequency fault generated transients seem to
+ be the most promising area and it is scarcely researched in literature.
+ 
+\end_layout
+
+\begin_layout Section
+Previous Work
+\end_layout
+
+\begin_layout Standard
+text text text text text text text text text text text text text text text
+\end_layout
+
+\begin_layout Subsection
+subsection
+\end_layout
+
+\begin_layout Subsection
+another subsection
+\end_layout
+
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Theorem name
+\end_layout
+
+\end_inset
+
+For a named theorem or theorem-like environment you need to insert the name
+ through 
+\family sans
+Insert\SpecialChar menuseparator
+Short Title
+\family default
+, as done here.
+\end_layout
+
+\begin_layout Lemma
+If you don't want a theorem or lemma name don't add one.
+\end_layout
+
+\begin_layout Proof
+And here's the proof!
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+A single column figure goes here
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captions go 
+\emph on
+under
+\emph default
+ the figure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Table captions go 
+\emph on
+above
+\emph default
+ the table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+delete
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+this
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+example
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+table
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+bla bla
+\end_layout
+
+\begin_layout Appendices
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Don't add text here!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+First appendix
+\end_layout
+
+\begin_layout Standard
+Citation: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "IEEEexample:beebe_archive"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Second appendix
+\end_layout
+
+\begin_layout Section*
+Acknowlegment
+\end_layout
+
+\begin_layout Standard
+bla bla
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Remember though that your final submission is supposed to have all the bibliogra
+phy entries embedded in the \SpecialChar LaTeX
+-file.
+ This means you eventually have to copy the .bbl file into the latex file
+ and remove the bibtex lines.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "References_used_in_proposal,newlit"
+options "bibtotoc,IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Biography
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "1in"
+special "none"
+height "1.25in"
+height_special "none"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Replace this box by an image with a width of 1
+\begin_inset space \thinspace{}
+\end_inset
+
+in and a height of 1.25
+\begin_inset space \thinspace{}
+\end_inset
+
+in!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Your Name
+\end_layout
+
+\end_inset
+
+ All about you and the what your interests are.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Biography without photo
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Coauthor
+\end_layout
+
+\end_inset
+
+Same again for the co-author, but without photo
+\end_layout
+
+\end_body
+\end_document
