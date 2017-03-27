@@ -1028,6 +1028,116 @@ name "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
 \end_layout
 
 \begin_layout Standard
+Most Independent System Operators (ISOs) today use N-1 criterion to judge
+ whether the system is secure after the removal of one line in planning
+ stage.
+ However, given that distance protection system misoperation is not triggered
+ until two or three lines go out of service 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Liscouski2004"
+
+\end_inset
+
+, the distribution of power flow is hard to be taken into account in the
+ planning stage as it would mean performing N-2 and N-3 contingency analysis
+ which is expensive computationally.
+ Thus, it is increasingly hard to assess protection system capability under
+ the most stressful system conditions.
+
+\shape slanted
+ 
+\shape default
+Due to that, the authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "li2007operation,li2008sensitivity"
+
+\end_inset
+
+ provided an efficient method to study the sensitivity of zone 3 under various
+ operating conditions without the need for performing large number of power
+ flow studies.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "li2007operation,li2008sensitivity"
+
+\end_inset
+
+, the authors define a linearized impedance margin of a distance relay using
+ system voltages, injected power and shunt susceptance.
+ The impedance margin is defined as the distance between the measured impedance
+ in the R-X plane to the boundary of the operating characteristic of the
+ relay.
+ By doing so, the relays that may misoperate can be anticipated ahead of
+ time in an efficient manner in the planning stage using simple formulas.
+ However, it is shown in the paper that if the changes in the voltages or
+ power injections are electrically far away from the relay under study,
+ a situation that always exists in wide area cascading scenarios, the error
+ in the analysis becomes unacceptable especially for long lines.
+ 
+\end_layout
+
+\begin_layout Standard
+The authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Song2007"
+
+\end_inset
+
+ proposed certain indices that can accurately gauge the severity of system
+ conditions and the likelihood of cascades.
+ An index that is used to monitor distance relays is also proposed.
+ However, in practice only N-1 contingencies are studied and thus the severity
+ index is chosen based on that case.
+ However, if the system enters N-2 or N-3 contingency conditions, tuning
+ of the “severity” threshold will be a difficult task computationally.
+ 
+\end_layout
+
+\begin_layout Standard
+Lastly, distance protection co-ordination has been explored in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ravikumar2008approach,ravikumar2009approach"
+
+\end_inset
+
+.
+ By ensuring that the relays are well co-coordinated under various contingency
+ conditions, unnecessary trip could be avoided.
+ Due to the fact that distance protection co-ordination requires large amount
+ of offline simulations by performing many contingency conditions, the authors
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tasdighi2016automated"
+
+\end_inset
+
+ introduced the idea of 
+\begin_inset Quotes eld
+\end_inset
+
+distance of impact
+\begin_inset Quotes erd
+\end_inset
+
+ to automate the distance protection co-ordination.
+ However, the authors uses the super computer to perform their computations
+ at the first stage.
+ Once the distance of impact of each relay has been calculated, co-ordination
+ of the distance relays becomes straight forward.
+ A shortcoming of the distance co-ordination approach is that even though
+ it can ensure that distance relays never overreach for faults beyond their
+ reach, little research has been performed to study whether the co-ordination
+ can ensure that relays will not misoperate under heavy loading conditions.
+ 
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 As can be seen above, detection  of distance protection misoperation is

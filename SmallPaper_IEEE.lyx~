@@ -395,7 +395,15 @@ reference "sec:Communication-Assisted-Schemes"
 
  provides an overview of the communication assisted scheme proposed to eliminate
  the distance protection misoperation.
- Lastly, .
+ Lastly, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Modifications-to-Local"
+
+\end_inset
+
+ offers a survey on the methods that were suggested in literature to to
+ enhance the distance protection security using local data only.
  
 \end_layout
 
