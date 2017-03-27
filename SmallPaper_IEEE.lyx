@@ -90,8 +90,8 @@
 \begin_body
 
 \begin_layout Title
-Solutions to the Problem of Distance Protection Zone 3 Misoperation During
- System Wide Cascading Events: A Critique
+Distance Protection Zone 3 Misoperation During System Wide Cascading Events:
+ The Problem and a Survey of Solutions
 \end_layout
 
 \begin_layout Author
@@ -120,7 +120,7 @@ Abdullah
 
 
 \begin_inset Flex Author Affiliation
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Department of Electrical and Computer Engineering
@@ -165,7 +165,7 @@ Butler-Purry
 
 
 \begin_inset Flex Author Affiliation
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Department of Electrical and Computer Engineering
@@ -185,9 +185,14 @@ Email: kbutler@tamu.edu
 \end_layout
 
 \begin_layout Abstract
-This paper summarizes the problem and provides a survey on the research
+Distance relay zone 3 misoperation has been responsible for major blackouts
+ around the world.
+ Zone 3 misoperation generally occurs under system wide cascading events
+ such as the 2003 Northeastern US-Canada blackout or under stressed system
+ conditions such as the 2015 Turkish blackout.
+ This paper summarizes the problem and provides a survey on the research
  efforts made to increase distance relay security to prevent distance protection
- misoperation.
+ misoperation
 \end_layout
 
 \begin_layout Keywords
@@ -200,113 +205,826 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Most Independent System Operators (ISOs) today use N-1 criterion to judge
- whether the system is secure after the removal of one line in planning
- stage.
- However, given that distance protection system misoperation is not triggered
- until two or three lines go out of service 
+With the deregulated market structure in the United States and Europe, grid
+ operators are under more pressure to reap more profits of existing infrastructu
+re due to increased competition.
+ The grid is thus increasingly operated near the threshold of stability.
+ Failure of the grid, better known as blackouts, carries catastrophic economic
+ and societal sequences.
+ Large blackouts tend to be due to either extreme natural events such as
+ hurricanes or a series of events called cascading failures 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Hines2009"
+
+\end_inset
+
+.
+ In this paper, we only focus on cascading events.
+ Those events can be any of the following: line tripping, overloading of
+ other lines, malfunctions of protection systems, power oscillations and
+ voltage instability 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yamashita"
+
+\end_inset
+
+.
+ The reason that is considered in this paper is distance protection misoperation
+ which is a contributing factor in seventy percent of all cascading events
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Chen2005"
+
+\end_inset
+
+.
+ If not discovered and mitigated in an early stage, cascading events generally
+ lead to a complete blackout.
+ With today’s society much dependence on electricity as a form of energy,
+ preventing such damage is detrimental.
+ 
+\end_layout
+
+\begin_layout Standard
+Cascading failures are defined as “a sequence of dependent failures of individua
+l components that successively weaken the power system” 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Baldick"
+
+\end_inset
+
+.
+ Since the 2003 US-Canada blackout, cascading events have drawn much attention
+ in the industrial and academic community.
+ Even though, the world has witnessed many blackouts prior to the 2003 blackout
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hines2009"
+
+\end_inset
+
+, the dramatic causes and consequences of the 2003 blackout have left industrial
+ and academic community with the burden of exploring this phenomenon in
+ more detail.
+ To understand the severity of the 2003 blackout 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Liscouski2004"
 
 \end_inset
 
-, the distribution of power flow is hard to be taken into account in the
- planning stage as it would mean performing N-2 and N-3 contingency analysis
- which is expensive computationally.
- Thus, it is increasingly hard to assess protection system capability under
- the most stressful system conditions.
-
-\shape slanted
- 
-\shape default
-Due to that, the authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "li2007operation,li2008sensitivity"
-
-\end_inset
-
- provided an efficient method to study the sensitivity of zone 3 under various
- operating conditions without the need for performing large number of power
- flow studies.
- In 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "li2007operation,li2008sensitivity"
-
-\end_inset
-
-, the authors define a linearized impedance margin of a distance relay using
- system voltages, injected power and shunt susceptance.
- The impedance margin is defined as the distance between the measured impedance
- in the R-X plane to the boundary of the operating characteristic of the
- relay.
- By doing so, the relays that may misoperate can be anticipated ahead of
- time in an efficient manner in the planning stage using simple formulas.
- However, it is shown in the paper that if the changes in the voltages or
- power injections are electrically far away from the relay under study,
- a situation that always exists in wide area cascading scenarios, the error
- in the analysis becomes unacceptable especially for long lines.
+, it sufficient to say it had caused the loss of 62 GW which caused the
+ lights to turn off in the houses of more than 51 million people in the
+ eastern interconnection.
+ Considering the many components and the bits and pieces involved, a domino
+ effect of events evolved slowly (hours) or fast (seconds) according to
+ the region causing a degradation of the integrity of the system leading
+ ultimately to a complete blackout.
+ Daunting efforts had to be exerted to gain more knowledge and understanding
+ of the underlying phenomenon.
  
 \end_layout
 
 \begin_layout Standard
-The authors in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Song2007"
-
+Relays by design act quickly to remove the fault from the system by disconnectin
+g faulted lines.
+ However, sometimes relays fail to perform such function which is considered
+ a protection system misoperation.
+ Of all protection system misoperations that lead to cascading events, this
+ paper focuses exclusively on distance protection misoperation.
+ A protection system misoperation is defined as 
+\begin_inset Quotes eld
 \end_inset
 
- proposed certain indices that can accurately gauge the severity of system
- conditions and the likelihood of cascades.
- An index that is used to monitor distance relays is also proposed.
- However, in practice only N-1 contingencies are studied and thus the severity
- index is chosen based on that case.
- However, if the system enters N-2 or N-3 contingency conditions, tuning
- of the “severity” threshold will be a difficult task computationally.
- 
-\end_layout
+a failure to operate as intended for protection purposes
+\begin_inset Quotes erd
+\end_inset
 
-\begin_layout Standard
-Lastly, distance protection co-ordination has been explored in 
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "ravikumar2008approach,ravikumar2009approach"
+key "NERCMisoperation"
 
 \end_inset
 
 .
- By ensuring that the relays are well co-coordinated under various contingency
- conditions, unnecessary trip could be avoided.
- Due to the fact that distance protection co-ordination requires large amount
- of offline simulations by performing many contingency conditions, the authors
- in 
+ Various categories are given for misoperation in 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "tasdighi2016automated"
+key "NERCMisoperation"
 
 \end_inset
 
- introduced the idea of 
-\begin_inset Quotes eld
+.
+ However, in this proposal the word misoperation will be used exclusively
+ to mean only one of them, namely, an operation in which a protection system
+ trips a healthy line when no fault exists.
+ Notable cascading events 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yamashita,Novosel2004"
+
 \end_inset
 
-distance of impact
-\begin_inset Quotes erd
+ begin with lines that were tripped due to actual faults.
+ The tripping of those faulty line causes the current flowing in those lines
+ to be redistributed to adjacent lines.
+ Those lines may be overloaded and thus tripped incorrectly -protection
+ misoperation- which will trigger a sequence of cascading events that might
+ ultimately lead to a blackout.
+ It should be noted that regardless of the initial triggering events- whether
+ a fault or not- that cause cascading events, historically those cascading
+ events were triggered under stressful system conditions 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Liscouski2004,Kosterev1999"
+
 \end_inset
 
- to automate the distance protection co-ordination.
- However, the authors uses the super computer to perform their computations
- at the first stage.
- Once the distance of impact of each relay has been calculated, co-ordination
- of the distance relays becomes straight forward.
- A shortcoming of the distance co-ordination approach is that even though
- it can ensure that distance relays never overreach for faults beyond their
- reach, little research has been performed to study whether the co-ordination
- can ensure that relays will not misoperate under heavy loading conditions.
+.
+\end_layout
+
+\begin_layout Standard
+As mentioned in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yamashita"
+
+\end_inset
+
+, one of the effective ways to prevent cascading events is to specify potential
+ undesirable relay operations ahead of time.
+ In this paper, we show that even though distance protection misoperation
+ can be anticipated ahead of time, prevention of this misoperation is not
+ possible with distance protection principle only because the distance protectio
+n principle is not able to be selective in some regions of its operation.
  
+\end_layout
+
+\begin_layout Standard
+The paper is organized as follows: Section 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "sec:Typical-Distance-Protection"
+
+\end_inset
+
+ provides a sample distance relay that is set according to NERC standards.
+ Once this relay is set according to NERC directives, it will be explained
+ in the same section that the relay may still misoperate under various operating
+ conditions.
+ Detection of relay misoperation in the planning stage is described 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Communication-Assisted-Schemes"
+
+\end_inset
+
+ provides an overview of the communication assisted scheme proposed to eliminate
+ the distance protection misoperation.
+ Lastly, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:Modifications-to-Local"
+
+\end_inset
+
+ offers a survey on the methods that were suggested in literature to to
+ enhance the distance protection security using local data only.
+ 
+\end_layout
+
+\begin_layout Section
+The Distance Protection Misoperation Problem
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Typical-Distance-Protection"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As can be seen from the examples in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2015Turkish,Liscouski2004"
+
+\end_inset
+
+ in which distance protection misoperation have been the main cause of the
+ blackouts or in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Abdullah"
+
+\end_inset
+
+ in which distance protection misoperation have been created in the IEEE
+ 118 bus system , a distance protection misoperation is characterized by
+ a distance protection system seeing a heavy load on a line as a fault.
+ This confusion arises from the fact that the impedance measured by the
+ impedance protection system coincides with that of a fault.
+ The reason for the heavy load can be due to load shifting after a fault
+ as in the 2003 US-Canada blackout 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Liscouski2004"
+
+\end_inset
+
+ or due to lines out of service for maintenance causing one line to carry
+ substantial system power transfer as in the 2015 Turkish blackout 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2015Turkish"
+
+\end_inset
+
+ or due to any unforeseen reasons.
+ 
+\end_layout
+
+\begin_layout Standard
+To illustrate that this confusion is not tied up with a certain system condition
+ but rather inherent insecurity in the distance protection principle, the
+ single line diagram shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:System-Configuration-for-formulating-problem"
+
+\end_inset
+
+ is used to formulate the problem in general terms.
+ It will be shown below that this insecurity always exists and the degraded
+ system conditions only excite it; that is, for some regions in the impedance
+ protection zone the protection system is not able to be selective between
+ a fault and non-fault condition.
+ Without the degraded system conditions, it is highly unlikely that a distance
+ protection misoperates.
+ Even though, degraded system conditions can be anticipated in the planning
+ stage, the system operator will have nothing in hand to prevent a distance
+ protection misoperation if distance protection is used alone.
+ It is important to keep in mind that distance protection systems are set
+ locally with the help of the impedance of adjacent lines without any informatio
+n about the system load until the coordination study phase.
+ In the coordination study phase, the transmission line owner checks all
+ settings against applicable standards.
+ This is explained in detail in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "thompson2015transmission"
+
+\end_inset
+
+.
+ In the following paragraphs, we will set up the relay settings first then
+ discuss what happens in system wide cascading events.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:System-Configuration-for-formulating-problem"
+
+\end_inset
+
+, the distance protection relay that will be studied is the relay at point
+ A of line A-C.
+ Line A-C is connected to three (3) lines, namely C-M, C-N and C-P.
+ The number of lines connected to line A-C will not affect zone1 or zone
+ 2 settings but will affect zone 3 settings.
+ As will be seen below, the more lines connected to line A-C, tripping in
+ Zone 3 becomes more insecure.
+ To simplify the analysis, all lines are assumed to have the same impedance
+ as well as the short circuit level.
+ However, as will be explained below, this simplification does not affect
+ the generality of the problem formulation.
+ The impedance and the rating of the lines are taken from 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NERC2003"
+
+\end_inset
+
+.
+ The setting of zone 1 is assumed to be 0.85 of the line impedance.
+ Zone 2 is assumed to be 1.2 of the line impedance.
+ However, some consideration is needed to set up the third zone.
+ The third zone has to be set such that it can protect the longest adjacent
+ line (assumed to be line C-P in this case) and to protect 20% beyond that
+ line to provide backup to the remote circuit breakers .
+ In case of a bolted three phase fault on line C-P and assuming that the
+ short circuit contributions of all buses is given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:System-Configuration-for-formulating-problem"
+
+\end_inset
+
+ by 
+\begin_inset Formula $I_{index}$
+\end_inset
+
+ where 
+\begin_inset Formula $index$
+\end_inset
+
+ is the bus name (being M , N, A or P), the voltage at distance protection
+ system at A can be written as given in equation 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:VoltageAtRelat"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename SysExample.PNG
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System Configuration for formulating the problem
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:System-Configuration-for-formulating-problem"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+System Configuration for formulating the problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{A}=I_{A}\times Z_{A}+Z_{P}\times\left(I_{M}+I_{A}+I_{N}\right)\label{eq:VoltageAtRelat}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The impedance that is seen by the relay A can then be written as in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:ApparentImpedanceAtRelay"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{R}=\frac{V_{A}}{I_{A}}=Z_{A}+Z_{P}\left(1+\frac{I_{M}+I_{N}}{I_{A}}\right)\label{eq:ApparentImpedanceAtRelay}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:ApparentImpedanceAtRelay"
+
+\end_inset
+
+ will only be applicable to faults on line C-P, if we need to include 20%
+ for the line that is beyond bus P, then the impedance 
+\begin_inset Formula $Z_{P}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:ApparentImpedanceAtRelay"
+
+\end_inset
+
+ has be replaced by 
+\begin_inset Formula $1.2\times Z_{P}$
+\end_inset
+
+.
+ Using the data in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NERC2003"
+
+\end_inset
+
+ and assuming all lines are identical as well as their short circuit contributio
+n, then the setting of zone 3 will be 
+\begin_inset Formula $Z_{A}+3.6\times Z_{P}=4.6\times Z_{A}$
+\end_inset
+
+.
+ The three zones are plotted in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Distance-Relay-characteristic"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename impedance form.PNG
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Distance protection characteristic 
+\end_layout
+
+\end_inset
+
+Distance protection characteristic 
+\series bold
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Distance-Relay-characteristic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+This ends setting up the relay locally.
+ 
+\end_layout
+
+\begin_layout Standard
+After setting up the relay locally, engineers need to apply applicable standards
+ and directives to their settings for compliance purposes.
+ This step involves running worst case power flow in the summer peak case.
+ The most notable directive is the load encroachment.
+ The load encroachment zone is an area of the protection zone in which the
+ load impedance “ encroaches” –intrudes- upon the fault impedance.
+ Load encroachment will obviously cause misoperation and should be removed
+ from the zone of protection.
+ To plot the load encroachment zone according to NERC directives 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NERCLoadability,NERC2003,NERCMisoperation"
+
+\end_inset
+
+, the load zone should include the point which corresponds to 150% line
+ loading and 0.85 per unit voltage.
+ Thus the load encroachment locus of the distance relay at A will consist
+ of two parts.
+ The first part will be an arc of circle of radius given in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:LoadImpedance"
+
+\end_inset
+
+ which is given as arc 
+\series bold
+RIT
+\series default
+ in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:System-Configuration-for-formulating-problem"
+
+\end_inset
+
+.
+ This arc 
+\series bold
+RIT
+\series default
+ corresponds to the least impedance that the relay should not issue a trip
+ command for.
+ The load lines will be two lines making an angle of 
+\begin_inset Formula $\pm30^{\circ}$
+\end_inset
+
+ with the x-axis (
+\begin_inset Formula $\pm30^{\circ}$
+\end_inset
+
+ represents the power factor of the line under worst case loading condition)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{load}=\frac{V_{A}}{I_{A}}=\frac{\frac{345kV}{\sqrt{3}}\times0.85}{1.5\times3000}=57\varOmega\label{eq:LoadImpedance}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The orange area 
+\series bold
+RLQT
+\series default
+ is the load encroachment area.
+ NERC directives 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NERCLoadability,NERC2003,NERCMisoperation"
+
+\end_inset
+
+ states that this load encroachment zone has to be removed from the relay
+ operating zone.
+ It can be seen at once that if the impedance seen by the relay lies within
+ the green area 
+\series bold
+URI
+\series default
+ then a relay may confuse this operating point for a fault since the point
+ lies already in zone 3.
+ This confusion arises if the fault resistance is high enough to cause the
+ fault point to lie within the green area 
+\series bold
+URI
+\series default
+.
+ In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Distance-Relay-characteristic"
+
+\end_inset
+
+, this fault resistance ranges from 
+\begin_inset Formula $30\varOmega$
+\end_inset
+
+ to 
+\begin_inset Formula $90\varOmega$
+\end_inset
+
+.
+ The fault resistance can be obtained by measuring the distance between
+ the diameter 
+\series bold
+AB
+\series default
+ of zone 3 circle to point 
+\series bold
+R
+\series default
+ and 
+\series bold
+U
+\series default
+ of the green zone.
+ If it is known in advance that the fault resistance calculated cannot be
+ attained along the route of the transmission line, then the risk of misoperatio
+n is nonexistence and the green area can be removed from zone 3 without
+ affecting the security or reliability of the distance protection system.
+ However, fault resistance along the route of the transmission line is not
+ known in advance.
+ Also, one should note that solid state and electromagnetical relays can
+ not be programmed, only microprocessor relays can.
+ This really means that older relays will have to comply with NERC standards
+ by disabling zone 3 altogether.
+ It is shown in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horowitz2006"
+
+\end_inset
+
+ that disabling zone 3 in some cases will force protection engineers to
+ provide back up protection solutions to remote circuit breakers.
+ This might involve a considerable cost.
+ Additionally, not all countries around the world have standards as strict
+ as NERC, so the green area 
+\series bold
+URI 
+\series default
+exist in the zone of protection without regard from the settings engineer.
+ Lastly, even if the relay complies with NERC directives, an impedance can
+ still fall anywhere in zone 3, not only the green area 
+\series bold
+URI,
+\series default
+ under stressed system conditions as Phadke and Horowitz pointed out in
+ their paper 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horowitz2006"
+
+\end_inset
+
+.
+ This shows clearly the impedance protection is inherently insecure under
+ stresses system conditions.
+ 
+\end_layout
+
+\begin_layout Standard
+Attention is now given to the assumptions stated in the beginning.
+ It was assumed that all lines have the same impedance and all of them are
+ contributing equal currents to the fault.
+ It can be seen at once from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Distance-Relay-characteristic"
+
+\end_inset
+
+ that this assumption is not restricting the generality of the problem formulati
+on.
+ Because in any case the green area 
+\series bold
+URI
+\series default
+ will exist due to the load profile under stressed conditions.
+ Additionally, the fault contribution of the transmission lines will only
+ affect the diameter 
+\series bold
+BA
+\series default
+ of zone 3 which will only affect point 
+\series bold
+U
+\series default
+.
+ Point 
+\series bold
+U
+\series default
+ correspond to the max fault resistance.
+ Stated differently, there will be always an overlap between the dynamic
+ rating of the line and zone 3 and the short circuit levels from nearby
+ lines will only affect the size of the overlap (area 
+\series bold
+URI)
+\series default
+ not the overlap itself.
+ Lastly, to derive 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:VoltageAtRelat"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:ApparentImpedanceAtRelay"
+
+\end_inset
+
+, a three phase fault has been assumed.
+ Nevertheless, if a single line to ground fault occurs then the positive
+ sequence impedance seen by the distance protection system will still be
+ given by 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:ApparentImpedanceAtRelay"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+It should be apparent from the description above that the major issue that
+ is faced by traditional impedance protection system is that the steady
+ state impedance corresponding to a heavy load is coincident to the impedance
+ under a fault on a remote line to which the distance protection system
+ provides backup protection.
+ It could be argued that impedance protection should be supervised by other
+ steady state protection principles to enhance its selectivity, i.e, the
+ ability to differentiate between a load and a fault current.
+ However, other protection principles -such as over current protection-
+ that can make the distinction between a load and a fault depend on the
+ anticipated power flow for operation while the problem in hand is different.
+ The confusion that is seen by the distance protection is because the power
+ flow under system wide cascading failures changes considerably from the
+ planned power flow.
+ In other words, the load encroachment zone has to be set for system wide
+ cascading scenarios that is not known in advance, which is close to impossible
+ undertaking.
+ One of the authors 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Horowitz2006"
+
+\end_inset
+
+ states this fact as:
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+"The overwhelming thrust of the NERC rules and other instructions regarding
+ the application of zone 3 elements has been to prevent its operation during
+ emergency conditions.
+ Although this is a desirable goal, it should be recognized that even with
+ all the intelligence available to modern computer relays, the problem of
+ distinguishing a fault from a heavy load in a relatively short time and
+ using only the current and voltage signals available to the relay can not
+ be solved in every single imaginable (and some unimaginable) power system
+ scenarios"
+\shape default
+.
+\end_layout
+
+\begin_layout Section
+Detection and mitigation of zone 3 misoperation in the planning stage
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -319,6 +1037,17 @@ As can be seen above, detection  of distance protection misoperation is
  Even though this could be done for small benchmark systems, the contingency
  analysis, under uncertain load and generation, is computationally impossible
  for large system consisting of thousands of buses.
+\end_layout
+
+\begin_layout Section
+Communication Assisted Schemes
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Communication-Assisted-Schemes"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -534,6 +1263,17 @@ t communication infrastructure cost.
  
 \end_layout
 
+\begin_layout Section
+Modifications to Local Distance Protection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Modifications-to-Local"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Apart from using PMUs for fault detection and assisting zone 3 tripping,
  various authors proposed making changes to the way impedance relays operate.
@@ -704,236 +1444,6 @@ In Summary, the use of high frequency fault generated transients seem to
  
 \end_layout
 
-\begin_layout Section
-Previous Work
-\end_layout
-
-\begin_layout Standard
-text text text text text text text text text text text text text text text
-\end_layout
-
-\begin_layout Subsection
-subsection
-\end_layout
-
-\begin_layout Subsection
-another subsection
-\end_layout
-
-\begin_layout Section
-Methodology
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Theorem name
-\end_layout
-
-\end_inset
-
-For a named theorem or theorem-like environment you need to insert the name
- through 
-\family sans
-Insert\SpecialChar menuseparator
-Short Title
-\family default
-, as done here.
-\end_layout
-
-\begin_layout Lemma
-If you don't want a theorem or lemma name don't add one.
-\end_layout
-
-\begin_layout Proof
-And here's the proof!
-\end_layout
-
-\begin_layout Section
-Results
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement htbp
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\family sans
-A single column figure goes here
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Captions go 
-\emph on
-under
-\emph default
- the figure
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float table
-placement htbp
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Table captions go 
-\emph on
-above
-\emph default
- the table
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-delete
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-this
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-example
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-table
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Conclusions
-\end_layout
-
-\begin_layout Standard
-bla bla
-\end_layout
-
-\begin_layout Appendices
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Don't add text here!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-First appendix
-\end_layout
-
-\begin_layout Standard
-Citation: 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "IEEEexample:beebe_archive"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Second appendix
-\end_layout
-
-\begin_layout Section*
-Acknowlegment
-\end_layout
-
-\begin_layout Standard
-bla bla
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Remember though that your final submission is supposed to have all the bibliogra
-phy entries embedded in the \SpecialChar LaTeX
--file.
- This means you eventually have to copy the .bbl file into the latex file
- and remove the bibtex lines.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
@@ -943,81 +1453,6 @@ options "bibtotoc,IEEEtran"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Biography
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "1in"
-special "none"
-height "1.25in"
-height_special "none"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-Replace this box by an image with a width of 1
-\begin_inset space \thinspace{}
-\end_inset
-
-in and a height of 1.25
-\begin_inset space \thinspace{}
-\end_inset
-
-in!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Argument 2
-status open
-
-\begin_layout Plain Layout
-Your Name
-\end_layout
-
-\end_inset
-
- All about you and the what your interests are.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Biography without photo
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-Coauthor
-\end_layout
-
-\end_inset
-
-Same again for the co-author, but without photo
 \end_layout
 
 \end_body

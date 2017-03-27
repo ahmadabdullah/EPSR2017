@@ -386,16 +386,8 @@ reference "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stag
 \end_inset
 
 .
- 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "sec:Communication-Assisted-Schemes"
-
-\end_inset
-
- provides an overview of the communication assisted scheme proposed to eliminate
- the distance protection misoperation.
- Lastly, .
+ in sections survey literature for possible solutions for the problem of
+ distance protection zone 3 misoperation.
  
 \end_layout
 
