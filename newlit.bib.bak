@@ -303,7 +303,7 @@
 }
 
 @InProceedings{schweitzer2016cyber,
-  author       = {David E. Whitehead, Kevin Owens, Dennis Gammel, and Jess Smith},
+  author       = {David, Whitehead and Kevin, Owens and Dennis, Gammel and Jess, Smith},
   title        = {Ukraine Cyber-Induced Power Outage: Analysis and Practical Mitigation Strategies},
   booktitle    = {43rd Annual Western Protective Relay Conference},
   year         = {2016},

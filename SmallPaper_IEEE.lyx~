@@ -564,7 +564,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename SysExample.PNG
-	scale 80
+	scale 60
 
 \end_inset
 
@@ -694,7 +694,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename impedance form.PNG
-	scale 80
+	scale 60
 
 \end_inset
 
@@ -959,17 +959,7 @@ reference "eq:ApparentImpedanceAtRelay"
 \end_inset
 
 , a three phase fault has been assumed.
- Nevertheless, if a single line to ground fault occurs then the positive
- sequence impedance seen by the distance protection system will still be
- given by 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:ApparentImpedanceAtRelay"
-
-\end_inset
-
-.
- 
+ This is due to the fact that line overload is three phase phenomenon.
 \end_layout
 
 \begin_layout Standard
@@ -1028,6 +1018,119 @@ name "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
 \end_layout
 
 \begin_layout Standard
+Most Independent System Operators (ISOs) today use N-1 criterion to judge
+ whether the system is secure after the removal of one line in planning
+ stage.
+ However, given that distance protection system misoperation is not triggered
+ until two or three lines go out of service 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Liscouski2004"
+
+\end_inset
+
+, the distribution of power flow is hard to be taken into account in the
+ planning stage as it would mean performing N-2 and N-3 contingency analysis
+ which is expensive computationally.
+ Thus, it is increasingly hard to assess protection system capability under
+ the most stressful system conditions.
+
+\shape slanted
+ 
+\shape default
+Due to that, the authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "li2007operation,li2008sensitivity"
+
+\end_inset
+
+ provided an efficient method to study the sensitivity of zone 3 under various
+ operating conditions without the need for performing large number of power
+ flow studies.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "li2007operation,li2008sensitivity"
+
+\end_inset
+
+, the authors define a linearized impedance margin of a distance relay using
+ system voltages, injected power and shunt susceptance.
+ The impedance margin is defined as the distance between the measured impedance
+ in the R-X plane to the boundary of the operating characteristic of the
+ relay.
+ By doing so, the relays that may misoperate can be anticipated ahead of
+ time in an efficient manner in the planning stage using simple formulas.
+ However, it is shown in the paper that if the changes in the voltages or
+ power injections are electrically far away from the relay under study,
+ a situation that always exists in wide area cascading scenarios, the error
+ in the analysis becomes unacceptable especially for long lines.
+ 
+\end_layout
+
+\begin_layout Standard
+The authors in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Song2007"
+
+\end_inset
+
+ proposed certain indices that can accurately gauge the severity of system
+ conditions and the likelihood of cascades in real time.
+ An index that is used to monitor distance relays is also proposed.
+ If the indies associated with the distance relays exceed their threshold,
+ then distance protection misoperation is about to occur and the system
+ operator has the option to stop distance relay from operation.
+ However, in practice only N-1 contingencies are studied and thus the severity
+ index is chosen based on that case.
+ However, if the system enters N-2 or N-3 contingency conditions, tuning
+ of the “severity” threshold will be a difficult task computationally.
+ 
+\end_layout
+
+\begin_layout Standard
+Lastly, distance protection co-ordination has been explored in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ravikumar2008approach,ravikumar2009approach"
+
+\end_inset
+
+.
+ By ensuring that the relays are well co-coordinated under various contingency
+ conditions, unnecessary trip could be avoided.
+ Due to the fact that distance protection co-ordination requires large amount
+ of offline simulations by performing many contingency conditions, the authors
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tasdighi2016automated"
+
+\end_inset
+
+ introduced the idea of 
+\begin_inset Quotes eld
+\end_inset
+
+distance of impact
+\begin_inset Quotes erd
+\end_inset
+
+ to automate the distance protection co-ordination.
+ However, the authors uses the super computer to perform their computations
+ at the first stage.
+ Once the distance of impact of each relay has been calculated, co-ordination
+ of the distance relays becomes straight forward.
+ A shortcoming of the distance co-ordination approach is that even though
+ it can ensure that distance relays never overreach for faults beyond their
+ reach, little research has been performed to study whether the co-ordination
+ can ensure that relays will not misoperate under heavy loading conditions.
+ 
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 As can be seen above, detection  of distance protection misoperation is
@@ -1063,10 +1166,22 @@ key "Lim2008"
  proposed that a tool is to be installed at the control center, also known
  as Independent System Operator (ISO), to continuously supervise the operation
  of zone 3 elements.
+ The tool will consist of two modules, a central control unit (CCU) and
+ several regional control units (RCUs).
+ The CCU will be installed in the ISO while the RCUs will be installed at
+ the individual substations.
+ The CCU measures the line outage distribution factors and generation shift
+ factors for the entire power grid and sends all factors to the individual
+ RCUs.
+ RCUs use local measurements at the substation and communicate with one
+ another.
+ The individual RCUs will differentiate between faults and transfer of power
+ flow and supervise distance relays based on the information received from
+ the CCU and other RCUs.
  Even though this solution might be able to prevent all zone-3 misoperations,
  but it needs considerable cost to construct the communication infrastructure
- that is needed to transmit the data from all distance relays in the system
- to the system operator.
+ that is needed to transmit the data between the individual substation and
+ the ISO.
  
 \end_layout
 
@@ -1122,7 +1237,9 @@ key "navalkar2011secure"
 \end_inset
 
 , distributed PMUs are used to reach a definitive decision about the existence
- of the fault in the system using a synchrophasor state estimator.
+ of the fault in the system using a synchrophasor state estimator (SynSE).
+ The SynSE is used to detect network topology changes as well as determine
+ the fault locations.
  However, the grid has be completely observably by PMUs.
  Thus, siting PMUs has to be done carefully to not create unobservable islands
  under stressed system conditions and certain contingency conditions.
@@ -1140,9 +1257,17 @@ key "Kundu2014"
  synchrophasors are proposed to supervise zone 3 operation.
  Specific indices are proposed to assert the fault using the currents which
  result in a very robust zone 3 distance protection system.
- The algorithm basically forms a super node from the certain groups of PMUs.
+ The algorithm forms a super node from the certain groups of PMUs.
  By summing the current going into the super node, a decision can be reached
- whether the fault exists or not.
+ whether a disturbance exists or not.
+ If a disturbance is detected, another logic is invoked to determine whether
+ it is a fault for the group of PMUs with the higher deviation.
+ The logic that is invoked after disturbance detection is impedance based.
+ A weighted fault detect index is defined for this purpose.
+ The weights used to define the index depend on the reach of the respective
+ zone 3 distance protection reach.
+ If after disturbance detection, the weighted fault index is exceeded, a
+ fault in zone 3 is declared and the relay is restraint from operation.
  However, to fully take advantage of the method, strategically located PMU
  have to exist in the system which makes the approach highly dependent on
  the topology and any transmission system upgrades.
@@ -1195,6 +1320,18 @@ key "Neyestanaki2015"
  between each PMU such that a line in not included in two regions.
  The sum of zero and positive sequence currents are used as discriminant
  for fault detection and location.
+ If the sum is not zero then the area will be flagged as having a fault.
+ Next comes the task of identifying the faulted line.
+ For the area that is flagged as having a fault, a distance quantity will
+ be calculated for each line within the area, i.e., each line will be assumed
+ faulted and a distance quantity will be calculated.
+ If the distance quantity falls between 0 to 1 then the faulted line will
+ be determined.
+ If more than one line is found to be faulted, an estimation of relative
+ residual error is made and the line with the minimum residual error will
+ be selected as the faulted line.
+ It is clear from this description that simultaneous faults within any protected
+ zone will be detected as one fault only.
  
 \end_layout
 
@@ -1207,6 +1344,8 @@ key "Eissa2010"
 \end_inset
 
 , a backup wide area protection scheme is proposed.
+ Short window DFT is used to extract the phasor information from the three
+ phase voltages and currents.
  In this scheme, the absolute difference of the bus angles and currents
  are used to detect the fault.
  The minimum voltage magnitude establishes the closest bus to the fault
@@ -1229,26 +1368,51 @@ key "He2011"
 \end_inset
 
 , another wide area protection scheme is proposed.
- The measured voltage and current of one terminal of the line are used to
- estimate the voltages at the other end.
- If an internal fault on the line being monitored exists, then the estimated
- value will be different form the measured value at that bus.
+ Th solution consists of two components: a fault element identification
+ (FEI) and a fault area detection (FAD).
+ The FEI is used to identify the faulted element in the zone being protected.
+ After that, the fault isolation is realized by coordination among area
+ circuit breakers breakers.
+ As part of the FEI, the measured voltage and current of one terminal of
+ the protected area are used to estimate the voltages at the other end.
+ If an internal fault occurs within the zone being monitored, then the estimated
+ value will be different form the measured value at that bus causing a fault
+ to be detected.
  This discrepancy causes the fault to be detected.
+ On the other hand, the faulted area is detected through FAD.
+ The substations that are within the faulted area need to send the information
+ to the central control room.
+ Afterwords, the central control control will search the suspected faulty
+ lines and identify actual faulty lines quickly.
+ The use of FAD concept reduces the communication overhead required by the
+ scheme.
  
 \end_layout
 
 \begin_layout Standard
 The authors in 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "lin2016countermeasures,yan2015research"
+LatexCommand cite
+key "lin2016countermeasures"
 
 \end_inset
 
  use PMUs, that are in place as part of a wide area protection scheme, to
  detect the power flow transfer due to the removal of faulted line from
  service.
- Based on that detection, zone 3 is adaptively adjusted to prevent misoperation.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lin2016countermeasures"
+
+\end_inset
+
+, the load flow transfer to a line can be calculated using the network topology
+ via the distribution factors.
+ If the measured power flow transfer significantly mismatches the calculated
+ power flow transfer, then a fault will be declared.
+ Based on that detection, zone 3 is adaptively adjusted to prevent misoperation
+ which eliminate distance protection zone 3 misoperation.
  
 \end_layout
 
@@ -1291,8 +1455,19 @@ key "Nayak2015"
 \end_inset
 
  to assist zone-3 tripping.
- The DC decaying component and the load angle are used to determine whether
- a fault has occurred within the reach of local distance relay.
+ The authors proposed to distinguish three phase faults from system overloads.
+ The DC decaying component and the line load angle are used to determine
+ whether a fault has occurred within the reach of local distance relay.
+ The DC decaying fault component is reconstructed from the measured currents
+ in all three phases.
+ Since the fault is three phase, a DC decaying component must exist in one
+ of the phases.
+ A transient monitoring function will then be defined to be the maximum
+ of all three phases DC decaying component in one cycle.
+ Also, for the three phase to be asserted, the line load angle has to be
+ greater than 50 degrees.
+ Both the monitoring function as well as the line load angle has to be true
+ for a three phase fault to be declared.
  The drawback of this method is that the fault must have significant decaying
  DC component which makes it challenging for certain fault incipient angles
  and transmission line lengths.
@@ -1307,7 +1482,13 @@ key "Horowitz2006"
 
  that under stressed system conditions the angle may indeed exceed that
  thresholds with no fault on the system.
- 
+ Also, if the swing frequency in the system is anticipated to be larger
+ than 5 Hz, threshold selection for transient monitoring becomes a hard
+ task which could mislead the scheme to confuse power system swing for three
+ phase faults.
+ Lastly, the effect of fault resistance has been studied in the paper.
+ Fault resistance can potentially cause trouble setting the threshold for
+ the the transient monitoring function as it affects the DC decaying component.
 \end_layout
 
 \begin_layout Standard
@@ -1318,43 +1499,81 @@ key "Jonsson2003"
 
 \end_inset
 
- the rate of change of voltage is used as a trip restraint to prevent distance
- protection misoperation in the real time.
+ the rate of change of voltage is used as a trip restraint to supervise
+ distance protection misoperation.
+ The idea is that fault occurrence or fault clearing causes the voltage
+ seen by the relay to change drastically.
+ The authors propose if the local relay senses that the system voltage is
+ stressed according to the conditions listed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vu1999use"
+
+\end_inset
+
+, the rate of voltage change 
+\begin_inset Formula $(\Delta V/\Delta t)$
+\end_inset
+
+ will be used to assert whether a fault has been occurred and cleared within
+ zone 3 protection using two thresholds for both fault occurrence and fault
+ clearing.
+ Additionally, the authors proposed to use a thermal loading monitoring
+ function to decide whether the maximum conductor temperature has been reached.
+ The temperature monitoring function will start operation after the fault
+ has been detected.
+ If the temperature monitoring function declares that the line temperature
+ has reached maximum limit, the line will be tripped whether the fault has
+ been cleared or not.
  However, for the trip command to be safe, large amount of offline simulations
  need to be carried out to know the worst case rate of change of voltage.
- Additionally, under voltage instability, the method is inapplicable as
- pointed in 
+ The major disadvantage of the method is that under voltage instability,
+ the 
+\begin_inset Formula $(\Delta V/\Delta t)$
+\end_inset
+
+ criterion is not exclusive property for faults as pointed in 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Sharifzadeh2014"
 
+\end_inset
+
+ since under voltage instability, a sudden generator tripping could cause
+ the same 
+\begin_inset Formula $(\Delta V/\Delta t)$
 \end_inset
 
 .
- Since it is hard to distinguish between evolving pre-blackout event and
- short circuit conditions using magnitude of voltage, the rate of change
- of current as well has been used along with the rate of voltage as trip
- restraint in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Sharifzadeh2014"
-
-\end_inset
-
-.
- A drawback of 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Sharifzadeh2014"
-
-\end_inset
-
- is that it only tries to distinguish between three phase symmetrical faults
- and heavy loading conditions without regard to other types of faults which
- could be the case if the transmission line is not transposed.
- Additionally, the rate of change of current may not be an accurate indication
- in case of generator dropping.
  
+\end_layout
+
+\begin_layout Standard
+Since it is hard to distinguish between evolving pre-blackout event and
+ short circuit conditions using magnitude of voltage, another trip restraint
+ quantity, namely 
+\begin_inset Formula $(\Delta I/\Delta V)$
+\end_inset
+
+ has been used along with 
+\begin_inset Formula $(\Delta V/\Delta t)$
+\end_inset
+
+ criterion to trip zone 3 securely in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sharifzadeh2014"
+
+\end_inset
+
+.
+ The 
+\begin_inset Formula $(\Delta I/\Delta V)$
+\end_inset
+
+ threshold has been also obtained using offline simulations.
+ However, neither contingency analysis nor system loading levels have not
+ been taken into consideration.
 \end_layout
 
 \begin_layout Standard
@@ -1400,23 +1619,75 @@ key "zadeh2008artificial,zadeh2011adaptive"
  conditions.
  The load blinder is then combined with the zone 3 settings to block any
  undesirable tripping.
- However, the effect of the system topology wasn't studied.
+ The load blinder is only activated under balanced conditions to make sure
+ that the heavy loading is not confused for unbalanced fault conditions.
+ The load blinder is determined based on offline simulations.
+ The simulations take into account the loading level of the power system,
+ fault incipient angle, source impedance ratio, fault resistance and fault
+ location.
+ The features used to train ANN is the active and reactive power, voltage
+ as well as the rate of change of both the voltages and currents seen at
+ the relay terminal.
+ A simple line connected to another line with a load in between is used
+ to test the method which is a disadvantage of the method.
+ Also, the effect of the system topology wasn't studied.
  It also is foreseen that the inclusion for contingency analysis in ANN
- training will require large offline simulations.
- In 
+ training will require large offline simulations and will make load blinder
+ selection difficult task.
+ Additionally, only three phase has been used to train the ANN and in case
+ a single line to ground fault occurs and cause the features to be different
+ than the ones used in training, the method is expected to fail because
+ ANN is known to have bad generalization capabilities.
+\end_layout
+
+\begin_layout Standard
+In 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Nikolaidis2016,Nikolaidis"
 
 \end_inset
 
-, the authors proposes a fourth protection zone for protection.
- The rate of change of the impedance once it enters that 4th zone and proceeds
- to zone 3 is calculated and a decision is made whether to issue a trip
- command based on that rate.
+, the authors propose changing zone 3 reach during emergency conditions
+ to prevent distance protection misoperation if certain system conditions
+ are met.
+ If those system conditions are met, zone 3 protection reach will be shrunk
+ to zone 2 which in turn gives maximum security.
+ During stressed system conditions, the impedance seen by the local relay
+ approaches the original zone 3 border, whether this border is MHO characteristi
+cs or polygonal one.
+ The authors propose to define a fourth protection zone, called third zone
+ proximity area (TZPA), as well as a fifth protection zone, called third
+ zone modification area (TZMA), to change zone 3 protection reach based
+ on certain criteria.
+ The TZMA is a region within TZPA but closer to zone 3 protection zone.
+ The authors provided rules on how to set the both TZMA and TZPA.
+ Once the impedance enters this TZPA and crosses zone 3 fast enough, the
+ fault will be declared.
+ However, if the impedance enters TZPA and stays within TZPA, the TZMA logic
+ will be put into action.
+ Zone 3 protection will be shrunk to zone 2 if the impedance crosses TZMA
+ within minute.
+ This one minute is used to adjust for restorative corrective forces of
+ the gird such as generator excitation controls and transformer load tap
+ changer.
+ In summary, zone 3 protection will only be changed if the impedance crosses
+ TZMA with a certain rate within a specified time delay once it starts changing
+ in TZPA.
  Although, the approach is very promising, a fast evolving system instability
  could mislead the scheme.
- 
+ Additionally, it can be seen that the approach proposed sacrifices dependabilit
+y for security as evident by shrinking zone 3; if a fault occurs within
+ the original zone 3 protection zone beyond the original zone 2 reach after
+ zone 3 protection zone is shrunk, the approach proposed by the authors
+ will rely heavily on the closest relay and circuit breaker to clear the
+ fault.
+ However, if this relay or circuit breaker fails to clear the fault, the
+ fault will go uncleared worsening the already stresses system conditions.
+ Lastly, the proposed algorithm will fail indefinitely in case the impedance
+ stays within TZPA, suddenly jumps to original zone 3 due to zone 3 fault
+ before the time delay expires then stays in zone 3 after fault clearing
+ due to line heavy loading conditions.
 \end_layout
 
 \begin_layout Standard
@@ -1427,12 +1698,26 @@ key "ma2016adaptive"
 
 \end_inset
 
- to identify power flow overload based on a complex phasor plane.
- The paper only differentiates between three phase faults and overloads.
- However, the method is not applicable in case an open phase fault occurs
- and causes asymmetrical power flow transfer.
- Additionally, the method is not applicable when three phase faults and
- system overload coexists.
+ to identify power flow overload based on a newly proposed concept.
+ This concept is based on the phasor relationships in the complex phasor
+ plane.
+ The paper only differentiates between three phase faults and overloads
+ as overloads are three phase balanced phenomenon.
+ Since the paper only aims to distinguish three phase faults from overload,
+ any three phase fault on a transmission line can be analyzed without the
+ need of information from the other end of line.
+ This is because the fact that the arc voltage is not affected by the infeed
+ fault current making the fault point grounded through the arc resistance.
+ This property is used to derive the criterion to differentiate between
+ three phase faults and overloads based on an impedance criterion that can
+ be adaptively adjusted using the measured phase angle between the voltage
+ and current at the relay location as well as a constant safety factor.
+ However, the method is not applicable when a three phase fault occur within
+ the distance relay reach during an overload condition.
+ Additionally, it is assumed that all three phase to ground faults involve
+ arc without the consideration of the other situations when three phase
+ downed conductors cause such faults which in turn could cause some of the
+ assumptions used in deriving the impedance criterion invalid.
  
 \end_layout
 
@@ -1441,6 +1726,9 @@ key "ma2016adaptive"
 \series bold
 In Summary, the use of high frequency fault generated transients seem to
  be the most promising area and it is scarcely researched in literature.
+ The use of rate of change of voltages and current can solve some aspects
+ of the problem of distance protection misoperation but leave other aspects
+ unresolved.
  
 \end_layout
 
