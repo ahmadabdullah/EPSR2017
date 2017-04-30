@@ -4,16 +4,22 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass IEEEtran
+\textclass elsarticle
 \begin_preamble
-% for subfigures/subtables
-\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{url}
+% specify here the journal
+%\journal{ Electric Power Systems Research}
+
+% use this if you need line numbers
+%\usepackage{lineno}
 \end_preamble
-\options conference
 \use_default_options false
+\begin_modules
+theorems-std
+\end_modules
 \maintain_unincluded_children false
 \language english
-\language_package none
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "default"
@@ -31,41 +37,38 @@
 \output_sync 0
 \bibtex_command bibtex
 \index_command default
-\float_placement tbh
+\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref true
-\pdf_title "Your Title"
-\pdf_author "Your Name"
 \pdf_bookmarks true
-\pdf_bookmarksnumbered true
-\pdf_bookmarksopen true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder true
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle false
-\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
 \papersize default
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 0
-\use_package esint 0
+\use_package esint 1
 \use_package mathdots 1
 \use_package mathtools 0
 \use_package mhchem 1
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
+\suppress_date true
 \justification true
 \use_refstyle 0
 \index Index
@@ -77,9 +80,9 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 2
-\papersides 1
-\paperpagestyle default
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -89,94 +92,135 @@
 
 \begin_body
 
+\begin_layout BeginFrontmatter
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keep this empty!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
 Distance Protection Zone 3 Misoperation During System Wide Cascading Events:
  The Problem and a Survey of Solutions
 \end_layout
 
 \begin_layout Author
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-the standard way: 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Flex Author Name
-status open
-
-\begin_layout Plain Layout
-Ahmad
+A.M.
 \begin_inset space ~
 \end_inset
 
 Abdullah
+\begin_inset Flex CorAuthormark
+status open
+
+\begin_layout Plain Layout
+cor1
 \end_layout
 
 \end_inset
 
 
-\begin_inset Flex Author Affiliation
-status collapsed
+\begin_inset Argument 1
+status open
 
 \begin_layout Plain Layout
-Department of Electrical and Computer Engineering
-\begin_inset Newline newline
-\end_inset
-
-Texas A&M University, College Station, TX 77840
-\begin_inset Newline newline
-\end_inset
-
-Email: ahmad@tamu.edu
+rvt
 \end_layout
 
 \end_inset
 
 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-and 
 \end_layout
 
-\end_inset
+\begin_layout Email
+ahmad.abdullah@ieee.org
+\end_layout
 
-
-\begin_inset Flex Author Name
-status collapsed
-
-\begin_layout Plain Layout
-Karen
+\begin_layout Author
+K.
 \begin_inset space ~
 \end_inset
 
 Butler-Purry
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+focal
 \end_layout
 
 \end_inset
 
 
-\begin_inset Flex Author Affiliation
+\begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Department of Electrical and Computer Engineering
-\begin_inset Newline newline
+
+\size normal
+With 
+\series bold
+\size default
+
+\backslash
+fnref
+\series default
+\size normal
+ and you refer to the author footnotes.
+\end_layout
+
 \end_inset
 
-Texas A&M University, College Station, TX 77840
-\begin_inset Newline newline
+
+\end_layout
+
+\begin_layout Email
+klbutler@tamu.edu
+\end_layout
+
+\begin_layout Corresponding author
+Corresponding author
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+cor1
+\end_layout
+
 \end_inset
 
-Email: kbutler@tamu.edu
+
+\end_layout
+
+\begin_layout Address
+Department of Electrical and Computer Engineering, Texas A&M University,
+ College Station, TX, 77843
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+rvt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Address
+Department of Electrical and Computer Engineering, Texas A&M University,
+ College Station, TX, 77843
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+focal
 \end_layout
 
 \end_inset
@@ -192,16 +236,79 @@ Distance relay zone 3 misoperation has been responsible for major blackouts
  conditions such as the 2015 Turkish blackout.
  This paper summarizes the problem and provides a survey on the research
  efforts made to increase distance relay security to prevent distance protection
- misoperation
+ misoperation.
+ 
 \end_layout
 
 \begin_layout Keywords
-Distance protection zone 3, blackouts, cascading events, misoperation, security
- 
+Distance protection zone 3 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ blackouts 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ cascading events 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ misoperation 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ security 
+\end_layout
+
+\begin_layout EndFrontmatter
+
 \end_layout
 
 \begin_layout Section
 Introduction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -263,7 +370,7 @@ key "Baldick"
  Even though, the world has witnessed many blackouts prior to the 2003 blackout
  
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Hines2009"
 
 \end_inset
@@ -422,7 +529,7 @@ name "sec:Typical-Distance-Protection"
 \begin_layout Standard
 On August 14th of 2003 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Liscouski2004"
 
 \end_inset
@@ -441,7 +548,7 @@ n ,which in turn, resulted in tripping of the heavily loaded line.
  leading to a chain of events that ultimately led to system collapse.
  Also, on March 31st of 2015 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "2015Turkish"
 
 \end_inset
@@ -483,7 +590,7 @@ key "Liscouski2004"
  or due to lines out of service for maintenance causing one line to carry
  substantial system power transfer as in the 2015 Turkish blackout 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2015Turkish"
 
 \end_inset
@@ -495,9 +602,9 @@ key "2015Turkish"
 \begin_layout Standard
 To illustrate that this confusion is not tied up with a certain system condition
  but rather inherent insecurity in the distance protection principle, the
- single line diagram shown in 
+ single line diagram shown in Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:System-Configuration-for-formulating-problem"
 
 \end_inset
@@ -530,9 +637,9 @@ key "thompson2015transmission"
 \end_layout
 
 \begin_layout Standard
-In 
+In Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:System-Configuration-for-formulating-problem"
 
 \end_inset
@@ -567,9 +674,9 @@ key "NERC2003"
  line (assumed to be line C-P in this case) and to protect 20% beyond that
  line to provide backup to the remote circuit breakers .
  In case of a bolted three phase fault on line C-P and assuming that the
- short circuit contributions of all buses is given in 
+ short circuit contributions of all buses is given in Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:System-Configuration-for-formulating-problem"
 
 \end_inset
@@ -712,9 +819,9 @@ n, then the setting of zone 3 will be
 \end_inset
 
 .
- The three zones are plotted in 
+ The three zones are plotted in Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Distance-Relay-characteristic"
 
 \end_inset
@@ -748,9 +855,9 @@ Distance protection characteristic
 
 \end_inset
 
-Distance protection characteristic for system in 
+Distance protection characteristic for system in Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:System-Configuration-for-formulating-problem"
 
 \end_inset
@@ -785,7 +892,14 @@ After setting up the relay locally, applicable standards and directives
  The load encroachment zone is an area of the protection zone in which the
  load impedance “ encroaches” –intrudes- upon the fault impedance.
  Load encroachment will obviously cause misoperation and should be removed
- from the zone of protection.
+ from the zone of protection 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NERC2003"
+
+\end_inset
+
+.
  To plot the load encroachment zone according to NERC directives 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -808,9 +922,9 @@ reference "eq:LoadImpedance"
 \series bold
 RIT
 \series default
- in 
+ in Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:System-Configuration-for-formulating-problem"
 
 \end_inset
@@ -845,7 +959,7 @@ Z_{load}=\frac{V_{A}}{I_{A}}=\frac{\frac{345kV}{\sqrt{3}}\times0.85}{1.5\times30
 \end_layout
 
 \begin_layout Standard
-The orange area 
+The orange hashed area 
 \series bold
 RLQT
 \series default
@@ -860,21 +974,21 @@ key "NERCLoadability,NERC2003,NERCMisoperation"
  states that this load encroachment zone has to be removed from the relay
  operating zone.
  It can be seen at once that if the impedance seen by the relay lies within
- the green area 
+ the solid green area 
 \series bold
 URI
 \series default
  then a relay may confuse this operating point for a fault since the point
  lies already in zone 3.
  This confusion arises if the fault resistance is high enough to cause the
- fault point to lie within the green area 
+ fault point to lie within the solid green area 
 \series bold
 URI
 \series default
 .
- In 
+ In Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Distance-Relay-characteristic"
 
 \end_inset
@@ -923,13 +1037,13 @@ key "Horowitz2006"
  provide back up protection solutions to remote circuit breakers.
  This might involve a considerable cost.
  Additionally, not all countries around the world have standards as strict
- as NERC, so the green area 
+ as NERC, so the solid green area 
 \series bold
 URI 
 \series default
 exist in the zone of protection without regard from the protection engineer.
  Lastly, even if the relay complies with NERC directives, an impedance can
- still fall anywhere in zone 3, not only the green area 
+ still fall anywhere in zone 3, not only the solid green area 
 \series bold
 URI,
 \series default
@@ -951,9 +1065,9 @@ key "Horowitz2006"
 Attention is now given to the assumptions stated in the beginning.
  It was assumed that all lines have the same impedance and all of them are
  contributing equal currents to the fault.
- It can be seen at once from 
+ It can be seen at once from Figure 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Distance-Relay-characteristic"
 
 \end_inset
@@ -1061,10 +1175,16 @@ name "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
 \end_layout
 
 \begin_layout Standard
-Most Independent System Operators (ISOs) today use N-1 criterion to judge
- whether the system is secure after the removal of one line in planning
- stage.
- However, given that distance protection system misoperation is not triggered
+Most Independent System Operators (ISOs) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ERCOTNodal,CaisoPlanning"
+
+\end_inset
+
+ today use N-1 criterion to judge whether the system is secure after the
+ removal of one line in planning stage.
+ However, given that zone 3 distance protection misoperation is not triggered
  until two or three lines go out of service 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1113,6 +1233,36 @@ key "li2007operation,li2008sensitivity"
 \end_layout
 
 \begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "aghamohammadi2016new"
+
+\end_inset
+
+, the authors propose blocking zone 3 of certain distance relays ahead of
+ time based on offline simulations.
+ The authors propose that the system operator perform contingency analysis
+ using credible historical contingencies in planning stage to observe the
+ impedance trajectory at each distance relay in the system.
+ The contingency scenarios to be performed have to include more than one
+ contingency to create an impedance trajectory.
+ The relays that misoperate during each contingency scenario due to the
+ impedance trajectory entering zone 3 when no fault conditions exist should
+ be short listed.
+ Of those relays that are short listed, certain relays are selected such
+ that their zone 3 protection will be disabled.
+ The relays that will be disabled are common to all contingency scenarios
+ and are selected based on a specific criterion explained in the paper.
+ However, the contingency scenarios can be hard to design in the planning
+ stage for modern power systems that have thousands of buses.
+ Additionally, disabling zone 3 effectively disables backup protection for
+ remote circuit breaker which is a situation that should be avoided unless
+ another form of backup is available.
+ 
+\end_layout
+
+\begin_layout Standard
 The authors in 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1142,8 +1292,27 @@ key "ravikumar2008approach,ravikumar2009approach"
 \end_inset
 
 .
+ An SVM for each relay is trained using the impedance trajectory that is
+ seen by the relay during fault conditions.
+ The impedance trajectory is obtained by using a transient stability program.
+ SVM is then trained for various scenarios to distinguish zone 1, zone 2
+ and zone 3.
+ Training scenarios include cases for different fault types at different
+ distances away from the relay that has the SVM and at different fault resistanc
+es.
+ Testing scenarios for SVM include faults that have not used in training.
  By ensuring that the relays are well co-coordinated under various contingency
  conditions, unnecessary trip could be avoided.
+ However, the impedance trajectory will depend on the system topology at
+ the time of fault occurrence and this has not been taken into consideration
+ in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ravikumar2008approach,ravikumar2009approach"
+
+\end_inset
+
+ which could lead to large offline training set.
  Due to the fact that distance protection co-ordination requires large amount
  of offline simulations by performing many contingency conditions, the authors
  in 
@@ -1178,11 +1347,14 @@ distance of impact
 \series bold
 As can be seen above, detection  of distance protection misoperation in
  the planning stage is a hard task.
- To be able to fully prevent distance protection misoperation, an N-x ,
- where x is greater than 1, contingency analysis need to be done.
+ To be able to fully prevent distance protection misoperation, an N-x, where
+ x is greater than 1, contingency analysis need to be done.
  Even though this could be done for small benchmark systems, the contingency
- analysis, under uncertain load and generation, is computationally impossible
+ analysis, under uncertain load and generation, is computationally intensive
  for large system consisting of thousands of buses.
+ Many ISOs may not have access to supercomputers to run such intensive computati
+ons.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1194,6 +1366,58 @@ name "sec:Communication-Assisted-Schemes"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 2003 blackouts pointed out the importance of having events along with
+ the time they occurred.
+ Investigators spent much of their time trying to match up the waveforms
+ to reconstruct the sequence of events that led to the blackout.
+ It was then apparent that to facilitate the transfer and comparison of
+ waveforms, all samples need to have a time stamp for this purpose.
+ Phasor Measurement Unit (PMU) or synchrophasor technology was then recommended
+ to address this shortcoming 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Liscouski2004"
+
+\end_inset
+
+.
+ By the time of 2003 blackout, state estimation was a very mature field,
+ but PMUs opened new areas for the application of state estimation by reducing
+ the time needed to do state estimation due to wide spread deployment in
+ the transmission network.
+ A PMU measures the positive sequence voltage and current (both the magnitude
+ and angle), which opens new areas for adaptive relaying and wide area control
+ and protection.
+ In typical distance protection schemes, the relay is only applied to a
+ single transmission line.
+ However, in a wide area protection scheme, a complete area ( several transmissi
+on lines) can be protected using selected PMU devices without the need to
+ apply PMUs to each single bus in the system.
+ By transferring information in between relays in the power system, accurate
+ decision regarding the nature of the impedance falling in zone 3 can be
+ made and misoperation can be avoided.
+\end_layout
+
+\begin_layout Standard
+With the introduction of PMUs, several fault detection and locations methods
+ have been proposed.
+ The salient feature of PMU detection schemes 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Joe-Air2000"
+
+\end_inset
+
+ is that using the communication links to transfer data between the two
+ ends of the lines, several conclusions can be drawn regarding whether the
+ line is undergoing abnormal conditions.
+ A salient feature of the PMU algorithm is the ability to monitor the status
+ of the line and compute the parameters of the lines online in a very accurate
+ way.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1229,45 +1453,38 @@ key "Lim2008"
 \end_layout
 
 \begin_layout Standard
-The 2003 blackouts pointed out the importance of having events along with
- the time they occurred.
- Investigators spent much of their time trying to match up the waveforms
- to reconstruct the sequence of events that led to the blackout.
- It was then apparent that to facilitate the transfer and comparison of
- waveforms, all samples need to have a time stamp for this purpose.
- Phasor Measurement Unit (PMU) or synchrophasor technology was found to
- address this shortcoming.
- By the time of 2003 blackout, state estimation was a very mature field,
- but PMUs opened new areas for the application of state estimation by reducing
- the time needed to do state estimation due to wide spread deployment in
- the transmission network.
- A PMU measures the positive sequence voltage and current (both the magnitude
- and angle), which opens new areas for adaptive relaying and wide area control
- and protection.
- In typical distance protection schemes, the relay is only applied to a
- single transmission line.
- However, in a wide area protection scheme, a complete area ( several transmissi
-on lines) can be protected using selected PMU devices without the need to
- apply PMUs to each single bus in the system.
- 
-\end_layout
-
-\begin_layout Standard
-With the introduction of PMUs, several fault detection and locations methods
- have been proposed.
- The essential feature of all PMU detection schemes 
+The authors in 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Joe-Air2000"
+key "dutta2014transmission"
 
 \end_inset
 
- is that using the communication links to transfer data between the two
- ends of the lines, several conclusions can be drawn regarding whether the
- line is undergoing abnormal conditions.
- A salient feature of the PMU algorithm is the ability to monitor the status
- of the line and compute the parameters of the lines online in a very accurate
- way.
+ uses synchronized samples from both ends of the line to check whether the
+ transmission line has been tripped successfully or not.
+ The instantaneous power from both line ends are calculated.
+ It is shown in the paper that after fault inception, the instantaneous
+ power at both ends becomes positive.
+ This hold true even under systems with week infeed.
+ The method is applicable to all systems other than radial systems.
+ However, due to the need to transfer data between both ends, significant
+ cost may be incurred to establish such algorithm across each transmission
+ line in the grid.
+ The approach that has been proposed in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dutta2014transmission"
+
+\end_inset
+
+ has been validated using field data in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "esmaeilian2015transmission"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1375,6 +1592,8 @@ key "Neyestanaki2015"
  be selected as the faulted line.
  It is clear from this description that simultaneous faults within any protected
  zone will be detected as one fault only.
+ And even though one of the two faults may have not been cleared, the algorithm
+ may not be able to detect such situation.
  
 \end_layout
 
@@ -1435,7 +1654,7 @@ key "He2011"
 \begin_layout Standard
 The authors in 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "lin2016countermeasures"
 
 \end_inset
@@ -1445,7 +1664,7 @@ key "lin2016countermeasures"
  service.
  In 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "lin2016countermeasures"
 
 \end_inset
@@ -1513,7 +1732,9 @@ key "Nayak2015"
  for a three phase fault to be declared.
  The drawback of this method is that the fault must have significant decaying
  DC component which makes it challenging for certain fault incipient angles
- and transmission line lengths.
+ and transmission line lengths as a significant decaying DC component can
+ only occur when the fault occurs at certain incipient angles and under
+ certain X/R ratios.
  Additionally, the paper assumes the angle between the current and the voltage
  at the relay to be more than 50 degrees as a fault indicator.
  However, it has been pointed out in 
@@ -1524,7 +1745,7 @@ key "Horowitz2006"
 \end_inset
 
  that under stressed system conditions the angle may indeed exceed that
- thresholds with no fault on the system.
+ threshold with no fault on the system.
  Also, if the swing frequency in the system is anticipated to be larger
  than 5 Hz, threshold selection for transient monitoring becomes a hard
  task which could mislead the scheme to confuse power system swing for three
@@ -1549,7 +1770,7 @@ key "Jonsson2003"
  The authors propose if the local relay senses that the system voltage is
  stressed according to the conditions listed in 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "vu1999use"
 
 \end_inset
@@ -1682,7 +1903,7 @@ key "zadeh2008artificial,zadeh2011adaptive"
  than the ones used in training, the method is expected to fail because
  ANN is known to have bad generalization capabilities 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "zurada1992introduction"
 
 \end_inset
@@ -1753,9 +1974,10 @@ key "ma2016adaptive"
  plane.
  The paper only differentiates between three phase faults and overloads
  as overloads are three phase balanced phenomenon.
- Since the paper only aims to distinguish three phase faults from overload,
- any three phase fault on a transmission line can be analyzed without the
- need of information from the other end of line.
+ This distinction is made because Since the paper only aims to distinguish
+ three phase faults from overload, any three phase fault on a transmission
+ line can be analyzed without the need of information from the other end
+ of line.
  This is because the fact that the arc voltage is not affected by the infeed
  fault current making the fault point grounded through the arc resistance.
  This property is used to derive the criterion to differentiate between
@@ -1792,11 +2014,11 @@ The problem of distance protection misoperation has been presented.
  Anticipation of distance protection misoperation in the planning stage
  has been proposed.
  However, due to the large size of modern day power systems, such anticipation
- is computationally impossible.
+ is computationally intensive.
  Also, wide area protection schemes have been proposed.
  Nevertheless, these protection schemes didn't find wide industry acceptance
- due to cybersecurity risks as well as the economic cost that is need to
- build such systems.
+ due to cybersecurity risks as well as the economic cost that is needed
+ to build such systems.
  Lastly, modification of the local distance protection function has been
  also proposed.
  However, the methods in this last category may fail under system conditions

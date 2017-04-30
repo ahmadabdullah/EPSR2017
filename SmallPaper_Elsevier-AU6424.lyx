@@ -4,16 +4,22 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass IEEEtran
+\textclass elsarticle
 \begin_preamble
-% for subfigures/subtables
-\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{url}
+% specify here the journal
+%\journal{ Electric Power Systems Research}
+
+% use this if you need line numbers
+%\usepackage{lineno}
 \end_preamble
-\options conference
 \use_default_options false
+\begin_modules
+theorems-std
+\end_modules
 \maintain_unincluded_children false
 \language english
-\language_package none
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "default"
@@ -31,41 +37,38 @@
 \output_sync 0
 \bibtex_command bibtex
 \index_command default
-\float_placement tbh
+\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref true
-\pdf_title "Your Title"
-\pdf_author "Your Name"
 \pdf_bookmarks true
-\pdf_bookmarksnumbered true
-\pdf_bookmarksopen true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder true
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle false
-\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
 \papersize default
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 0
-\use_package esint 0
+\use_package esint 1
 \use_package mathdots 1
 \use_package mathtools 0
 \use_package mhchem 1
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
+\suppress_date true
 \justification true
 \use_refstyle 0
 \index Index
@@ -77,9 +80,9 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 2
-\papersides 1
-\paperpagestyle default
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -89,94 +92,135 @@
 
 \begin_body
 
+\begin_layout BeginFrontmatter
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keep this empty!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
 Distance Protection Zone 3 Misoperation During System Wide Cascading Events:
  The Problem and a Survey of Solutions
 \end_layout
 
 \begin_layout Author
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-the standard way: 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Flex Author Name
-status open
-
-\begin_layout Plain Layout
-Ahmad
+A.M.
 \begin_inset space ~
 \end_inset
 
 Abdullah
+\begin_inset Flex CorAuthormark
+status open
+
+\begin_layout Plain Layout
+cor1
 \end_layout
 
 \end_inset
 
 
-\begin_inset Flex Author Affiliation
-status collapsed
+\begin_inset Argument 1
+status open
 
 \begin_layout Plain Layout
-Department of Electrical and Computer Engineering
-\begin_inset Newline newline
-\end_inset
-
-Texas A&M University, College Station, TX 77840
-\begin_inset Newline newline
-\end_inset
-
-Email: ahmad@tamu.edu
+rvt
 \end_layout
 
 \end_inset
 
 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-and 
 \end_layout
 
-\end_inset
+\begin_layout Email
+ahmad.abdullah@ieee.org
+\end_layout
 
-
-\begin_inset Flex Author Name
-status collapsed
-
-\begin_layout Plain Layout
-Karen
+\begin_layout Author
+K.
 \begin_inset space ~
 \end_inset
 
-Butler-Purry
+Butler-Perry
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+focal
 \end_layout
 
 \end_inset
 
 
-\begin_inset Flex Author Affiliation
+\begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-Department of Electrical and Computer Engineering
-\begin_inset Newline newline
+
+\size normal
+With 
+\series bold
+\size default
+
+\backslash
+fnref
+\series default
+\size normal
+ and you refer to the author footnotes.
+\end_layout
+
 \end_inset
 
-Texas A&M University, College Station, TX 77840
-\begin_inset Newline newline
+
+\end_layout
+
+\begin_layout Email
+klbutler@tamu.edu
+\end_layout
+
+\begin_layout Corresponding author
+Corresponding author
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+cor1
+\end_layout
+
 \end_inset
 
-Email: kbutler@tamu.edu
+
+\end_layout
+
+\begin_layout Address
+Department of Electrical and Computer Engineering, Texas A&M University,
+ College Station, TX, 77843
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+rvt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Address
+Department of Electrical and Computer Engineering, Texas A&M University,
+ College Station, TX, 77843
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+focal
 \end_layout
 
 \end_inset
@@ -192,16 +236,79 @@ Distance relay zone 3 misoperation has been responsible for major blackouts
  conditions such as the 2015 Turkish blackout.
  This paper summarizes the problem and provides a survey on the research
  efforts made to increase distance relay security to prevent distance protection
- misoperation
+ misoperation.
+ 
 \end_layout
 
 \begin_layout Keywords
-Distance protection zone 3, blackouts, cascading events, misoperation, security
- 
+Distance protection zone 3 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ blackouts 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ cascading events 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ misoperation 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+sep
+\end_layout
+
+\end_inset
+
+ security 
+\end_layout
+
+\begin_layout EndFrontmatter
+
 \end_layout
 
 \begin_layout Section
 Introduction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Introduction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -263,7 +370,7 @@ key "Baldick"
  Even though, the world has witnessed many blackouts prior to the 2003 blackout
  
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Hines2009"
 
 \end_inset
@@ -422,7 +529,7 @@ name "sec:Typical-Distance-Protection"
 \begin_layout Standard
 On August 14th of 2003 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Liscouski2004"
 
 \end_inset
@@ -441,7 +548,7 @@ n ,which in turn, resulted in tripping of the heavily loaded line.
  leading to a chain of events that ultimately led to system collapse.
  Also, on March 31st of 2015 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "2015Turkish"
 
 \end_inset
@@ -483,7 +590,7 @@ key "Liscouski2004"
  or due to lines out of service for maintenance causing one line to carry
  substantial system power transfer as in the 2015 Turkish blackout 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2015Turkish"
 
 \end_inset
@@ -1061,9 +1168,15 @@ name "sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage"
 \end_layout
 
 \begin_layout Standard
-Most Independent System Operators (ISOs) today use N-1 criterion to judge
- whether the system is secure after the removal of one line in planning
- stage.
+Most Independent System Operators (ISOs) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ERCOTNodal,CaisoPlanning"
+
+\end_inset
+
+ today use N-1 criterion to judge whether the system is secure after the
+ removal of one line in planning stage.
  However, given that distance protection system misoperation is not triggered
  until two or three lines go out of service 
 \begin_inset CommandInset citation
@@ -1435,7 +1548,7 @@ key "He2011"
 \begin_layout Standard
 The authors in 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "lin2016countermeasures"
 
 \end_inset
@@ -1445,7 +1558,7 @@ key "lin2016countermeasures"
  service.
  In 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "lin2016countermeasures"
 
 \end_inset
@@ -1549,7 +1662,7 @@ key "Jonsson2003"
  The authors propose if the local relay senses that the system voltage is
  stressed according to the conditions listed in 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "vu1999use"
 
 \end_inset
@@ -1682,7 +1795,7 @@ key "zadeh2008artificial,zadeh2011adaptive"
  than the ones used in training, the method is expected to fail because
  ANN is known to have bad generalization capabilities 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "zurada1992introduction"
 
 \end_inset
