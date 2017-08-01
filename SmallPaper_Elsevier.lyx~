@@ -139,7 +139,7 @@ rvt
 \end_layout
 
 \begin_layout Email
-ahmad.abdullah@ieee.org
+ahmad.abdullah@cu.edu.eg
 \end_layout
 
 \begin_layout Author
@@ -199,10 +199,10 @@ cor1
 \end_layout
 
 \begin_layout Address
-Department of Electrical and Computer Engineering, Texas A&M University,
- College Station, TX, 77843
+Department of Electrical Power and Machines, Cairo University, Gizah, Egypt,
+ 12613
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 rvt
@@ -217,7 +217,7 @@ rvt
 Department of Electrical and Computer Engineering, Texas A&M University,
  College Station, TX, 77843
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 focal
@@ -236,16 +236,14 @@ Distance relay zone 3 misoperation has been responsible for major blackouts
  conditions such as the 2015 Turkish blackout.
  This paper explains the problem of zone 3 distance protection misoperation.
  The paper then proceeds to survey the literature for possible solutions
- made to increase distance relay security in order to prevent distance protectio
-n misoperation.
- It is found that solutions to the problem of zone 3 distance protection
- misoperation can be classified under one of three categories.
+ to increase distance relay security to prevent distance protection misoperation.
+ Three categories of solutions were proposed in literature to address the
+ problem of zone 3 distance protection misoperation.
  The first one is anticipation and prevention of misoperation in the planning
  stage.
- The second one is communication assisted protection schemes that uses non-local
- relay data to enhance relay security.
- The last one concerns with the use of local data to enhance distance relay
- security.
+ The second one is communication assisted protection schemes that use remote
+ measurements to enhance relay security.
+ The last one uses local data to enhance distance relay security.
  
 \end_layout
 
@@ -401,6 +399,7 @@ on.
  effect of events evolved slowly (hours) or fast (seconds) according to
  the region causing a degradation of the integrity of the system leading
  ultimately to a complete blackout.
+ The main reason of the 2003 blackout was distance relay misoperation.
  Daunting efforts had to be exerted to gain more knowledge and understanding
  of the underlying phenomenon.
  
@@ -564,7 +563,7 @@ key "2015Turkish"
 
 \end_inset
 
-, the Turkish grid suffered the worst blackout ever recorded since 1999,
+, the Turkish grid suffered the worst blackout ever recorded since 1999
  when an earthquake caused a complete shutdown of the grid.
  On the contrary to the 1999 earthquake, the 2015 blackout was caused by
  a impedance protection misoperation that tripped a heavily loaded line
@@ -611,8 +610,8 @@ key "2015Turkish"
 \end_layout
 
 \begin_layout Standard
-To illustrate that this confusion is not tied up with a certain system condition
-s but rather inherent insecurity in the distance protection principle, the
+To illustrate that this confusion is not tied up with certain system conditions
+ but rather inherent insecurity in the distance protection principle, the
  single line diagram shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -629,7 +628,8 @@ reference "fig:System-Configuration-for-formulating-problem"
  protection misoperates.
  Even though, degraded system conditions can be anticipated in the planning
  stage, the system operator will have nothing in hand to prevent a distance
- protection misoperation if distance protection is used alone.
+ protection misoperation if local function of the distance protection is
+ used alone.
  It is important to keep in mind that distance protection systems are set
  locally with the help of the impedance of adjacent lines without any informatio
 n about the system load until the coordination study phase.
@@ -667,7 +667,11 @@ reference "fig:System-Configuration-for-formulating-problem"
  However, as will be explained below, this simplification does not affect
  the generality of the problem formulation.
  The impedance and the rating of the lines are 
-\begin_inset Formula $60\varOmega$
+\begin_inset Formula $60$
+\end_inset
+
+ 
+\begin_inset Formula $\varOmega$
 \end_inset
 
  and 3000 Amp, respectively and are taken from 
@@ -915,7 +919,7 @@ key "NERC2003"
  To plot the load encroachment zone according to NERC directives 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "NERCMisoperation,NERCLoadability,NERC2003"
+key "NERCMisoperation,NERC2003,NERCLoadability"
 
 \end_inset
 
@@ -980,7 +984,7 @@ RLQT
  NERC directives 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "NERCMisoperation,NERCLoadability,NERC2003"
+key "NERCMisoperation,NERC2003,NERCLoadability"
 
 \end_inset
 
@@ -1007,11 +1011,19 @@ reference "fig:Distance-Relay-characteristic"
 \end_inset
 
 , this fault resistance ranges from 
-\begin_inset Formula $30\varOmega$
+\begin_inset Formula $30$
+\end_inset
+
+
+\begin_inset Formula $\varOmega$
 \end_inset
 
  to 
-\begin_inset Formula $90\varOmega$
+\begin_inset Formula $90$
+\end_inset
+
+
+\begin_inset Formula $\varOmega$
 \end_inset
 
 .
@@ -1342,7 +1354,7 @@ key "Song2007"
  operator has the option to stop distance relays from operation.
  However, in practice only N-1 contingencies are studied and thus the severity
  index is chosen based on these cases.
- However, if the system enters N-2 or N-3 contingency conditions, tuning
+ Nevertheless, if the system enters N-2 or N-3 contingency conditions, tuning
  of the “severity” threshold will be a difficult task computationally.
  
 \end_layout
@@ -1417,7 +1429,7 @@ As can be seen above, anticipation detection  of distance protection misoperatio
 n in the planning stage is a hard task.
  To be able to fully prevent distance protection misoperation, an N-x, where
  x is greater than 1, contingency analysis need to be done.
- Even though this could be done for small benchmark systems, the contingency
+ Even though this could be done for small benchmark systems, contingency
  analysis, under uncertain load and generation, is computationally intensive
  for large system consisting of thousands of buses.
  Many ISOs may not have access to supercomputers to run such intensive computati
@@ -1461,8 +1473,8 @@ key "Liscouski2004"
  and protection.
  In typical distance protection schemes, the relay is only applied to a
  single transmission line.
- However, in a wide area protection scheme, a complete area ( several transmissi
-on lines) can be protected using selected PMU devices without the need to
+ However, in a wide area protection scheme, a complete area (several transmissio
+n lines) can be protected using selected PMU devices without the need to
  apply PMUs to each single bus in the system.
  By transferring information in between PMUs in the power system, accurate
  decision regarding the nature of the impedance falling in zone 3 can be
@@ -1511,7 +1523,7 @@ reference "fig:RCU-and-CCU"
 
 .
  The CCU will be installed in the ISO while the RCUs will be installed at
- the individual substations.
+ select individual substations.
  The CCU measures the line outage distribution factors and generation shift
  factors for the entire power grid and sends all factors to the individual
  RCUs.
@@ -1812,7 +1824,7 @@ key "He2011"
  As part of the FEI, the measured voltage and current of one terminal of
  the protected area are used to estimate the voltages at the other end.
  If an internal fault occurs within the zone being monitored, then the estimated
- value will be different form the measured value at that bus causing a fault
+ value will be different from the measured value at that bus causing a fault
  to be detected.
  On the other hand, the faulted area is detected through FAD.
  The substations that are within the faulted area need to send the information
@@ -1834,7 +1846,7 @@ reference "fig:The-concept-of-FAD"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1910,9 +1922,9 @@ key "lin2016countermeasures"
 \begin_layout Standard
 
 \series bold
-Even though PMU based solutions can offer an attractive solution to the
- problem of distance protection misoperation, these solutions require significan
-t communication infrastructure cost.
+Even though PMU based schemes and wide-area based schemes can offer attractive
+ solutions to eliminate the problem of distance protection misoperation,
+ these solutions require significant communication infrastructure cost.
  Additionally, the power grid is a critical infrastructure and the cybersecurity
  risk may be eminent if the grid is brought online for communications purposes.
  
@@ -1934,7 +1946,7 @@ In addition to using PMUs for fault detection and assisting zone 3 tripping,
  various authors proposed making changes to the way impedance relays operate.
  In these methods, the authors proposed additional criteria to assist distance
  protection in order to assert that fault exists within the relay reach
- using local data .
+ using local data.
  
 \end_layout
 
@@ -1955,7 +1967,7 @@ key "Nayak2015"
  Since the fault is three phase, a DC decaying component must exist in one
  of the phases.
  A transient monitoring function will then be defined to be the maximum
- of all three phases DC decaying component in one cycle.
+ of all three phases DC decaying components in one cycle.
  Also, for the three phase to be asserted, the line load angle has to be
  greater than 50 degrees.
  Both the monitoring function as well as the line load angle has to be true
@@ -2066,7 +2078,14 @@ key "Sharifzadeh2014"
 \end_inset
 
  threshold value has also been obtained using offline simulations.
- However, neither contingency analysis nor system loading levels have been
+ The disadvantage of the method in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sharifzadeh2014"
+
+\end_inset
+
+ is that neither contingency analysis nor system loading levels have been
  taken into consideration.
 \end_layout
 
@@ -2091,12 +2110,51 @@ key "Perera2011"
 
 , the energy of the first three current levels and the third approximation
  is used to train a probabilistic classifier.
- The using this energy feature, a decision is made whether a transient signal
+ The energy is calculated using certain levels of the discrete wavelet transform
+ of the three phase currents.
+ Using this energy features, a decision is made whether a transient signal
  if due to a fault or non-fault condition on a line.
- The major drawback of this approach is that even though fault can be distinguis
-hed from non-fault transients, the location of the fault, whether it is
- within or without the reach of the relay, cannot be determined.
- 
+ A simpler online transient classifier has been proposed in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abdullah2016towards"
+
+\end_inset
+
+, where the transient events occurring on the transmission lines nearby
+ any distance relay are identified.
+ Modal transformation is used to transform the phase currents into modal
+ currents.
+ The discrete wavelet transform coefficients of the aerial modes 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "hedman1965propagation"
+
+\end_inset
+
+ are combined in a certain manner to train a feedforward neural network
+ to classify those transients.
+ However, the major drawbacks of both 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Perera2011"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abdullah2016towards"
+
+\end_inset
+
+ is that they cannot be used to tell whether the fault is within the relay
+ protection reach even though they can tell whether a fault has occurred
+ in the network.
+ These papers can only be useful if a method is found to use the transient
+ classification as an entrance point to determining whether the fault is
+ within the protection reach of the relay but this has not been done in
+ literature to the best of our knowledge.
 \end_layout
 
 \begin_layout Standard
@@ -2135,10 +2193,10 @@ reference "fig:Creation-of-adaptive"
  It is also foreseen that the inclusion for contingency analysis in ANN
  training will require large offline simulations and will make load blinder
  selection difficult task.
- Additionally, only three phase current has been used to train the ANN and
- in case a single line to ground fault occurs and cause the features to
- be different than the ones used in training, the method is expected to
- fail because ANN is known to have bad generalization capabilities 
+ Additionally, only three phase fault currents has been used to train the
+ ANN and in case a single line to ground fault occurs and cause the features
+ to be different than the ones used in training, the method is expected
+ to fail because ANN is known to have bad generalization capabilities 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "zurada1992introduction"
@@ -2334,14 +2392,15 @@ key "ma2016adaptive"
 \begin_layout Standard
 
 \series bold
-In Summary, the use of rate of change of voltages and currents can solve
- some aspects of the problem of distance protection misoperation but leave
- other aspects unresolved.
+In summary, the use of rate of change of voltages and currents can prevent
+ the problem of distance protection misoperation in most occasions but does
+ not fully prevent it.
  Other methods use previous operational experience with distance relays
  to propose solutions to the problem of distance protection misoperation.
- However, unforeseen conditions could mislead those proposed solutions.
- The use of high frequency fault generated transients seem to be the most
- promising area but it is scarcely researched in literature.
+ However, system conditions and scenarios that were not previously encountered
+ could mislead those proposed solutions.
+ The use of high frequency fault generated transients seems to be a promising
+ area but it is scarcely researched in literature.
 \end_layout
 
 \begin_layout Section
@@ -2361,8 +2420,9 @@ The problem of distance protection misoperation has been presented.
 \begin_layout Standard
 The first category is anticipation of distance protection misoperation in
  the planning stage.
- In this category, distance protection could be anticipated day ahead based
- on the forecasted load and generation as well as contingency conditions.
+ In this category, distance protection misoperation could be anticipated
+ day ahead based on the forecasted load and generation as well as contingency
+ conditions.
  However, due to the large size of modern day power systems, such anticipation
  is computationally intensive.
  
@@ -2373,22 +2433,37 @@ The second category is communication assisted protection schemes.
  The main idea in this category is that using information from both ends
  of the line or information from various substations in the network, a blocking
  command can be issued to the affected distance relay.
- Nevertheless, these communication assisted protection schemes did not find
- wide industry acceptance due to cybersecurity risks as well as the economic
- cost that is needed to build such systems.
+ Nevertheless, these communication assisted protection schemes have not
+ found wide industry acceptance due to cybersecurity risks as well as the
+ economic cost that is required to build such systems.
  
 \end_layout
 
 \begin_layout Standard
-Lastly, modification of the local distance protection function has been
- also proposed.
- The main idea in this family of solutions that using operational system
+The third category is modification of the local distance protection function
+ using local information.
+ The main idea in this family of solutions is that using operational system
  experience as well as the local data, one can tell with certainty that
- distance relay is about to misoperate.
+ a distance relay is about to misoperate.
  By detecting such conditions, a blocking command can be issued to guard
  the relay against misoperation.
  Nevertheless, the methods in this last category may fail under system condition
 s that were not taken into consideration while developing these methods.
+ 
+\end_layout
+
+\begin_layout Standard
+The most appropriate method to mitigate zone 3 misoperation is dependent
+ on what is the most important factor for the utility company.
+ For example, one utility company may prefer a communication-assisted scheme
+ using remote measurements to eliminate the possibility for distance protection
+ misoperation while accepting the cybersecurity vulnerabilities that are
+ introduced.
+ Another utility may not be willing to accept the cybersecurity risks or
+ the cost of constructing such scheme and requires a solution using local
+ measurements or minimum remote measurements.
+ The authors think that methods which use local relay data are worthy of
+ research attention as cybersecurity threats are becoming a major concern.
  
 \end_layout
 
