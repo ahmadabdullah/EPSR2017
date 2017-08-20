@@ -1047,8 +1047,8 @@ n is nonexistence and the green area can be removed from zone 3 without
  affecting the security or reliability of the distance protection system.
  However, fault resistance along the route of the transmission line is not
  known in advance.
- Also, one should note that solid state and electromechanical relays can
- not be programmed, only microprocessor relays can.
+ Also, one should note that solid state and electromechanical relays cannot
+ be programmed, only microprocessor relays can.
  This really means that older relays will have to comply with NERC standards
  by disabling zone 3 altogether.
  It is shown in 
@@ -1155,7 +1155,7 @@ It should be apparent from the description above that the major issue that
  under a fault on a remote line to which the distance protection system
  provides backup protection.
  It could be argued that impedance protection should be supervised by other
- steady state protection principles to enhance its selectivity, i.e, the
+ steady state protection principles to enhance its selectivity, i.e., the
  ability to differentiate between a load and a fault current.
  However, other protection principles -such as over current protection-
  that can make the distinction between a load and a fault depend on the
@@ -1185,7 +1185,7 @@ key "Horowitz2006"
  Although this is a desirable goal, it should be recognized that even with
  all the intelligence available to modern computer relays, the problem of
  distinguishing a fault from a heavy load in a relatively short time and
- using only the current and voltage signals available to the relay can not
+ using only the current and voltage signals available to the relay cannot
  be solved in every single imaginable (and some unimaginable) power system
  scenarios"
 \shape default
@@ -1514,14 +1514,7 @@ key "Lim2008"
  Independent System Operator (ISO), to continuously supervise the operation
  of zone 3 elements.
  The tool will consist of two modules, a central control unit (CCU) and
- several regional control units (RCUs) as shown in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:RCU-and-CCU"
-
-\end_inset
-
-.
+ several regional control units (RCUs).
  The CCU will be installed in the ISO while the RCUs will be installed at
  select individual substations.
  The CCU measures the line outage distribution factors and generation shift
@@ -1537,52 +1530,6 @@ reference "fig:RCU-and-CCU"
  that is needed to transmit the data between the individual substation and
  the ISO.
  
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename fig4.tif
-	scale 70
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-RCU and CCU of the solution in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lim2008"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:RCU-and-CCU"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1652,7 +1599,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig5.tif
+	filename fig4.tif
 	scale 50
 
 \end_inset
@@ -1833,63 +1780,7 @@ key "He2011"
  and identify actual faulty lines quickly.
  The use of FAD concept reduces the communication overhead required by the
  scheme.
- The overall structure of the solution is shown in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:The-concept-of-FAD"
-
-\end_inset
-
-.
  
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename fig6.tif
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The concept that is given in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "He2011"
-
-\end_inset
-
-.
- A select number of substations will be included in the communication network.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:The-concept-of-FAD"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2213,7 +2104,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig7.tif
+	filename fig5.tif
 	scale 70
 
 \end_inset
@@ -2318,7 +2209,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig8.tif
+	filename fig6.tif
 	scale 60
 
 \end_inset

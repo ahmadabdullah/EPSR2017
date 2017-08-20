@@ -12,6 +12,7 @@
  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false]
  {hyperref}
+\usepackage{breakurl}
 
 \makeatletter
 \@ifundefined{date}{}{\date{}}
@@ -302,7 +303,7 @@ area can be removed from zone 3 without affecting the security or
 reliability of the distance protection system. However, fault resistance
 along the route of the transmission line is not known in advance.
 Also, one should note that solid state and electromechanical relays
-can not be programmed, only microprocessor relays can. This really
+cannot be programmed, only microprocessor relays can. This really
 means that older relays will have to comply with NERC standards by
 disabling zone 3 altogether. It is shown in \citep{Horowitz2006}
 that disabling zone 3 in some cases will force protection engineers
@@ -343,7 +344,7 @@ steady state impedance corresponding to a heavy load is coincident
 to the impedance under a fault on a remote line to which the distance
 protection system provides backup protection. It could be argued that
 impedance protection should be supervised by other steady state protection
-principles to enhance its selectivity, i.e, the ability to differentiate
+principles to enhance its selectivity, i.e., the ability to differentiate
 between a load and a fault current. However, other protection principles
 -such as over current protection- that can make the distinction between
 a load and a fault depend on the anticipated power flow for operation
@@ -362,7 +363,7 @@ this is a desirable goal, it should be recognized that even with all
 the intelligence available to modern computer relays, the problem
 of distinguishing a fault from a heavy load in a relatively short
 time and using only the current and voltage signals available to the
-relay can not be solved in every single imaginable (and some unimaginable)
+relay cannot be solved in every single imaginable (and some unimaginable)
 power system scenarios\textquotedbl{}}.
 
 \section{Detection and mitigation of zone 3 misoperation in the planning stage\label{sec:Detection-and-mitigation-of-cascading-events-in-the-planning-stage}}
@@ -505,23 +506,18 @@ in \citep{Lim2008} proposed that a tool be installed at the control
 center, also known as Independent System Operator (ISO), to continuously
 supervise the operation of zone 3 elements. The tool will consist
 of two modules, a central control unit (CCU) and several regional
-control units (RCUs) as shown in Figure \ref{fig:RCU-and-CCU}. The
-CCU will be installed in the ISO while the RCUs will be installed
-at select individual substations. The CCU measures the line outage
-distribution factors and generation shift factors for the entire power
-grid and sends all factors to the individual RCUs. RCUs use local
-measurements at the substation and communicate with one another. The
-individual RCUs will differentiate between faults and transfer of
-power flow and supervise distance relays based on the information
-received from the CCU and other RCUs. Even though this solution might
-be able to prevent all zone-3 misoperations, it needs considerable
-cost to construct the communication infrastructure that is needed
-to transmit the data between the individual substation and the ISO.
-\begin{figure}[h]
-\begin{centering}
-\includegraphics[scale=0.7]{fig4}\caption{RCU and CCU of the solution in \citep{Lim2008}\label{fig:RCU-and-CCU} }
-\par\end{centering}
-\end{figure}
+control units (RCUs). The CCU will be installed in the ISO while the
+RCUs will be installed at select individual substations. The CCU measures
+the line outage distribution factors and generation shift factors
+for the entire power grid and sends all factors to the individual
+RCUs. RCUs use local measurements at the substation and communicate
+with one another. The individual RCUs will differentiate between faults
+and transfer of power flow and supervise distance relays based on
+the information received from the CCU and other RCUs. Even though
+this solution might be able to prevent all zone-3 misoperations, it
+needs considerable cost to construct the communication infrastructure
+that is needed to transmit the data between the individual substation
+and the ISO. 
 
 The authors in \citep{dutta2014transmission} uses synchronized samples
 from both ends of the line to check whether the transmission line
@@ -545,7 +541,7 @@ be done carefully to not create unobservable islands under stressed
 system conditions and certain contingency conditions. 
 \begin{figure}[h]
 \begin{centering}
-\includegraphics[scale=0.5]{fig5}\caption{Protection logic of the paper in \citep{navalkar2011secure}\label{fig:Protection-logic-ofSYNSE} }
+\includegraphics[scale=0.5]{fig4}\caption{Protection logic of the paper in \citep{navalkar2011secure}\label{fig:Protection-logic-ofSYNSE} }
 \par\end{centering}
 \end{figure}
 
@@ -628,15 +624,7 @@ within the faulted area need to send the information to the central
 control room. Afterwords, the central control room will search the
 suspected faulty lines and identify actual faulty lines quickly. The
 use of FAD concept reduces the communication overhead required by
-the scheme. The overall structure of the solution is shown in Figure
-\ref{fig:The-concept-of-FAD}. 
-\begin{figure}[h]
-\begin{centering}
-\includegraphics[scale=0.5]{fig6}
-\par\end{centering}
-\caption{The concept that is given in \citep{He2011}. A select number of substations
-will be included in the communication network. \label{fig:The-concept-of-FAD}}
-\end{figure}
+the scheme. 
 
 The authors in \citep{lin2016countermeasures} use PMUs, that are
 in place as part of a wide area protection scheme, to detect the power
@@ -772,7 +760,7 @@ the method is expected to fail because ANN is known to have bad generalization
 capabilities \citep{zurada1992introduction}. 
 \begin{figure}[h]
 \begin{centering}
-\includegraphics[scale=0.7]{fig7}\caption{Creation of adaptive load blinder in \citep{zadeh2011adaptive} \label{fig:Creation-of-adaptive}}
+\includegraphics[scale=0.7]{fig5}\caption{Creation of adaptive load blinder in \citep{zadeh2011adaptive} \label{fig:Creation-of-adaptive}}
 \par\end{centering}
 \end{figure}
 
@@ -814,7 +802,7 @@ then stays in zone 3 after fault clearing due to line heavy loading
 conditions. 
 \begin{figure}[h]
 \begin{centering}
-\includegraphics[scale=0.6]{fig8}\caption{TZMA and TZPA of the method in \citep{Nikolaidis2016}\label{fig:TZMA-and-TZPA} }
+\includegraphics[scale=0.6]{fig6}\caption{TZMA and TZPA of the method in \citep{Nikolaidis2016}\label{fig:TZMA-and-TZPA} }
 \par\end{centering}
 \end{figure}
 
